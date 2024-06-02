@@ -1,0 +1,42 @@
+.btn__primary {
+    background-color: var(--primary-600);
+    border: .1rem solid var(--primary-600);
+    color: var(--white-950);
+    padding: 1.2rem 2rem;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all .15s ease;
+    &:hover {
+        background-color: var(--primary-700);
+    }
+}
+
+.btn__secondary {
+    border: .1rem solid var(--slate-800);
+    color: var(--black-950);
+    padding: 1.2rem 2rem;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: all .15s ease;
+    @include inline-flex-center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Link text
+.text__primary {
+    color: var(--primary-600)
+}

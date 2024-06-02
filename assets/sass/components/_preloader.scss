@@ -1,0 +1,25 @@
+.preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 1024;
+    background-color: var(--white-950);
+    @include flex-center;
+
+    img {
+       width: 25rem;
+    }
+
+    .loader {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background: #000;
+        box-shadow: 0 0 0 0 #0004;
+        animation: l1 1s infinite;
+    }
+    @keyframes l1 {
+        100% {
+            box-shadow: 0 0 0 3rem #0000
+        }
+    }
+}

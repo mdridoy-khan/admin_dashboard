@@ -1,0 +1,105 @@
+/*-------------------------------------------------
+    [ ## Fields ]
+---------------------------------------------------*/
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+    font-size: 1.4rem;
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+input[type=time]::-webkit-inner-spin-button, 
+input[type=time]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button, 
+input[type=date]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    box-shadow: 0 0 0rem 100rem var(--white-950) inset;
+    -webkit-box-shadow: 0 0 0rem 100rem var(--white-950) inset;
+    -webkit-text-fill-color: var(--black-950) !important;
+}
+input:-webkit-autofill:focus {
+    box-shadow: 0 0 0rem 100rem var(--white-950) inset;
+    -webkit-box-shadow: 0 0 0rem 100rem var(--white-950) inset;
+    -webkit-text-fill-color: var(--black-950) !important;
+}
+.form-control {
+    font-size: 1.4rem;
+    padding: 1.25rem 1.6rem;
+    border: .1rem solid var(--slate-100);
+    &:focus {
+        border-color: var(--black-950);
+    }
+}
+textarea.form-control {
+    display: block;
+    width: 100%;
+    display: block;
+    min-height: 15rem;
+    padding-top: 0;
+    font-size: 1.4rem;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+}
+.form-floating > .form-control {
+    border: none;
+    border-bottom: .1rem solid rgba(0,0,0,0.1);
+    border-radius: 0;
+}
+
+// Placeholder Color
+::-webkit-input-placeholder {
+    color: var(--black-950);
+}
+.widget_newsletter::-webkit-input-placeholder {
+    color: #808080;
+}
+
+:-moz-placeholder {
+    color: var(--black-950);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    color: var(--black-950);
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: var(--black-950);
+}
+
+
+/**
+ * Hide element while making it readable for screen readers
+ */
+.figure {
+	display: block;
+}
