@@ -131,7 +131,7 @@ Version: 1.0.0
   --sky_Blue-900: #0e4562;
   --sky_Blue-950: #0a3047;
   --ff-primary: "Inter", sans-serif;
-  --ff-awesome: Font Awesome 5 Pro;
+  --ff-awesome: "Font Awesome 5 Pro";
 }
 
 html {
@@ -383,12 +383,67 @@ textarea.form-control:focus {
   justify-content: center;
 }
 
+.notification-bell-icon {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  color: var(--slate-500);
+}
+.notification-bell-icon .count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--error-500);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white-950);
+  border-radius: 1rem;
+  padding: 0.1rem 0.5rem;
+  text-align: center;
+}
+
 .text__primary {
   color: var(--primary-600);
 }
 
 .glightbox-clean .gslide-title {
   margin: 0;
+}
+
+.tooltip {
+  z-index: 99999999;
+}
+.tooltip.bs-tooltip-top {
+  padding: 0 0 0.7rem;
+}
+.tooltip .tooltip-inner {
+  max-width: 200px;
+  padding: 0.5rem 1rem;
+  color: var(--white-950);
+  text-align: center;
+  background-color: var(--black-950);
+  border-radius: 0.25rem;
+  font-size: 1.4rem;
+}
+.tooltip .tooltip-arrow {
+  width: 1.2rem;
+  height: 0.6rem;
+}
+.tooltip .tooltip-arrow::before {
+  border-width: 0.6rem 0.6rem 0;
+}
+
+.popover {
+  font-size: 1.5rem;
+  z-index: 999999;
+}
+.popover .popover-header {
+  font-size: 1.4rem;
 }
 
 .preloader {
@@ -464,7 +519,7 @@ textarea.form-control:focus {
 # Footer-block
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Home Page
+# User Authentication Page
 --------------------------------------------------------------*/
 .user-auth {
   min-height: 100vh;
@@ -585,6 +640,344 @@ textarea.form-control:focus {
   gap: 2rem;
   justify-content: center;
   margin-top: 2.5rem;
+}
+
+/*--------------------------------------------------------------
+# Dashboard [Logged In]Page
+--------------------------------------------------------------*/
+.db_wrapper {
+  height: 100vh;
+  overflow: hidden;
+}
+.db_wrapper .db_header, .db_wrapper .db_body {
+  display: flex;
+  flex-wrap: wrap;
+}
+.db_wrapper .sidebarBlock, .db_wrapper .sidebar {
+  flex: 0 0 30rem;
+}
+@media screen and (max-width: 991px) {
+  .db_wrapper .sidebar {
+    position: fixed;
+    top: 7.8rem;
+    bottom: 0;
+    left: -32rem;
+    transition: all 0.2s ease;
+    width: 30rem;
+  }
+  .db_wrapper .sidebar.sidebar_collapsed {
+    left: 0;
+  }
+}
+.db_wrapper .headerBlock, .db_wrapper .db_content {
+  flex: 1;
+}
+.db_wrapper .db_header {
+  background-color: var(--white-950);
+  border-bottom: 0.1rem solid var(--slate-50);
+}
+.db_wrapper .db_header .sidebarBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem;
+  position: relative;
+  border-right: 0.1rem solid var(--slate-50);
+}
+@media screen and (max-width: 991px) {
+  .db_wrapper .db_header .sidebarBlock {
+    flex: 0 0 15rem;
+  }
+}
+.db_wrapper .db_header .sidebarBlock .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--slate-700);
+}
+.db_wrapper .db_header .sidebarBlock .logo img {
+  width: 4rem;
+}
+@media screen and (max-width: 991px) {
+  .db_wrapper .db_header .sidebarBlock .name {
+    display: none;
+  }
+}
+.db_wrapper .db_header .headerBlock {
+  display: flex;
+  padding: 1.5rem;
+}
+.db_wrapper .db_header .headerBlock > ul {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu {
+  min-width: 35rem;
+  max-width: 35rem;
+  background: var(--white-950);
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 0.6rem 0.6rem;
+  padding: 0;
+  border: 0;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .dropdown_header, .db_wrapper .db_header .headerBlock .dropdown-menu .dropdown_footer {
+  background-color: #F0F1F3;
+  padding: 1rem;
+  margin: 1rem 1rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 0.4rem;
+  display: block;
+  font-weight: 600;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .max-height-scroll {
+  max-height: 30rem;
+  overflow-y: scroll;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .max-height-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .max-height-scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .max-height-scroll::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 2rem var(--slate-300);
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .notification__single {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 1rem;
+  margin: 0.5rem 0;
+  padding: 1rem 1rem;
+  position: relative;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .notification__single .notification_icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .notification__single .notification__details {
+  flex: 1;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .notification__single .notification__details .subject {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+.db_wrapper .db_header .headerBlock .dropdown-menu .notification__single .notification__details p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 28rem;
+}
+.db_wrapper .db_header .headerBlock .profile-dropdown .profile-nav {
+  gap: 1rem;
+}
+.db_wrapper .db_header .headerBlock .profile-dropdown .profile-nav h6 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.db_wrapper .db_header .headerBlock .profile-dropdown hr {
+  background-color: var(--slate-50);
+  opacity: 1;
+}
+.db_wrapper .db_header .headerBlock .profile-dropdown ul li a {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--slate-700);
+  transition: all 0.15s ease;
+  border-radius: 0.6rem;
+}
+.db_wrapper .db_header .headerBlock .profile-dropdown ul li a:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
+}
+@media screen and (max-width: 575px) {
+  .db_wrapper .db_header .headerBlock .searchbox {
+    display: none;
+  }
+}
+.db_wrapper .db_header .headerBlock .searchbox .input-group-text {
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0;
+  color: var(--slate-300);
+}
+.db_wrapper .db_header .headerBlock .searchbox input {
+  color: var(--slate-300);
+  border: 0;
+  padding: 0 1rem;
+}
+.db_wrapper .db_header .sidebarToggler {
+  border: 0.1rem solid var(--slate-50);
+  width: 4.5rem;
+  height: 4.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: var(--white-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .db_wrapper .db_header .sidebarToggler {
+    display: none;
+  }
+}
+.db_wrapper .db_header .sidebarToggler .collapseable {
+  display: none;
+}
+.db_wrapper .db_header .sidebarToggler.sidebar_collapsed .expandable {
+  display: none;
+}
+.db_wrapper .db_header .sidebarToggler.sidebar_collapsed .collapseable {
+  display: block;
+}
+.db_wrapper .db_body {
+  height: calc(100vh - 7.2rem);
+}
+.db_wrapper .db_body .sidebar {
+  background-color: var(--white-950);
+  overflow-y: auto;
+  padding: 1.6rem;
+}
+@media screen and (min-width: 992px) {
+  .db_wrapper .db_body .sidebar {
+    height: 100%;
+  }
+}
+.db_wrapper .db_body .sidebar::-webkit-scrollbar {
+  width: 0;
+}
+.db_wrapper .db_body .sidebar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.db_wrapper .db_body .sidebar::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 2rem var(--slate-300);
+}
+.db_wrapper .db_body .sidebar .menu-group + .menu-group {
+  margin-top: 3rem;
+}
+.db_wrapper .db_body .sidebar .menu-group .title {
+  margin: 0 2.4rem 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 0.1rem solid var(--slate-50);
+  font-size: 1.5rem;
+  color: var(--slate-700);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.db_wrapper .db_body .sidebar .menu-group .menu-list li a {
+  padding: 1.2rem 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--slate-700);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.8rem;
+  transition: all 0.15s ease;
+}
+.db_wrapper .db_body .sidebar .menu-group .menu-list li a.active, .db_wrapper .db_body .sidebar .menu-group .menu-list li a:hover {
+  background-color: var(--primary-50);
+  color: var(--primary-600);
+}
+.db_wrapper .db_body .sidebar .menu-group .menu-list li a .count {
+  margin-left: auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+  width: 2.4rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--slate-25);
+  border: 0.1rem solid var(--slate-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.db_wrapper .db_body .sidebar .workspaces-list li {
+  position: relative;
+}
+.db_wrapper .db_body .sidebar .workspaces-list li a {
+  color: var(--slate-500);
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: block;
+  padding: 1rem 0;
+  transition: all 0.15s ease;
+}
+.db_wrapper .db_body .sidebar .workspaces-list .workspaces-item > a {
+  padding: 0.8rem 1.5rem 1.8rem 2.4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 500;
+  color: var(--slate-700);
+}
+.db_wrapper .db_body .sidebar .workspaces-list .workspaces-item > a::before {
+  content: "";
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.4rem;
+  background-color: var(--primary-500);
+  display: inline-block;
+}
+.db_wrapper .db_body .sidebar .workspaces-list .workspaces-item > a::after {
+  content: "\f078";
+  font-family: var(--ff-awesome);
+  font-weight: 500;
+  margin-left: auto;
+  transition: all 0.15s ease;
+  font-size: 1.3rem;
+}
+.db_wrapper .db_body .sidebar .workspaces-list .workspaces-item > a[aria-expanded=true]::after {
+  transform: scaleY(-1);
+}
+.db_wrapper .db_body .sidebar .workspaces-list .project-list {
+  margin-left: 3.5rem;
+}
+.db_wrapper .db_body .sidebar .workspaces-list .project-list li {
+  position: relative;
+  margin: 0.5rem 0;
+}
+.db_wrapper .db_body .sidebar .workspaces-list .project-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  width: 2rem;
+  height: 6rem;
+  border-left: 0.1rem solid;
+  border-bottom: 0.1rem solid;
+  border-bottom-left-radius: 1.2rem;
+  border-color: var(--slate-100);
+}
+.db_wrapper .db_body .sidebar .workspaces-list .project-list li:first-child::before {
+  height: 4rem;
+}
+.db_wrapper .db_body .sidebar .workspaces-list .project-list a {
+  position: relative;
+  padding-left: 2.8rem;
+}
+.db_wrapper .db_body .sidebar .workspaces-list .project-list a:hover {
+  color: var(--primary-600);
+}
+.db_wrapper .db_body .db_content {
+  padding: 4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

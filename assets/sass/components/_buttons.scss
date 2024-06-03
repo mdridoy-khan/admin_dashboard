@@ -24,7 +24,26 @@
     @include inline-flex-center;
 }
 
-
+.notification-bell-icon {
+    @include dimension(4rem, 4rem);
+    @include flex-center;
+    border: 0;
+    background-color: transparent;
+    position: relative;
+    color: var(--slate-500);
+    .count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--error-500);
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--white-950);
+        border-radius: 1rem;
+        padding: .1rem .5rem;
+        text-align: center;
+    }
+}
 
 
 

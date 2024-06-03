@@ -1,0 +1,32 @@
+.tooltip {
+    z-index: 99999999;
+    &.bs-tooltip-top {
+        padding: 0 0 0.7rem;
+    }
+    .tooltip-inner {
+        max-width: 200px;
+        padding: 0.5rem 1rem;
+        color: var(--white-950);
+        text-align: center;
+        background-color: var(--black-950);
+        border-radius: 0.25rem;
+        font-size: 1.4rem;
+    }
+    .tooltip-arrow {
+        width: 1.2rem;
+        height: 0.6rem;
+
+        &::before {
+            border-width: 0.6rem 0.6rem 0
+        }
+    }
+}
+
+// Poppover
+.popover {
+    font-size: 1.5rem;
+    z-index: 999999;
+    .popover-header {
+        font-size: 1.4rem;
+    }
+}
