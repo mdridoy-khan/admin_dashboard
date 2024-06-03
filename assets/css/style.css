@@ -553,6 +553,16 @@ textarea.form-control:focus {
     font-size: 2.6rem;
   }
 }
+.user-auth .form-title.step {
+  color: var(--slate-950);
+  font-size: 3.2rem;
+  color: var(--slate-950);
+  font-weight: 600;
+  font-family: var(--ff-primary);
+}
+.user-auth .form-title.step span {
+  color: var(--slate-300);
+}
 .user-auth p {
   color: var(--slate-700);
 }
@@ -640,6 +650,89 @@ textarea.form-control:focus {
   gap: 2rem;
   justify-content: center;
   margin-top: 2.5rem;
+}
+
+/*--------------------------------------------------------------
+# Authentication Onboard Page
+--------------------------------------------------------------*/
+#onboard-steps .body {
+  width: 100%;
+}
+#onboard-steps .body input {
+  display: none;
+}
+#onboard-steps .body label {
+  margin-bottom: 0;
+  padding: 6.5rem 2.4rem;
+}
+#onboard-steps .steps {
+  display: none;
+}
+#onboard-steps .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkable-widget {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--slate-950);
+}
+.checkable-widget label {
+  background-color: var(--white-950);
+  border-radius: 10px;
+  border: 0.1rem solid var(--slate-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.8rem;
+  color: var(--slate-950);
+  font-weight: 600;
+  position: relative;
+  padding: 2rem;
+  transition: all 0.15s ease;
+  z-index: 10;
+}
+.checkable-widget label::before {
+  content: "\f111";
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--slate-100);
+  font-size: 2.4rem;
+  font-family: var(--ff-awesome);
+  font-weight: 300;
+}
+.checkable-widget label span {
+  font-size: 1.4rem;
+  display: block;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: var(--ff-primary);
+  margin-top: 0.8rem;
+  color: #4B5768;
+  z-index: 2;
+}
+.checkable-widget input {
+  display: none;
+}
+.checkable-widget input:checked + label {
+  background-color: var(--primary-50);
+  border-color: var(--primary-600);
+}
+.checkable-widget input:checked + label::before {
+  content: "\f058";
+  font-weight: 600;
+  color: var(--primary-600);
 }
 
 /*--------------------------------------------------------------
