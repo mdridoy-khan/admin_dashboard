@@ -60,17 +60,57 @@
             <h5 class="form-title text-center">
                 Try Project Manager for free!
             </h5>
-            <form action="#">
+            <form action="#" method="post" id="form2">
                 <p class="text-center mb-5">
                     Full access, no credit card required
                 </p>
                 <fieldset>
                     <input type="email" id="user-email" name="user-email" class="form-control" value="hello@gmail.com" readonly>
-                    <label for="user-email">Your Email Address<span class="text-danger">*</span></label>
+                    <label for="user-email">
+                        Your Email Address<span class="text-danger">*</span>
+                    </label>
                 </fieldset>
+
+                <fieldset>
+                    <div class="row g-5">
+                        <div class="col-sm-6">
+                            <fieldset>
+                                <input type="text" id="user-fname" name="user-fname" class="form-control" placeholder="" required>
+                                <label for="user-fname">
+                                    First Name<span class="text-danger">*</span>
+                                </label>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset>
+                                <input type="text" id="user-lname" name="user-lname" class="form-control" placeholder="" required>
+                                <label for="user-lname">
+                                    Last Name<span class="text-danger">*</span>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <input type="text" id="workspace_name" name="workspace_name" class="form-control" placeholder="" required>
+                    <label for="workspace_name">
+                        Workspace Name<span class="text-danger">*</span>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <input type="password" id="workspace_password" name="workspace_password" class="form-control" placeholder="" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*\W).{8,}$" required>
+                    <label for="workspace_password">
+                        Create Password<span class="text-danger">*</span>
+                    </label>
+                    <span class="toggle-password fal fa-eye" data-toggle="#workspace_password"></span>
+                    <small>Password must be  minimum of 8 character, 1 uppercase, 1 lowercase and 1 special character  </small>
+                </fieldset>
+
                 <fieldset>
                     <button type="submit" class="btn__primary w-100">
-                        Continue
+                        Create your Workspace
                     </button>
                 </fieldset>
             </form>
@@ -83,21 +123,29 @@
     
 
 
-
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Start Footer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-    <!--~~./ end Footer ~~-->
-
-
-
     <!-- All The JS Files
     ================================================== -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        $(".toggle-password").click(function() {
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("data-toggle"));
+            if (input.attr("type") == "password") {
+                input.attr("type", "text");
+            } else {
+                input.attr("type", "password");
+            }
+        });
+
+        $(document).on('submit', '#form2', function(e) {
+            e.preventDefault();
+            window.location.href = "welcome-screen.html" ;
+        })
+    </script>
 
 </body>
 </html>

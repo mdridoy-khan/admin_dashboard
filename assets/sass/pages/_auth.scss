@@ -20,11 +20,19 @@
         color: var(--slate-700);
         
         @include lg-up {
-            font-size: 3rem;
+            font-size: 2.6rem;
         }
     }
     p {
         color: var(--slate-700);
+    }
+    h6 {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        font-weight: 600;
+    }
+    hr {
+        border-color: var(--slate-300);
     }
     form {
         background-color: var(--white-950);
@@ -44,19 +52,19 @@
             label {
                 color: var(--slate-600);
                 position: absolute;
-                top: 50%;
+                top: 0;
                 left: 1.5rem;
-                transform: translateY(-50%);
+                transform: translateY(1.3rem);
                 transition: all .15s ease;
                 pointer-events: none;
                 z-index: 1;
             }
 
             input {
-                &:focus, &:valid, &:read-only {
+                &:focus, &:valid, &:read-only, &:not(:placeholder-shown) {
                     & ~ label {
                         background-color: var(--slate-25);
-                        transform: translateY(calc(-50% - 2.5rem));
+                        transform: translateY(-1rem);
                         padding: 0 .2rem;
                     }
                 }
@@ -64,6 +72,18 @@
                     background-color: var(--slate-25);
                     pointer-events: none;
                 }
+            }
+            small {
+                color: var(--slate-400);
+            }
+            .toggle-password  {
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 4.8rem;
+                @include flex-center;
+                padding: 0 1rem;
+                cursor: pointer;
             }
         }
 

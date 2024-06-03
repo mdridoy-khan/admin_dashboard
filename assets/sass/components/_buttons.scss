@@ -9,6 +9,7 @@
     transition: all .15s ease;
     &:hover {
         background-color: var(--primary-700);
+        color: var(--white-950);
     }
 }
 
