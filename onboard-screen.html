@@ -48,7 +48,7 @@
 
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Start Authentication
+    Start onboard step for user
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
     <div class="user-auth">
         <div class="auth-container" >
@@ -390,18 +390,8 @@
             </form>
         </div>
     </div>
-    <!--~~./ end Authentication ~~-->
+    <!--~~./ end onboard step for user ~~-->
     
-
-
-
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Start Footer
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-
-    <!--~~./ end Footer ~~-->
-
-
 
     <!-- All The JS Files
     ================================================== -->
@@ -424,7 +414,6 @@
             onFinished: function (event, currentIndex) { 
                 $("#onboard-steps").submit();
                 window.location.href = "loader-screen.html";
-
             },
         });
         
