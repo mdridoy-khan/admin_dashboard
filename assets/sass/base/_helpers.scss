@@ -77,23 +77,23 @@ textarea.form-control {
 
 // Placeholder Color
 ::-webkit-input-placeholder {
-    color: var(--black-950);
+    color: var(--slate-600);
 }
 .widget_newsletter::-webkit-input-placeholder {
-    color: #808080;
+    color: var(--slate-600);
 }
 
 :-moz-placeholder {
-    color: var(--black-950);
+    color: var(--slate-600);
     opacity: 1;
 }
 
 ::-moz-placeholder {
-    color: var(--black-950);
+    color: var(--slate-600);
     opacity: 1;
 }
 :-ms-input-placeholder {
-    color: var(--black-950);
+    color: var(--slate-600);
 }
 
 

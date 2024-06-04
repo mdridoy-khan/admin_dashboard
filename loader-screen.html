@@ -47,43 +47,16 @@
 
 
     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Start Authentication
+    Start loader-content
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <div class="user-auth">
-        <div class="auth-container">
-            <h5 class="form-title text-center">
-                Welcome, John Doe
-            </h5>
-            <hr class="my-5">
-            <h6 class="mb-3">
-                Thanks for signing up  🙏  - you are ready to onboard on your Workstation
-            </h6>
-            <p>
-                Now you are having a one central place for managing and organizing project files, discuss ideas with your coworkers and team members, make collaborative discussions, set project deadlines, manage team members to meet deadline, track the project progression with your team members. Lets check some onboarding process.
-            </p>
-            <br>
-            <p>
-                If you need any help contact our support center for quick solution or you can contact at <a href="mailto:support@projectmanager.com">support@projectmanager.com</a> 
-            </p>
-            <br>
-            <img 
-                src="assets/img/signature-ronald.svg" 
-                alt="Onboard signature" 
-                class="signature"
-            >
-            <br><br>
-            <p>
-                Ronald Koeman
-            </p>
-            <p>
-                Chief Support, Project Manager
-            </p>
-            <p class="text-center mt-5">
-                <a href="onboard-screen.html" class="btn__primary d-block">Ok, Let's Onboard</a>
-            </p>
-        </div>
+    <div class="loader-content">
+        <img src="assets/img/logo-icon.svg" alt="">
+        <h4 id="typing">
+            Creating your first base <span class="auto-type"></span>
+        </h4>
     </div>
-    <!--~~./ end Authentication ~~-->
+    <!--~~./ end loader-content ~~-->
+    
 
 
     <!-- All The JS Files
@@ -91,7 +64,14 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        setTimeout(function(){
+            window.location = "dashboard.html";
+        }, 2000); 
+    </script>
 
 </body>
 </html>

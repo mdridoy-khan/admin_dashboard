@@ -124,5 +124,32 @@
                 margin-top: 2.5rem;
             }
         }
+        .input-fields{
+            background: none;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            margin-top: 1rem;
+            fieldset{
+                position: relative;
+                & + fieldset{
+                    margin-top: 2.4rem;
+                }
+                &.add-more{
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    margin-bottom: 5.5rem;
+                }
+            }
+            .input-icon{
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                left: 1.2rem;
+                transform: translateY(-50%);
+            }
+        }
     }
 }

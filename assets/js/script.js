@@ -43,54 +43,5 @@
     ///============= Select2 =============\\\
     $('.select2').select2();
 
-    function socialmedia(newcount){
-        var items = `<div class="social_link_item">
-            <div class="row gx-3">
-                <div class="col-5">
-                    <input type="text" name="socialMedia[${newcount}]['name']" placeholder="Social Name" value="" class="form-control">
-                </div>
-                <div class="col-5">
-                    <input type="url" class="form-control" name="socialMedia[${newcount}][url]" placeholder="url">
-                </div>
-                <div class="col-2">
-                    <div class="form-check justify-content-center">
-                        <input class="form-check-input" name="socialMedia[${newcount}][newtab]" type="checkbox" id="social_icon_${newcount}">
-                        <label for="social_icon_${newcount}" class="form-check-label" title="Open in new tab"></label>
-                    </div>
-                </div>
-                <button type="button" class="remove-field"><i class="fal fa-times"></i></button>
-            </div>
-        </div>`;
-
-        return items;
-    }        
-                    
-    function addAbleItems( addbutton, cloneITem, appendto, dataCount ){
-        var itemcount = $(dataCount).data('count');
-        $(document).on('click', addbutton, function() {
-            var thisButtonType = $(this).data('type');
-            var newcount = itemcount++;
-            $(dataCount).attr('data-count', newcount);
-
-            if(thisButtonType == 'socialMedia') {
-                var items = socialmedia(newcount);
-            } else if (thisButtonType == 'footerTopMenu') {
-                var items = footerTopMenuItem(newcount);
-            } else if (thisButtonType == 'downloadAppsButton') {
-                var items = downloadButtonItem(newcount);
-            } else if (thisButtonType == 'footerBottomMenu') {
-                var items = footerBottomMenuItem(newcount);
-            };
-            $(items).appendTo(appendto);
-        });
-        $(document).on('click', '.remove-field', function(e) {
-            $(this).parent().parent().remove();
-            e.preventDefault();
-            var newcount = itemcount--;
-        });
-    };
-    addAbleItems('.add_social_link', '.social_link_item', '.social_link_dynamic','#social_item_count');
-
-
 
 })(jQuery);

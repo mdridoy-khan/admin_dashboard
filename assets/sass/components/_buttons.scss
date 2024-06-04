@@ -22,6 +22,7 @@
     font-weight: 600;
     transition: all .15s ease;
     @include inline-flex-center;
+    background-color: var(--white-950);
 }
 
 .notification-bell-icon {
@@ -44,15 +45,6 @@
         text-align: center;
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,16 +1,53 @@
-#onboard-steps {
+.onboard_screen {
+    min-height: 100vh;
+    @include flex-center;
+    padding: 0 2rem;
 
+    .onboard_container {
+        width: 100%;
+        max-width: 64rem;
+        margin: 5rem auto;
+    }
+}
+
+#onboard-steps {
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    margin: 0;
     > .content {
         background: transparent;
+        padding-bottom: 3rem;
+    }
+    .step-title{
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: var(--slate-300);
+        font-family: var(--ff-primary);
+        line-height: 1.4;
+        @include flex-center;
+        padding-bottom: 2.4rem;
+        margin-bottom: 4rem;
+        border-bottom: .1rem solid var(--slate-100);
+        span{
+            color: var(--slate-950);
+        }
     }
     .body {
         width: 100%;
-        input{
-            display: none;
-        }
-        label{
+        position: inherit;
+
+        label {
             margin-bottom: 0;
-            padding: 6.5rem 2.4rem;
+            &.checkable-field{
+                @include flex-center;
+                padding: 4rem 1.6rem;
+                position: relative;
+                &::before{
+                    display: none;
+                }
+                
+            }
         }
     }
     .steps {
@@ -28,6 +65,7 @@
     justify-content: center;
     align-items: center;
     color: var(--slate-950);
+    height: 100%;
     label {
         background-color: var(--white-950);
         border-radius: 10px;
@@ -43,6 +81,7 @@
         padding: 2rem;
         transition: all .15s ease;
         z-index: 10;
+        padding: 6.5rem 2.4rem;
         &::before{
             content: '\f111';
             position: absolute;
@@ -78,5 +117,56 @@
                 }
             }
         }
+    }
+    .toggle-switch{
+        & + label span{
+            width: 3rem;
+            height: 1.7rem;
+            background: var(--gray-100);
+            border-radius: 5rem;
+            position: absolute;
+            top: 1rem;
+            right: 1.6rem;
+            &::before{
+                content: "";
+                position: absolute;
+                background: var(--white-950);
+                width: 1.3rem;
+                height: 1.3rem;
+                border-radius: 50%;
+                top: .2rem;
+                right: 1.5rem;
+                z-index: 11;
+                transition: all .3 ease;
+            }
+        }
+        &:checked{
+            & + label{
+                span{
+                    background: var(--primary-600);
+                    &::before{
+                        right: .2rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+//loader screen css
+.loader-content{
+    @include flex-center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    img{
+        margin-bottom: 1.6rem;
+    }
+    #typing{
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: var(--slate-950);
     }
 }
