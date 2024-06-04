@@ -124,5 +124,65 @@
                 margin-top: 2.5rem;
             }
         }
+        &#form4{
+            background: none;
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            margin-top: 1rem;
+            input{
+                display: block;
+                width: 100%;
+                border: .1rem solid var(--slate-100);
+                padding: 1.3rem .8rem 1.2rem 4.4rem;
+                border-radius: .8rem;
+            }
+            fieldset{
+                position: relative;
+                & + fieldset{
+                    margin-top: 2.4rem;
+                }
+                &.add-more{
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    margin-bottom: 5.5rem;
+                }
+                label{
+                    position: inherit;
+                    padding: 0;
+                    transform: translateY(0);
+                    margin: 0;
+                    left: 0;
+                    font-size: 1.4rem;
+                    line-height: 1.5;
+                    color: var(--slate-600);
+                    margin-bottom: .4rem;
+                }
+                .copy-link-field{
+                    position: relative;
+                    input{
+                        padding: 1.2rem 4.4rem 1.2rem 1.2rem;
+                    }
+                    .copy-link{
+                        position: absolute;
+                        right: 1.2rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: none;
+                        border: 0;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            .input-icon{
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                left: 1.2rem;
+                transform: translateY(-50%);
+            }
+        }
     }
 }

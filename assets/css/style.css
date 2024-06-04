@@ -327,25 +327,25 @@ textarea.form-control:focus {
 }
 
 ::-webkit-input-placeholder {
-  color: var(--black-950);
+  color: var(--slate-600);
 }
 
 .widget_newsletter::-webkit-input-placeholder {
-  color: #808080;
+  color: var(--slate-600);
 }
 
 :-moz-placeholder {
-  color: var(--black-950);
+  color: var(--slate-600);
   opacity: 1;
 }
 
 ::-moz-placeholder {
-  color: var(--black-950);
+  color: var(--slate-600);
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: var(--black-950);
+  color: var(--slate-600);
 }
 
 /**
@@ -405,6 +405,27 @@ textarea.form-control:focus {
   border-radius: 1rem;
   padding: 0.1rem 0.5rem;
   text-align: center;
+}
+
+.tertiary-btn {
+  font-size: 1.6rem;
+  color: var(--slate-600);
+  font-weight: 600;
+  font-family: var(--ff-primary);
+  line-height: 1.7;
+  padding: 1.2rem 2.4rem;
+  border: 0.1rem solid var(--slate-200);
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  background: none;
+  transition: all 0.3s ease;
+}
+.tertiary-btn:hover {
+  border: 0.1rem solid var(--slate-300);
+  color: var(--slate-700);
 }
 
 .text__primary {
@@ -651,15 +672,93 @@ textarea.form-control:focus {
   justify-content: center;
   margin-top: 2.5rem;
 }
+.user-auth form#form4 {
+  background: none;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin-top: 1rem;
+}
+.user-auth form#form4 input {
+  display: block;
+  width: 100%;
+  border: 0.1rem solid var(--slate-100);
+  padding: 1.3rem 0.8rem 1.2rem 4.4rem;
+  border-radius: 0.8rem;
+}
+.user-auth form#form4 fieldset {
+  position: relative;
+}
+.user-auth form#form4 fieldset + fieldset {
+  margin-top: 2.4rem;
+}
+.user-auth form#form4 fieldset.add-more {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 5.5rem;
+}
+.user-auth form#form4 fieldset label {
+  position: inherit;
+  padding: 0;
+  transform: translateY(0);
+  margin: 0;
+  left: 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: var(--slate-600);
+  margin-bottom: 0.4rem;
+}
+.user-auth form#form4 fieldset .copy-link-field {
+  position: relative;
+}
+.user-auth form#form4 fieldset .copy-link-field input {
+  padding: 1.2rem 4.4rem 1.2rem 1.2rem;
+}
+.user-auth form#form4 fieldset .copy-link-field .copy-link {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+}
+.user-auth form#form4 .input-icon {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 1.2rem;
+  transform: translateY(-50%);
+}
 
 /*--------------------------------------------------------------
 # Authentication Onboard Page
 --------------------------------------------------------------*/
 #onboard-steps > .content {
   background: transparent;
+  padding-bottom: 3rem;
+}
+#onboard-steps .step-title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--slate-300);
+  font-family: var(--ff-primary);
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2.4rem;
+  margin-bottom: 4rem;
+  border-bottom: 0.1rem solid var(--slate-100);
+}
+#onboard-steps .step-title span {
+  color: var(--slate-950);
 }
 #onboard-steps .body {
   width: 100%;
+  position: inherit;
 }
 #onboard-steps .body input {
   display: none;

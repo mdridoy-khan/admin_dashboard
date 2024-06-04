@@ -56,7 +56,7 @@
             <h3 class="title"></h3>
             <section>
                 <div class="step-title">
-                    1/5
+                    <span>1</span>/5
                 </div>
                 <h6 class="mb-4">
                     How do you plan to use Project Manager?
@@ -64,37 +64,37 @@
                 <div class="row g-4">
                     <div class="col-4">
                         <div class="checkable-widget">
-                            <input type="checkbox" id="check1">
+                            <input type="radio" name="is_project" id="check1">
                             <label for="check1">Personal</label>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="checkable-widget">
-                            <input type="checkbox" id="check2">
+                            <input type="radio" name="is_project" id="check2">
                             <label for="check2">Creative Use</label>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="checkable-widget">
-                            <input type="checkbox" id="check3">
+                            <input type="radio" name="is_project" id="check3">
                             <label for="check3">Sales Purpose</label>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="checkable-widget">
-                            <input type="checkbox" id="check4">
+                            <input type="radio" name="is_project" id="check4">
                             <label for="check4">Marketing</label>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="checkable-widget">
-                            <input type="checkbox" id="check5">
+                            <input type="radio" name="is_project" id="check5">
                             <label for="check5">Operational</label>
                         </div>
                     </div>
                     <div class="col-4">
                         <div class="checkable-widget">
-                            <input type="checkbox" id="check6">
+                            <input type="radio" name="is_project" id="check6">
                             <label for="check6">Professional</label>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
             <h3 class="title"></h3>
             <section>
                 <div class="step-title">
-                    2/5
+                    <span>2</span>/5
                 </div>
                 <h6 class="mb-4">
                     How experience are you with productivity application?
@@ -136,7 +136,7 @@
             <h3 class="title"></h3>
             <section>
                 <div class="step-title">
-                    3/5
+                    <span>3</span>/5
                 </div>
                 <h6 class="mb-4">
                     How many people you will be working with?
@@ -185,18 +185,48 @@
             <h3 class="title"></h3>
             <section>
                 <div class="step-title">
-                    4/5
+                    <span>4</span>/5
                 </div>
                 <h6 class="mb-4">
                     Invite people you are working with?
                 </h6>
+                <form action="#" method="post" id="form4">
+                    <fieldset>
+                        <input type="email" placeholder="Co-worker Email">
+                        <span class="input-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#6B7D94"/>
+                                <path d="M12.0002 14.5C6.99016 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5902C20.8702 22.5 21.0902 22.28 21.0902 22C21.0902 17.86 17.0102 14.5 12.0002 14.5Z" fill="#6B7D94"/>
+                            </svg>   
+                        </span>
+                    </fieldset>
+                    <fieldset class="add-more">
+                        <button type="button" class="tertiary-btn">
+                            <i class="fal fa-plus"></i> Add
+                        </button>
+                    </fieldset>
+                    <fieldset>
+                        <label>
+                            Send Invitation link to user on any Email
+                        </label>
+                        <fieldset class="copy-link-field">
+                            <input type="text" placeholder="https://projectmanager.com/invite/john's-workspace/5tu4398tgih589t/">
+                            <button type="button" class="copy-link">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10.6673 8.59992V11.3999C10.6673 13.7333 9.73398 14.6666 7.40065 14.6666H4.60065C2.26732 14.6666 1.33398 13.7333 1.33398 11.3999V8.59992C1.33398 6.26658 2.26732 5.33325 4.60065 5.33325H7.40065C9.73398 5.33325 10.6673 6.26658 10.6673 8.59992Z" stroke="#4B5768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M14.6673 4.59992V7.39992C14.6673 9.73325 13.734 10.6666 11.4007 10.6666H10.6673V8.59992C10.6673 6.26658 9.73398 5.33325 7.40065 5.33325H5.33398V4.59992C5.33398 2.26659 6.26732 1.33325 8.60065 1.33325H11.4007C13.734 1.33325 14.6673 2.26659 14.6673 4.59992Z" stroke="#4B5768" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                            </button>
+                        </fieldset>
+                    </fieldset>
+                </form>
             </section>
 
 
             <h3 class="title"></h3>
             <section>
                 <div class="step-title">
-                    5/5
+                    <span>5</span>/5
                 </div>
                 <h6 class="mb-4">
                     Let’s end this 🙏  - integrate your favourite app to this Workstation

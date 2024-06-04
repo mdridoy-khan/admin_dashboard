@@ -2,9 +2,25 @@
 
     > .content {
         background: transparent;
+        padding-bottom: 3rem;
+    }
+    .step-title{
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: var(--slate-300);
+        font-family: var(--ff-primary);
+        line-height: 1.4;
+        @include flex-center;
+        padding-bottom: 2.4rem;
+        margin-bottom: 4rem;
+        border-bottom: .1rem solid var(--slate-100);
+        span{
+            color: var(--slate-950);
+        }
     }
     .body {
         width: 100%;
+        position: inherit;
         input{
             display: none;
         }
