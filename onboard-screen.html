@@ -53,9 +53,7 @@
     <div class="user-auth">
         <div class="auth-container" id="onboard-steps">
 
-            <h3 class="title">
-                1
-            </h3>
+            <h3 class="title"></h3>
             <section>
                 <div class="step-title">
                     1/5
@@ -103,10 +101,11 @@
                 </div>
             </section>
 
-            <h3 class="title">
-                2
-            </h3>
+            <h3 class="title"></h3>
             <section>
+                <div class="step-title">
+                    2/5
+                </div>
                 <h6 class="mb-4">
                     How experience are you with productivity application?
                 </h6>
@@ -133,10 +132,12 @@
                     </div>
                 </div>
             </section>
-            <h3 class="title">
-                3
-            </h3>
+
+            <h3 class="title"></h3>
             <section>
+                <div class="step-title">
+                    3/5
+                </div>
                 <h6 class="mb-4">
                     How many people you will be working with?
                 </h6>
@@ -179,6 +180,28 @@
                     </div>
                 </div>
             </section>
+
+            
+            <h3 class="title"></h3>
+            <section>
+                <div class="step-title">
+                    4/5
+                </div>
+                <h6 class="mb-4">
+                    Invite people you are working with?
+                </h6>
+            </section>
+
+
+            <h3 class="title"></h3>
+            <section>
+                <div class="step-title">
+                    5/5
+                </div>
+                <h6 class="mb-4">
+                    Let’s end this 🙏  - integrate your favourite app to this Workstation
+                </h6>
+            </section>
         </div>
     </div>
     <!--~~./ end Authentication ~~-->
@@ -196,23 +219,13 @@
 
     <!-- All The JS Files
     ================================================== -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
     <script src="assets/js/jquery.steps.min.js"></script>
     <script src="assets/js/script.js"></script>
 
     <script>
-        $(".toggle-password").click(function() {
-            $(this).toggleClass("fa-eye fa-eye-slash");
-            var input = $($(this).attr("data-toggle"));
-            if (input.attr("type") == "password") {
-                input.attr("type", "text");
-            } else {
-                input.attr("type", "password");
-            }
-        });
-
         $("#onboard-steps").steps({
             headerTag: "h3",
             bodyTag: "section",

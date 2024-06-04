@@ -655,6 +655,9 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # Authentication Onboard Page
 --------------------------------------------------------------*/
+#onboard-steps > .content {
+  background: transparent;
+}
 #onboard-steps .body {
   width: 100%;
 }
