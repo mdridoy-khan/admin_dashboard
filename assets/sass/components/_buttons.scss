@@ -82,7 +82,6 @@
         border: 0;
         overflow: hidden;
         a{
-            padding: 1rem 1.5rem;
             display: flex;
             align-items: center;
             gap: 1rem;
@@ -93,6 +92,9 @@
             &:hover {
                 color: var(--primary-600);
                 background-color: var(--primary-50);
+            }
+            &.item-link{
+                padding: 1rem 1.5rem;
             }
         }
     }

@@ -22,6 +22,7 @@
             left: -32rem;
             transition: all .2s ease;
             width: 30rem;
+            z-index: 1024;
             &.sidebar_collapsed {
                 left: 0;
             }
