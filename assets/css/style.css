@@ -434,7 +434,8 @@ textarea.form-control:focus {
   max-width: 15rem;
   background: var(--white-950);
   box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
-  border-radius: 0 0 0.6rem 0.6rem;
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--slate-50);
   padding: 0;
   border: 0;
   overflow: hidden;
@@ -1367,6 +1368,12 @@ textarea.form-control:focus {
   align-items: center;
   justify-content: center;
 }
+.workspace table .project_name .name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--slate-950);
+  line-height: 1.6;
+}
 .workspace table .task {
   display: flex;
   align-items: center;
@@ -1450,6 +1457,128 @@ textarea.form-control:focus {
   color: #D0D5DD;
   font-size: 1.6rem;
   font-weight: 600;
+}
+
+.workspace .project_card {
+  background: var(--white-950);
+  border-radius: 1.6rem;
+  box-shadow: 0 0.2rem 0.2rem 0.1rem var(--slate-50);
+  border: 0.1rem solid var(--slate-50);
+  padding: 2.4rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.workspace .project_card .project_name {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+}
+.workspace .project_card .project_name .icon {
+  width: 6.5rem;
+  height: 6.5rem;
+  background: var(--slate-50);
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.workspace .project_card .project_name .name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--slate-950);
+  line-height: 1.6;
+}
+.workspace .project_card .dated {
+  margin-bottom: 6.5rem;
+}
+.workspace .project_card .dated span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  display: flex;
+  border-radius: 5rem;
+  color: var(--slate-500);
+  background: var(--slate-50);
+  display: inline-block;
+}
+.workspace .project_card .dated span b {
+  margin-left: 0.8rem;
+}
+.workspace .project_card .task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--slate-500);
+  margin-bottom: 2.4rem;
+}
+.workspace .project_card .task i {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-right: 0.8rem;
+  color: var(--slate-500);
+}
+.workspace .project_card .task span {
+  color: var(--slate-950);
+}
+.workspace .project_card .task p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--slate-700);
+}
+.workspace .project_card .members {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.workspace .project_card .members .image-group {
+  display: flex;
+  align-items: center;
+}
+.workspace .project_card .members .image-group img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: -1.6rem;
+  box-shadow: 0 0 0 0.3rem #fff;
+}
+.workspace .project_card .members .image-group span {
+  width: 4rem;
+  height: 4rem;
+  background: var(--primary-50);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--slate-500);
+  box-shadow: 0 0 0 0.3rem #fff;
+}
+.workspace .project_card .members .add-member {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0.1rem dashed #D0D5DD;
+  border-radius: 50%;
+  color: #D0D5DD;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.workspace .project_card .project_dropdown {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+}
+.workspace .project_card:hover {
+  transform: translateY(-0.5rem);
 }
 
 /*# sourceMappingURL=style.css.map */
