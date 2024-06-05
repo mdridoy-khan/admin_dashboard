@@ -1,4 +1,7 @@
 .workspace{
+    & + .workspace{
+        margin-top: 3rem;
+    }
     table{
         width: 100%;
         border-collapse: separate;
@@ -20,7 +23,7 @@
                 }
             }
         }
-        .single_project{
+        .project_name{
             display: flex;
             align-items: center;
             gap: 1.6rem;
@@ -56,33 +59,27 @@
                color: var(--slate-700);
             }
         }
-        .due-date{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--slate-50);
-            padding: .4rem 1.2rem;
-            border-radius: 5rem;
-            gap: .8rem;
-            max-width: 17rem;
-            width: 100%;
-            margin: 0 auto;
+        .dated{
             span{
                 font-size: 1.2rem;
                 font-weight: 700;
+                padding: .4rem 1.2rem;
+                display: flex;
+                border-radius: 5rem;
                 color: var(--slate-500);
+                background: var(--slate-50);
                 display: inline-block;
-                &.text-black{
-                    color: var(--slate-950);
+                b{
+                    margin-left: .8rem;
                 }
             }
         }
-        .invite-member{
+        .members{
             display: flex;
             align-items: center;
             gap: .8rem;
             padding: 1.6rem 2.4rem;
-            .member-images{
+            .image-group{
                 display:flex;
                 align-items: center;
                 img{
@@ -116,34 +113,5 @@
                 font-weight: 600;
             }
         }
-        .dropdown{
-            .dropdown-toggle{
-                background: transparent;
-                border: 0;
-                color: var(--slate-950);
-                outline: none;
-                box-shadow: none;
-                font-size: 1.6rem;
-                font-weight: 600;
-                &::after{
-                    display: none;
-                }
-            }
-            .dropdown-menu{
-                padding: 0;
-            }
-        }
-        // .dropdown-icon{
-        //     max-width: 5rem;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: end;
-        //     color: var(--slate-700);
-        //     font-weight: 700;
-        //     font-size: 2rem;
-        //     cursor: pointer;
-        //     margin-right: 2rem;
-        // }
     }
-
 }
