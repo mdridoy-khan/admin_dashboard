@@ -2,7 +2,6 @@
     min-height: 100vh;
     @include flex-center;
     padding: 0 2rem;
-
     .onboard_container {
         width: 100%;
         max-width: 64rem;
@@ -56,6 +55,19 @@
     .actions{
         @include flex-center;
     }
+    .dynamic-fields{
+        .remove-field{
+            @include flex-center;
+            font-size: 1.8rem;
+            color: var(--error-500);
+            background: var(--white-950);
+            padding: 0 1.5rem;
+            border-left: 0;
+        }
+        .form-control{
+            border-right: 0;
+        }
+    }
 }
 .checkable-widget {
     width: 100%;
@@ -101,6 +113,7 @@
             margin-top: .8rem;
             color: #4B5768;
             z-index: 2;
+            transition: all .15s ease;
         }
     }
     
@@ -127,6 +140,7 @@
             position: absolute;
             top: 1rem;
             right: 1.6rem;
+            transition: all .15s ease;
             &::before{
                 content: "";
                 position: absolute;
@@ -137,7 +151,7 @@
                 top: .2rem;
                 right: 1.5rem;
                 z-index: 11;
-                transition: all .3 ease;
+                transition: all .3s ease;
             }
         }
         &:checked{
