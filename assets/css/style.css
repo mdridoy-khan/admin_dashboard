@@ -963,6 +963,19 @@ textarea.form-control:focus {
   align-items: center;
   justify-content: center;
 }
+#onboard-steps .dynamic-fields .remove-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--error-500);
+  background: var(--white-950);
+  padding: 0 1.5rem;
+  border-left: 0;
+}
+#onboard-steps .dynamic-fields .form-control {
+  border-right: 0;
+}
 
 .checkable-widget {
   width: 100%;
@@ -1013,6 +1026,7 @@ textarea.form-control:focus {
   margin-top: 0.8rem;
   color: #4B5768;
   z-index: 2;
+  transition: all 0.15s ease;
 }
 .checkable-widget input {
   display: none;
@@ -1034,6 +1048,7 @@ textarea.form-control:focus {
   position: absolute;
   top: 1rem;
   right: 1.6rem;
+  transition: all 0.15s ease;
 }
 .checkable-widget .toggle-switch + label span::before {
   content: "";
@@ -1045,7 +1060,7 @@ textarea.form-control:focus {
   top: 0.2rem;
   right: 1.5rem;
   z-index: 11;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
 }
 .checkable-widget .toggle-switch:checked + label span {
   background: var(--primary-600);
