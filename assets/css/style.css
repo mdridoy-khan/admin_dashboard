@@ -1146,7 +1146,11 @@ textarea.form-control:focus {
 }
 .db_wrapper .db_body {
   height: calc(100vh - 7.2rem);
-  overflow-y: scroll;
+}
+@media screen and (max-width: 991px) {
+  .db_wrapper .db_body {
+    overflow-y: scroll;
+  }
 }
 .db_wrapper .db_body .sidebar {
   background-color: var(--white-950);
@@ -1281,6 +1285,12 @@ textarea.form-control:focus {
   padding: 2rem;
 }
 @media screen and (min-width: 992px) {
+  .db_wrapper .db_body .db_content {
+    height: 100%;
+    overflow-y: scroll;
+  }
+}
+@media screen and (min-width: 1200px) {
   .db_wrapper .db_body .db_content {
     padding: 4rem;
   }
