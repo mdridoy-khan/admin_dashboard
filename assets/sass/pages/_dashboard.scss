@@ -3,6 +3,7 @@
     overflow: hidden;    
     .db_body {
         height: calc(100vh - 7.2rem);
+        overflow-y: scroll;
         .sidebar {
             background-color: var(--white-950);
             overflow-y: auto;
@@ -148,7 +149,11 @@
         }
 
         .db_content {
-            padding: 4rem;
+            padding: 2rem;
+
+            @include lg-up {
+                padding: 4rem;
+            }
         }
         .db_title{
             margin-bottom: 2rem;

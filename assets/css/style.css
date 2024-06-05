@@ -552,12 +552,20 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
     [ ## Header ]
 --------------------------------------------------------------*/
-.db_wrapper .db_header, .db_wrapper .db_body {
+.db_wrapper .db_header {
   display: flex;
   flex-wrap: wrap;
 }
-.db_wrapper .sidebarBlock, .db_wrapper .sidebar {
-  flex: 0 0 30rem;
+@media screen and (min-width: 992px) {
+  .db_wrapper .db_body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 992px) {
+  .db_wrapper .sidebarBlock, .db_wrapper .sidebar {
+    flex: 0 0 30rem;
+  }
 }
 @media screen and (max-width: 991px) {
   .db_wrapper .sidebar {
@@ -1137,6 +1145,7 @@ textarea.form-control:focus {
 }
 .db_wrapper .db_body {
   height: calc(100vh - 7.2rem);
+  overflow-y: scroll;
 }
 .db_wrapper .db_body .sidebar {
   background-color: var(--white-950);
@@ -1268,7 +1277,12 @@ textarea.form-control:focus {
   color: var(--primary-600);
 }
 .db_wrapper .db_body .db_content {
-  padding: 4rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .db_wrapper .db_body .db_content {
+    padding: 4rem;
+  }
 }
 .db_wrapper .db_body .db_title {
   margin-bottom: 2rem;
@@ -1320,12 +1334,13 @@ textarea.form-control:focus {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 0.8rem;
-  border-radius: 1.6rem;
 }
 .workspace table tr td {
   background: var(--white-950);
   border-top: 0.1rem solid var(--slate-50);
   border-bottom: 0.1rem solid var(--slate-50);
+  vertical-align: middle;
+  white-space: nowrap;
 }
 .workspace table tr td:first-child {
   border-radius: 1.6rem 0 0 1.6rem;
@@ -1334,12 +1349,14 @@ textarea.form-control:focus {
 .workspace table tr td:last-child {
   border-radius: 0 1.6rem 1.6rem 0;
   border-right: 0.1rem solid var(--slate-50);
+  padding: 0 2rem;
 }
 .workspace table .project_name {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 1.6rem;
-  padding: 1.6rem 2.4rem;
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
 }
 .workspace table .project_name .icon {
   width: 6.5rem;
@@ -1359,7 +1376,7 @@ textarea.form-control:focus {
   font-size: 1.6rem;
   font-weight: 600;
   color: var(--slate-500);
-  padding: 1.6rem 2.4rem;
+  padding: 1rem 1.5rem;
 }
 .workspace table .task i {
   font-size: 1.6rem;
@@ -1391,12 +1408,15 @@ textarea.form-control:focus {
 .workspace table .members {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8rem;
-  padding: 1.6rem 2.4rem;
+  padding: 1rem 1.5rem;
 }
 .workspace table .members .image-group {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  min-width: max-content;
 }
 .workspace table .members .image-group img {
   width: 4rem;

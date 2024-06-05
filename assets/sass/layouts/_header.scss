@@ -1,10 +1,18 @@
 .db_wrapper {
-    .db_header, .db_body {
+    .db_header {
         display: flex;
         flex-wrap: wrap;
-    }    
+    }
+    .db_body {
+        @include lg-up {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
     .sidebarBlock, .sidebar {
-        flex: 0 0 30rem;
+        @include lg-up {
+            flex: 0 0 30rem;
+        }
     }
     .sidebar {
         @include lg-down {
