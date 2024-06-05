@@ -76,7 +76,8 @@
         max-width: 15rem;
         background: var(--white-950);
         box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
-        border-radius: 0 0 .6rem .6rem;
+        border-radius: .6rem;
+        border: .1rem solid var(--slate-50);
         padding: 0;
         border: 0;
         overflow: hidden;
