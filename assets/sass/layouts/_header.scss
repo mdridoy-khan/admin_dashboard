@@ -1,0 +1,219 @@
+.db_wrapper {
+    .db_header, .db_body {
+        display: flex;
+        flex-wrap: wrap;
+    }    
+    .sidebarBlock, .sidebar {
+        flex: 0 0 30rem;
+    }
+    .sidebar {
+        @include lg-down {
+            position: fixed;
+            top: 7.8rem;
+            bottom: 0;
+            left: -32rem;
+            transition: all .2s ease;
+            width: 30rem;
+            &.sidebar_collapsed {
+                left: 0;
+            }
+        }
+    }
+    .headerBlock, .db_content {
+        flex: 1;
+    }
+    .db_header {
+        background-color: var(--white-950);
+        border-bottom: .1rem solid var(--slate-50);
+        .sidebarBlock {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.6rem;
+            position: relative;
+            border-right: .1rem solid var(--slate-50);
+            @include lg-down {
+                flex: 0 0 15rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: var(--slate-700);
+
+                img {
+                    width: 4rem;
+                }
+            }
+            .name {
+                @include lg-down {
+                    display: none;
+                }
+            }
+        }
+        .headerBlock {
+            display: flex;
+            padding: 1.5rem;
+            > ul {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+            }
+            .dropdown-menu {
+                min-width: 35rem;
+                max-width: 35rem;
+                background: var(--white-950);
+                box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
+                border-radius: 0 0 .6rem .6rem;
+                padding: 0;
+                border: 0;
+
+                .dropdown_header, .dropdown_footer {
+                    background-color: #F0F1F3;
+                    padding: 1rem;
+                    margin: 1rem 1rem 0;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    border-radius: 0.4rem;
+                    display: block;
+                    font-weight: 600;
+                }
+                .max-height-scroll {
+                    max-height: 30rem;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar {
+                        width: 5px;
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: transparent;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        box-shadow: inset 0 0 2rem var(--slate-300);
+                    }
+                }
+                .notification__single {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 0 1rem;
+                    margin: .5rem 0;
+                    padding: 1rem 1rem;
+                    position: relative;
+                    .notification_icon {
+                        width: 4rem;
+                        height: 4rem;
+                        border-radius: 50%;
+                        @include inline-flex-center;                        
+                        font-size: 1.5rem;
+                    }
+                    .notification__details {
+                        flex: 1;
+                        .subject {
+                            font-weight: 600;
+                            font-size: 1.4rem;
+                        }
+                        p {
+                            font-size: 1.2rem;
+                            line-height: 1.6;
+                            max-width: 28rem;
+                        }
+                    }
+                }
+            }
+            .profile-dropdown {
+                .profile-nav {
+                    gap: 1rem;
+
+                    h6 {
+                        font-size: 1.6rem;
+                        font-weight: 600;
+
+                    }
+                }
+                hr {
+                    background-color: var(--slate-50);
+                    opacity: 1;
+                }
+
+                ul {
+                    li {
+                        a {
+                            padding: 1rem 1.5rem;
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            font-weight: 500;
+                            font-size: 1.4rem;
+                            color: var(--slate-700);
+                            transition: all .15s ease;
+                            border-radius: .6rem;
+                            &:hover {
+                                color: var(--primary-600);
+                                background-color: var(--primary-50);
+                            }
+                        }
+                    }
+                }
+            }
+            .searchbox {
+                @include sm-down {
+                    display: none;
+                }
+                .input-group-text {
+                    background-color: transparent;
+                    border: 0;
+                    @include  flex-center;
+                    font-size: 2rem;
+                    padding: 0;
+                    color: var(--slate-300);
+                }
+                input {
+                    color: var(--slate-300);
+                    border: 0;
+                    padding: 0 1rem;
+                }
+            }
+            .user-profile-icon {
+                position: relative;
+                img {
+                    border-width: 50%;
+                    @include dimension(4rem, 4rem);
+
+                }
+
+                .status {
+                    display: inline-block;
+                    @include dimension(1rem,1rem);
+                    background-color: var(--clr);
+                    border-radius: 50%;
+                    box-shadow: 0 0 0 .3rem var(--white-950);
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+        .sidebarToggler {
+            border: .1rem solid var(--slate-50);
+            width: 4.5rem;
+            height: 4.5rem;
+            @include dimension(4.5rem, 4.5rem);
+            border-radius: 50%;
+            background-color: var(--white-950);
+            @include flex-center;
+            @include lg-up {
+                display: none;
+            }
+            .collapseable {
+                display: none;
+            }
+            &.sidebar_collapsed {
+                .expandable {
+                    display: none;
+                }
+                .collapseable {
+                    display: block;
+                }
+            }
+        }
+    }
+}
