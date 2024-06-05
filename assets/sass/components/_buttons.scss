@@ -52,3 +52,47 @@
 .text__primary {
     color: var(--primary-600)
 }
+.text-black{
+    color: var(--slate-950);
+}
+
+
+//dropdown menu for team space page
+.dropdown{
+    button{
+        background: transparent;
+        border: 0;
+        color: var(--slate-950);
+        outline: none;
+        box-shadow: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        &::after{
+            display: none;
+        }
+    }
+    .dropdown-menu{
+        min-width: 15rem;
+        max-width: 15rem;
+        background: var(--white-950);
+        box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
+        border-radius: 0 0 .6rem .6rem;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        a{
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+            font-size: 1.4rem;
+            color: var(--slate-700);
+            transition: all .15s ease;
+            &:hover {
+                color: var(--primary-600);
+                background-color: var(--primary-50);
+            }
+        }
+    }
+}

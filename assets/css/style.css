@@ -413,6 +413,47 @@ textarea.form-control:focus {
   color: var(--primary-600);
 }
 
+.text-black {
+  color: var(--slate-950);
+}
+
+.dropdown button {
+  background: transparent;
+  border: 0;
+  color: var(--slate-950);
+  outline: none;
+  box-shadow: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.dropdown button::after {
+  display: none;
+}
+.dropdown .dropdown-menu {
+  min-width: 15rem;
+  max-width: 15rem;
+  background: var(--white-950);
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 0.6rem 0.6rem;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+.dropdown .dropdown-menu a {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--slate-700);
+  transition: all 0.15s ease;
+}
+.dropdown .dropdown-menu a:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
+}
+
 .glightbox-clean .gslide-title {
   margin: 0;
 }
@@ -1229,6 +1270,9 @@ textarea.form-control:focus {
 .db_wrapper .db_body .db_content {
   padding: 4rem;
 }
+.db_wrapper .db_body .db_title {
+  margin-bottom: 2rem;
+}
 .db_wrapper .db_body .home-widgets .widget {
   background-color: var(--white-950);
   padding: 1.6rem;
@@ -1269,6 +1313,9 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # project table Page
 --------------------------------------------------------------*/
+.workspace + .workspace {
+  margin-top: 3rem;
+}
 .workspace table {
   width: 100%;
   border-collapse: separate;
@@ -1288,13 +1335,13 @@ textarea.form-control:focus {
   border-radius: 0 1.6rem 1.6rem 0;
   border-right: 0.1rem solid var(--slate-50);
 }
-.workspace table .single_project {
+.workspace table .project_name {
   display: flex;
   align-items: center;
   gap: 1.6rem;
   padding: 1.6rem 2.4rem;
 }
-.workspace table .single_project .icon {
+.workspace table .project_name .icon {
   width: 6.5rem;
   height: 6.5rem;
   background: var(--slate-50);
@@ -1328,44 +1375,36 @@ textarea.form-control:focus {
   font-weight: 700;
   color: var(--slate-700);
 }
-.workspace table .due-date {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--slate-50);
-  padding: 0.4rem 1.2rem;
-  border-radius: 5rem;
-  gap: 0.8rem;
-  max-width: 17rem;
-  width: 100%;
-  margin: 0 auto;
-}
-.workspace table .due-date span {
+.workspace table .dated span {
   font-size: 1.2rem;
   font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  display: flex;
+  border-radius: 5rem;
   color: var(--slate-500);
+  background: var(--slate-50);
   display: inline-block;
 }
-.workspace table .due-date span.text-black {
-  color: var(--slate-950);
+.workspace table .dated span b {
+  margin-left: 0.8rem;
 }
-.workspace table .invite-member {
+.workspace table .members {
   display: flex;
   align-items: center;
   gap: 0.8rem;
   padding: 1.6rem 2.4rem;
 }
-.workspace table .invite-member .member-images {
+.workspace table .members .image-group {
   display: flex;
   align-items: center;
 }
-.workspace table .invite-member .member-images img {
+.workspace table .members .image-group img {
   width: 4rem;
   height: 4rem;
   margin-right: -1.6rem;
   box-shadow: 0 0 0 0.3rem #fff;
 }
-.workspace table .invite-member .member-images span {
+.workspace table .members .image-group span {
   width: 4rem;
   height: 4rem;
   background: var(--primary-50);
@@ -1379,7 +1418,7 @@ textarea.form-control:focus {
   color: var(--slate-500);
   box-shadow: 0 0 0 0.3rem #fff;
 }
-.workspace table .invite-member .add-member {
+.workspace table .members .add-member {
   width: 4rem;
   height: 4rem;
   display: flex;
@@ -1391,21 +1430,6 @@ textarea.form-control:focus {
   color: #D0D5DD;
   font-size: 1.6rem;
   font-weight: 600;
-}
-.workspace table .dropdown .dropdown-toggle {
-  background: transparent;
-  border: 0;
-  color: var(--slate-950);
-  outline: none;
-  box-shadow: none;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-.workspace table .dropdown .dropdown-toggle::after {
-  display: none;
-}
-.workspace table .dropdown .dropdown-menu {
-  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
