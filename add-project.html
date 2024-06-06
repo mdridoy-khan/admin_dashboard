@@ -33,7 +33,19 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontAwesome5Pro.css">
     <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .create_project form {
+            display: flex;
+            width: calc(100% * var(--stepNumber));
+        }
+        .create_project form .page {
+            width: calc(100% / var(--stepNumber));
+            transition: margin-left 0.3s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
@@ -418,244 +430,188 @@
                 </div>
             </div>
 
-            <div class="db_content">
-                <div class="db_title">
-                    <h5>
-                        All Projects
-                    </h5>
-                </div>
-                <div class="filter_area mb-5">
-                    <div class="startBlock">
-                        <form action="#">
-                            <div class="input-item overflow-hidden">
-                                <div class="input-group align-items-center">
-                                    <label class="px-4">
-                                        Space
-                                    </label>
-                                    <select name="" class="select2">
-                                        <option value="">All</option>
-                                        <option value="">IT Transmit</option>
-                                        <option value="">NEN ERP</option>
-                                        <option value="">The Times BD</option>
-                                    </select>
+            <div class="db_content create_project">   
+                <div class="form-wrapper">
+                    <div class="overflow-hidden">
+                        <form action="#" id="create_project_form">
+                            <div class="page slide-page">
+                                <div class="form_page_header text-center">
+                                    <h6>
+                                        Basic Information
+                                    </h6>
+                                    <p>
+                                        Follow the steps to create your new project 
+                                    </p>
                                 </div>
-                            </div>
-                            <div class="input-item overflow-hidden">
-                                <div class="input-group align-items-center">
-                                    <label class="px-4">
-                                        Status
+                                <fieldset>
+                                    <label class="mb-2">
+                                        Project Thumbnail
                                     </label>
-                                    <select name="" class="select2">
-                                        <option value="">All</option>
-                                        <option value="">Active</option>
-                                        <option value="">Deactive</option>
-                                        <option value="">In Review</option>
-                                    </select>
-                                </div>
+                                    <div class="thumbnails_upload-wrapper">
+                                        <div class="input">
+                                            <input type="file" id="upload_icon" name="" onchange="upload_thumbnail(this);" class="d-none" required>
+                                            <label for="upload_icon" class="upload_icon">
+                                                <i class="fal fa-plus fa-2x"> </i>
+                                            </label>
+                                        </div>
+                                        <div class="preview">
+                                            <img src="assets/img/placeholder-image.png" id="projectThumb" alt="">                                    
+                                            <span class="remove_image">
+                                                <i class="fal fa-times"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </fieldset>
+        
+                                <fieldset>
+                                    <label class="mb-2">
+                                        Project Name<span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" placeholder="Project Name" class="form-control" required>
+                                </fieldset>
+                                <fieldset class="row gx-5">
+                                    <div class="col-lg-6">
+                                        <fieldset class="field">
+                                            <label class="mb-2">
+                                                Workstation Space<span class="text-danger">*</span>
+                                            </label>
+                                            <select name="" class="form-control select2" required>
+                                                <option value="">IT Transmit Ltd</option>
+                                                <option value="">NEN Construction</option>
+                                                <option value="">NEN Trading Corp</option>
+                                            </select>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <fieldset class="field">
+                                            <label class="mb-2">
+                                                Due Date<span class="text-danger">*</span>
+                                            </label>
+                                            <input type="date" name="" class="form-control flatpickr_calendar" required>
+                                        </fieldset>
+                                    </div>
+                                </fieldset>
+        
+                                <fieldset class="form-footer d-flex align-items-center">
+                                    <button class="firstNext next btn__primary ms-auto">
+                                        Proceed
+                                        <i class="fal fa-chevron-right"></i>
+                                    </button>
+                                </fieldset>
                             </div>
+        
+                            <div class="page">
+                                <div class="form_page_header text-center">
+                                    <h6>
+                                        Project Description
+                                    </h6>
+                                    <p>
+                                        Follow the steps to create your new project 
+                                    </p>
+                                </div>
+                                
+                                <fieldset>
+                                    <label class="mb-2">
+                                        Project Description<span class="text-danger">*</span>
+                                    </label>
+                                    <textarea name="" class="form-control" required>A little about the project description and the team that you’ll be working with.</textarea>
+                                </fieldset>
+    
+                                <fieldset class="form-footer d-flex align-items-center">
+                                    <button class="prev-1 prev btn__primary">
+                                        <i class="fal fa-chevron-left"></i>
+                                        Previous
+                                    </button>
+                                    <button class="next-1 next btn__primary ms-auto">
+                                        Continue
+                                        <i class="fal fa-chevron-right"></i>
+                                    </button>
+                                </fieldset>
+                            </div>
+    
+                            <div class="page">
+                                <div class="form_page_header text-center">
+                                    <h6>
+                                        Invite Participants
+                                    </h6>
+                                    <p>
+                                        Follow the steps to create your new project 
+                                    </p>
+                                </div>
+
+                                <fieldset>
+                                    <label class="mb-2">
+                                        Add Teammate
+                                    </label>
+                                    <input type="search" name="" class="form-control" id="addTeamMate" autocomplete="off" placeholder="Type name, email or designation to add new members">
+                                </fieldset>
+                                <fieldset class="suggested_team collapse">
+                                    <div class="suggested_item">
+                                        <div class="thumb">
+                                            <img 
+                                                src="assets/img/avatar1.png" 
+                                                alt=""
+                                                width="40"
+                                                class="rounded-circle"
+                                            >
+                                        </div>
+                                        <div class="name">
+                                            <h6>
+                                                Robert Taylor
+                                            </h6>
+                                            <p>
+                                                hello@gmail.com
+                                            </p>
+                                        </div>
+                                        <div class="designation ms-auto">
+                                            <span class="badge rounded-pill">UI/UX Designer</span>
+                                        </div>
+                                        <button class="action" type="button">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <div class="suggested_item">
+                                        <div class="thumb">
+                                            <img 
+                                                src="assets/img/avatar1.png" 
+                                                alt=""
+                                                width="40"
+                                                class="rounded-circle"
+                                            >
+                                        </div>
+                                        <div class="name">
+                                            <h6>
+                                                Robert Taylor
+                                            </h6>
+                                            <p>
+                                                hello@gmail.com
+                                            </p>
+                                        </div>
+                                        <div class="designation ms-auto">
+                                            <span class="badge rounded-pill">UI/UX Designer</span>
+                                        </div>
+                                        <button class="action" type="button">
+                                            <i class="fal fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="form-footer d-flex align-items-center">
+                                    <button class="prev-2 prev btn__primary">
+                                        <i class="fal fa-chevron-left"></i>
+                                        Previous
+                                    </button>
+                                    <button class="btn__primary ms-auto submit" type="submit">
+                                        Create Project
+                                    </button>
+                                </fieldset>
+                            </div>
+                            
+        
                         </form>
-                    </div>        
-                    <div class="endBlock">
-                        <ul class="d-flex align-items-center">
-                            <li class="btn-group">
-                                <a href="projects-table.html" class="active">
-                                    <i class="fas fa-list-ul"></i>
-                                </a>
-                                <a href="projects.html">
-                                    <i class="fad fa-th-large"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="add-project.html" class="btn__primary">
-                                    <i class="fal fa-plus"></i> New Project
-                                </a>
-                            </li>
-                        </ul>
-                    </div>        
-                </div>
-                <div class="workspace">
-                    <div class="name">
-                        Space : <b>IT TRANSMIT</b>
                     </div>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <a href="#" class="project_name">
-                                            <div class="icon">
-                                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.732 18.5984C13.4172 16.0415 16.0454 13.4133 18.6023 12.728L34.5431 8.45607C37.1 7.77085 38.6173 9.28814 37.9321 11.845L33.6601 27.7859C32.9749 30.3428 30.3467 32.971 27.7898 33.6562L11.8489 37.9282C9.29205 38.6134 7.77476 37.0961 8.45998 34.5392L12.732 18.5984Z" fill="#9E77ED"/>
-                                                    <path d="M6.34133 12.2078C7.02655 9.6509 9.6548 7.02264 12.2117 6.33742L28.1525 2.06545C30.7094 1.38023 32.2267 2.89752 31.5415 5.45441L27.2695 21.3952C26.5843 23.9521 23.9561 26.5804 21.3992 27.2656L5.45831 31.5376C2.90142 32.2228 1.38413 30.7055 2.06935 28.1486L6.34133 12.2078Z" fill="#6941C6"/>
-                                                </svg>
-                                            </div>
-                                            <h6 class="name">
-                                                Nen Erp
-                                            </h6>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <div class="task">
-                                            <div class="count">
-                                                <i class="fal fa-tasks"></i>
-                                                <span>
-                                                    15
-                                                </span>
-                                                /15
-                                            </div>
-                                            <p>
-                                                Tasks
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dated text-center">
-                                            <span>
-                                                Due Date <b class="text-black">Feb 20, 2024</b>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="members">
-                                            <div class="image-group">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <span>
-                                                    5+
-                                                </span>
-                                            </div>
-                                            <button type="button" class="add-member">
-                                                <i class="fal fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="dropdown">
-                                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="far fa-ellipsis-h"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-eye"></i>View
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-edit"></i>Edit 
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-share-alt"></i>Share
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-trash-alt"></i>Delete 
-                                            </a>
-                                          </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-                </div>
-                <div class="workspace">
-                    <div class="name">
-                        Space : <b>IT TRANSMIT</b>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <a href="#" class="project_name">
-                                            <div class="icon">
-                                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.732 18.5984C13.4172 16.0415 16.0454 13.4133 18.6023 12.728L34.5431 8.45607C37.1 7.77085 38.6173 9.28814 37.9321 11.845L33.6601 27.7859C32.9749 30.3428 30.3467 32.971 27.7898 33.6562L11.8489 37.9282C9.29205 38.6134 7.77476 37.0961 8.45998 34.5392L12.732 18.5984Z" fill="#9E77ED"/>
-                                                    <path d="M6.34133 12.2078C7.02655 9.6509 9.6548 7.02264 12.2117 6.33742L28.1525 2.06545C30.7094 1.38023 32.2267 2.89752 31.5415 5.45441L27.2695 21.3952C26.5843 23.9521 23.9561 26.5804 21.3992 27.2656L5.45831 31.5376C2.90142 32.2228 1.38413 30.7055 2.06935 28.1486L6.34133 12.2078Z" fill="#6941C6"/>
-                                                </svg>
-                                            </div>
-                                            <h6 class="name">
-                                                Nen Erp
-                                            </h6>
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <div class="task">
-                                            <div class="count">
-                                                <i class="fal fa-tasks"></i>
-                                                <span>
-                                                    15
-                                                </span>
-                                                /15
-                                            </div>
-                                            <p>
-                                                Tasks
-                                            </p>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="dated text-center">
-                                            <span>
-                                                Due Date <b class="text-black">Feb 20, 2024</b>
-                                            </span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="members">
-                                            <div class="image-group">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                                <span>
-                                                    5+
-                                                </span>
-                                            </div>
-                                            <button type="button" class="add-member">
-                                                <i class="fal fa-plus"></i>
-                                            </button>
-                                        </div>
-                                    </td>
-                                    <td class="dropdown">
-                                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="far fa-ellipsis-h"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fal fa-eye"></i>View
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fal fa-edit"></i>Edit 
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fal fa-share-alt"></i>Share
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <i class="fal fa-trash-alt"></i>Delete 
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+                </div>             
             </div>
-
         </div>
     </div>
     <!--~~./ end Dashboard  ~~-->
@@ -667,6 +623,110 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="assets/js/script.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            // Flatpickr init
+            $(".flatpickr_calendar").flatpickr({
+                dateFormat: "d-M-Y",
+            });
+
+
+
+            // MultiStepForm
+            initMultiStepForm();
+            function initMultiStepForm() {
+                let $slidePage = $(".slide-page");
+                let $submitBtn = $(".submit");
+                let $pages = $(".page");
+                let $nextButtons = $(".next");
+                let $prevButtons = $(".prev");
+                let $stepWrapper = $(".create_project");
+                let stepsNumber = $pages.length;
+
+                $stepWrapper.css("--stepNumber", stepsNumber);
+
+                let current = 1;
+
+                $nextButtons.each(function(index) {
+                    $(this).on("click", function(event) {
+                        event.preventDefault();
+
+                        let inputsValid = validateInputs($(this));
+
+                        if (inputsValid) {
+                            $slidePage.css("marginLeft", `-${(100 / stepsNumber) * current}%`);
+                            current += 1;
+                        }
+                    });
+                });
+
+                $prevButtons.each(function(index) {
+                    $(this).on("click", function(event) {
+                        event.preventDefault();
+                        $slidePage.css("marginLeft", `-${(100 / stepsNumber) * (current - 2)}%`);
+                        current -= 1;
+                    });
+                });
+
+                $(document).on('submit', '#create_project_form', function(e){
+                })
+                $('#create_project_form').submit(function() {
+                    current += 1;
+                    setTimeout(function(){
+                        window.location.href = "project-created.html";
+                    }, 2000);
+                });
+
+
+                function validateInputs($this) {
+                    let inputsValid = true;
+                    let $inputs = $this.closest(".page").find("input");
+                    
+                    $inputs.each(function() {
+                        if (!this.checkValidity()) {
+                            inputsValid = false;
+                            $(this).addClass("invalid-input");
+                        } else {
+                            $(this).removeClass("invalid-input");
+                        }
+                    });
+
+                    return inputsValid;
+                }
+            }
+        });
+
+        // Upload Project Thumbnail Image
+        function upload_thumbnail(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#projectThumb').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+                $('.thumbnails_upload-wrapper').addClass('image_uploaded');
+            }
+        }
+        $('.remove_image').on('click', function() {
+            $(this).parents('.thumbnails_upload-wrapper').find('input').val('');
+            $(this).parent().find('img').attr('src', 'assets/img/placeholder-image.png');
+            $(this).parents('.thumbnails_upload-wrapper').removeClass('image_uploaded');
+        });
+
+        // Toggle Auto suggestion teammate collapse function
+        $(document).ready(function() {
+            $('#addTeamMate').on('input', function() {
+                if ($(this).val().trim() !== '') {
+                    $('.suggested_team').collapse('show');
+                } else {
+                    $('.suggested_team').collapse('hide');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

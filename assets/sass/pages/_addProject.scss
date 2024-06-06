@@ -1,0 +1,131 @@
+.create_project {
+    .overflow-hidden {
+        max-width: 90rem;
+        margin: 0 auto;
+    }
+    .form-wrapper {
+        background-color: var(--white-950);
+        border: .1rem solid var(--slate-50);
+        padding: 10rem;
+        border-radius: 1rem;
+    }
+    fieldset {
+        & + fieldset {
+            margin-top: 2rem;
+        }
+    }
+    .thumbnails_upload-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        .upload_icon {
+            width: 16rem;
+            height: 16rem;
+            @include flex-center;
+            border-radius: 50%;
+            border: .1rem dashed var(--slate-100);
+            color: var(--slate-300);
+            background-color: var(--slate-25);
+            cursor: pointer;
+            transition: all .3s ease;
+
+            i {
+                transition: all .5s ease;
+            }
+            &:hover {
+                border-color: var(--slate-300);
+                i {
+                    transform: rotate(180deg) scale(1.5);
+                }
+            }
+        }
+        .invalid-input + .upload_icon {
+            border-color: var(--error-600);
+            color: var(--error-600);
+        }
+
+        .preview {
+            width: 16rem;
+            height: 16rem;
+            @include flex-center;
+            position: relative;
+            .remove_image {
+                position: absolute;
+                right: 2rem;
+                top: 0; 
+                width: 3rem;
+                height: 3rem;
+                background-color: var(--slate-100);
+                color: var(--black-950);
+                @include flex-center;
+                border-radius: 50%;
+                cursor: pointer;
+                opacity: 0;
+                &:hover {
+                    background-color: var(--error-600);
+                    color: var(--white-950);
+                }
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+                position: relative;
+                background-color: var(--primary-25);
+                border: .1rem solid var(--primary-25);
+            }
+        }
+        &.image_uploaded {
+            .preview {
+                .remove_image {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .form_page_header  {
+        margin-bottom: 5rem;
+    }
+
+    .suggested_team {
+        margin-top: 0;
+        .suggested_item {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: .1rem solid var(--slate-100);
+            padding: 1.5rem 0;
+
+
+            h6 {
+                font-size: 1.5rem;
+            }
+            p {
+                line-height: 1.3;
+                font-size: 1.3rem;
+            }
+            .badge {
+                background-color: var(--slate-50);
+                color: var(--black-950);
+                font-weight: 600;
+                font-size: 1.4rem;
+                padding: .8rem 1.5rem;
+            }
+
+            button {
+                border: 0;
+                padding: 1rem 1.5rem;
+                border-radius: .5rem;
+                background-color: var(--slate-50);
+                transition: all .15s ease;
+
+                &:hover {
+                    background-color: var(--slate-100);
+                }
+            }
+        }
+    }
+}

@@ -164,6 +164,57 @@
         .db_title{
             margin-bottom: 2rem;
         }
+        .filter_area {
+
+            @include md-up {
+                @include flex-between;
+            }
+            .startBlock {
+                form {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                    .input-item {
+                        border: .1rem solid var(--slate-100);
+                        border-radius: .8rem;
+                        
+                    }
+                    .select2-container {
+                        width: 8rem !important;
+                        .select2-selection {
+                            border: 0;
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+            .endBlock {
+                @include md-down {
+                    margin-top: 1rem;
+                }
+                .btn-group {
+                    border: .1rem solid var(--slate-100);
+                    border-radius: .8rem;
+                    display: flex;
+                    overflow: hidden;
+                    a {
+                        width: 4rem;
+                        height: 3.5rem;
+                        @include flex-center;
+                        & + a {
+                            border-left: .1rem solid var(--slate-100);
+                        }
+                        &:hover, &.active {
+                            background-color: var(--slate-50);
+                        }
+                    }
+                }
+                ul {
+                    gap: 2rem;
+                }
+            }
+        }
         .home-widgets {
             .widget {
                 background-color: var(--white-950);

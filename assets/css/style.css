@@ -249,14 +249,16 @@ input[type=text],
 input[type=email],
 input[type=url],
 input[type=password],
-input[type=search] {
+input[type=search],
+input[type=date] {
   font-size: 1.4rem;
 }
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=url]:focus,
 input[type=password]:focus,
-input[type=search]:focus {
+input[type=search]:focus,
+input[type=date]:focus {
   outline: none;
   box-shadow: none;
 }
@@ -272,12 +274,25 @@ input[type=number]::-webkit-outer-spin-button {
   appearance: none;
 }
 
+input[type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
 input[type=search] {
   -webkit-appearance: textfield;
 }
 
 input[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
+}
+
+.flatpickr_calendar {
+  background-color: transparent !important;
 }
 
 select {
@@ -307,6 +322,9 @@ input:-webkit-autofill:focus {
 }
 .form-control:focus {
   border-color: var(--black-950);
+}
+.form-control.invalid-input {
+  border-color: var(--error-600);
 }
 
 textarea.form-control {
@@ -365,7 +383,12 @@ textarea.form-control:focus {
   border-radius: 0.8rem;
   font-size: 1.4rem;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 .btn__primary:hover {
   background-color: var(--primary-700);
@@ -379,11 +402,13 @@ textarea.form-control:focus {
   border-radius: 0.8rem;
   font-size: 1.4rem;
   font-weight: 600;
-  transition: all 0.15s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.15s ease;
   background-color: var(--white-950);
+  white-space: nowrap;
 }
 
 .notification-bell-icon {
@@ -481,6 +506,19 @@ textarea.form-control:focus {
 
 .select2-container {
   width: 100% !important;
+}
+.select2-container .select2-selection--single {
+  border: 0.1rem solid var(--slate-100);
+  height: 4.8rem;
+}
+.select2-container .select2-selection--single:focus {
+  border-color: var(--black-950);
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  line-height: 4.8rem;
+}
+.select2-container .select2-selection--single .select2-selection__arrow {
+  height: 4.8rem;
 }
 
 /*--------------------------------------------------------------
@@ -1262,6 +1300,57 @@ textarea.form-control:focus {
 .db_wrapper .db_body .db_title {
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .db_wrapper .db_body .filter_area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.db_wrapper .db_body .filter_area .startBlock form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.db_wrapper .db_body .filter_area .startBlock form .input-item {
+  border: 0.1rem solid var(--slate-100);
+  border-radius: 0.8rem;
+}
+.db_wrapper .db_body .filter_area .startBlock form .select2-container {
+  width: 8rem !important;
+}
+.db_wrapper .db_body .filter_area .startBlock form .select2-container .select2-selection {
+  border: 0;
+  border-radius: 0;
+}
+@media screen and (max-width: 767px) {
+  .db_wrapper .db_body .filter_area .endBlock {
+    margin-top: 1rem;
+  }
+}
+.db_wrapper .db_body .filter_area .endBlock .btn-group {
+  border: 0.1rem solid var(--slate-100);
+  border-radius: 0.8rem;
+  display: flex;
+  overflow: hidden;
+}
+.db_wrapper .db_body .filter_area .endBlock .btn-group a {
+  width: 4rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.db_wrapper .db_body .filter_area .endBlock .btn-group a + a {
+  border-left: 0.1rem solid var(--slate-100);
+}
+.db_wrapper .db_body .filter_area .endBlock .btn-group a:hover, .db_wrapper .db_body .filter_area .endBlock .btn-group a.active {
+  background-color: var(--slate-50);
+}
+.db_wrapper .db_body .filter_area .endBlock ul {
+  gap: 2rem;
+}
 .db_wrapper .db_body .home-widgets .widget {
   background-color: var(--white-950);
   padding: 1.6rem;
@@ -1898,6 +1987,131 @@ textarea.form-control:focus {
   height: 0.8rem;
   bottom: 0;
   left: 0;
+}
+
+/*--------------------------------------------------------------
+# Add Project Page
+--------------------------------------------------------------*/
+.create_project .overflow-hidden {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+.create_project .form-wrapper {
+  background-color: var(--white-950);
+  border: 0.1rem solid var(--slate-50);
+  padding: 10rem;
+  border-radius: 1rem;
+}
+.create_project fieldset + fieldset {
+  margin-top: 2rem;
+}
+.create_project .thumbnails_upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.create_project .thumbnails_upload-wrapper .upload_icon {
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.1rem dashed var(--slate-100);
+  color: var(--slate-300);
+  background-color: var(--slate-25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.create_project .thumbnails_upload-wrapper .upload_icon i {
+  transition: all 0.5s ease;
+}
+.create_project .thumbnails_upload-wrapper .upload_icon:hover {
+  border-color: var(--slate-300);
+}
+.create_project .thumbnails_upload-wrapper .upload_icon:hover i {
+  transform: rotate(180deg) scale(1.5);
+}
+.create_project .thumbnails_upload-wrapper .invalid-input + .upload_icon {
+  border-color: var(--error-600);
+  color: var(--error-600);
+}
+.create_project .thumbnails_upload-wrapper .preview {
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.create_project .thumbnails_upload-wrapper .preview .remove_image {
+  position: absolute;
+  right: 2rem;
+  top: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--slate-100);
+  color: var(--black-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+}
+.create_project .thumbnails_upload-wrapper .preview .remove_image:hover {
+  background-color: var(--error-600);
+  color: var(--white-950);
+}
+.create_project .thumbnails_upload-wrapper .preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  background-color: var(--primary-25);
+  border: 0.1rem solid var(--primary-25);
+}
+.create_project .thumbnails_upload-wrapper.image_uploaded .preview .remove_image {
+  opacity: 1;
+}
+.create_project .form_page_header {
+  margin-bottom: 5rem;
+}
+.create_project .suggested_team {
+  margin-top: 0;
+}
+.create_project .suggested_team .suggested_item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 0.1rem solid var(--slate-100);
+  padding: 1.5rem 0;
+}
+.create_project .suggested_team .suggested_item h6 {
+  font-size: 1.5rem;
+}
+.create_project .suggested_team .suggested_item p {
+  line-height: 1.3;
+  font-size: 1.3rem;
+}
+.create_project .suggested_team .suggested_item .badge {
+  background-color: var(--slate-50);
+  color: var(--black-950);
+  font-weight: 600;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.5rem;
+}
+.create_project .suggested_team .suggested_item button {
+  border: 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--slate-50);
+  transition: all 0.15s ease;
+}
+.create_project .suggested_team .suggested_item button:hover {
+  background-color: var(--slate-100);
 }
 
 /*# sourceMappingURL=style.css.map */
