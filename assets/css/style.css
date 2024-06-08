@@ -435,6 +435,24 @@ textarea.form-control:focus {
   text-align: center;
 }
 
+.btn__primary__lightpill {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-600);
+  font-weight: 600;
+  gap: 0.4rem;
+  padding: 0.6rem 1rem;
+  background: var(--primary-50);
+  border-radius: 5rem;
+  transition: all 0.3s ease;
+}
+.btn__primary__lightpill:hover {
+  color: var(--primary-600);
+  background: var(--primary-100);
+}
+
 .text__primary {
   color: var(--primary-600);
 }
@@ -2155,6 +2173,7 @@ textarea.form-control:focus {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  justify-content: center;
 }
 .workspace .social-icon a {
   display: flex;
@@ -2191,6 +2210,37 @@ textarea.form-control:focus {
   font-size: 1.4rem;
   line-height: 1.6;
   color: var(--slate-500);
+}
+.workspace .chat-button a {
+  display: inline-block;
+}
+.workspace .dropdown {
+  position: relative;
+}
+.workspace .dropdown .dropdown-menu {
+  min-width: 15rem;
+  max-width: 15rem;
+  background: var(--white-950);
+  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--slate-50);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+.workspace .dropdown .dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--slate-700);
+  transition: all 0.15s ease;
+  padding: 1rem 1.5rem;
+}
+.workspace .dropdown .dropdown-menu a:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
 }
 
 /*# sourceMappingURL=style.css.map */
