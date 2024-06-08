@@ -387,6 +387,7 @@ textarea.form-control:focus {
   border-radius: 0.8rem;
   font-size: 1.4rem;
   font-weight: 600;
+  outline: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2829,6 +2830,49 @@ textarea.form-control:focus {
 .project_tabfilter .nav a.active {
   color: var(--black-950);
   background-color: var(--slate-50);
+}
+
+.kanban_canvas {
+  margin: 2rem 0;
+  padding: 0 0 1rem;
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+  overflow-x: scroll;
+}
+.kanban_canvas::-webkit-scrollbar {
+  height: 1rem;
+  width: 1.5%;
+  background-color: var(--slate-50);
+}
+.kanban_canvas::-webkit-scrollbar-thumb {
+  background-color: var(--slate-200);
+  border-radius: 2rem;
+}
+.kanban_canvas #kanban_board {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+.kanban_canvas .list {
+  background-color: var(--white-950);
+  padding: 1.5rem;
+  border: 0.1rem solid var(--slate-50);
+  border-radius: 0.8rem;
+  min-width: 28rem;
+}
+.kanban_canvas .list .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.kanban_canvas .addListPlaceholder {
+  background-color: white;
+  padding: 0.8rem 1.5rem;
+  border: 0.1rem solid var(--slate-200);
+  border-radius: 0.8rem;
+  outline: none;
+  min-width: 25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
