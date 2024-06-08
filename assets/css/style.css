@@ -1432,7 +1432,7 @@ textarea.form-control:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 2.4rem 1.6rem 2.4rem;
+  padding: 1.6rem 0 1.6rem 0;
   border-bottom: 0.1rem solid var(--slate-50);
 }
 .db_wrapper .db_body .home-widgets .widget .widget-task:last-child {
@@ -1442,7 +1442,7 @@ textarea.form-control:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 2.4rem 1.6rem 2.4rem;
+  padding: 1.6rem 0 1.6rem 0;
 }
 .db_wrapper .db_body .home-widgets .widget .widget-task.due-task {
   display: block;
@@ -1458,6 +1458,10 @@ textarea.form-control:focus {
   display: flex;
   align-items: center;
   gap: 1.2rem;
+}
+.db_wrapper .db_body .home-widgets .widget .widget-task input[type=checkbox] {
+  width: 1.6rem;
+  height: 1.6rem;
 }
 .db_wrapper .db_body .home-widgets .widget .widget-task label {
   font-size: 1.4rem;
@@ -1615,14 +1619,16 @@ textarea.form-control:focus {
   color: var(--primary-500);
 }
 .db_wrapper .db_body .home-widgets .widget .activity_date {
-  margin: 0 0 1.2rem 1.6rem;
+  margin: 0 0 0 2.2rem;
+  font-weight: 500;
 }
 .db_wrapper .db_body .home-widgets .widget .activity-item {
   display: flex;
   gap: 1.2rem;
-  padding: 0.6rem 0 3.2rem 0.8rem;
+  padding: 1rem 0 1rem 0.8rem;
   transition: all 0.3s ease;
   border-radius: 0.6rem;
+  overflow: hidden;
 }
 .db_wrapper .db_body .home-widgets .widget .activity-item .icon {
   font-size: 1.4rem;
@@ -1637,19 +1643,7 @@ textarea.form-control:focus {
   justify-content: center;
   border-radius: 50%;
   position: relative;
-}
-.db_wrapper .db_body .home-widgets .widget .activity-item .icon.circle {
-  border: 0;
-  position: relative;
-}
-.db_wrapper .db_body .home-widgets .widget .activity-item .icon.circle::before {
-  position: absolute;
-  content: "";
-  width: 0.8rem;
-  height: 0.8rem;
-  background: var(--slate-50);
-  border-radius: 50%;
-  top: 0.7rem;
+  background: var(--white-950);
 }
 .db_wrapper .db_body .home-widgets .widget .activity-item .icon::after {
   position: absolute;
@@ -1675,13 +1669,30 @@ textarea.form-control:focus {
   gap: 0.8rem;
 }
 .db_wrapper .db_body .home-widgets .widget .activity-item .author .name {
-  font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.6;
   color: var(--slate-800);
 }
 .db_wrapper .db_body .home-widgets .widget .activity-item:hover {
   background: var(--slate-50);
+}
+.db_wrapper .db_body .home-widgets .widget .load_more {
+  padding: 0.8rem 1.8rem;
+}
+.db_wrapper .db_body .home-widgets .widget .load_more a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--primary-600);
+  transition: all 0.3s ease;
+}
+.db_wrapper .db_body .home-widgets .widget .load_more a i {
+  font-weight: 500;
+}
+.db_wrapper .db_body .home-widgets .widget .load_more a:hover {
+  color: var(--primary-600);
 }
 
 /*--------------------------------------------------------------
@@ -2112,6 +2123,74 @@ textarea.form-control:focus {
 }
 .create_project .suggested_team .suggested_item button:hover {
   background-color: var(--slate-100);
+}
+
+/*--------------------------------------------------------------
+# Add Project Page
+--------------------------------------------------------------*/
+.workspace .team_name {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem 2.4rem;
+}
+.workspace .team_name .image img {
+  border-radius: 50%;
+}
+.workspace .team_name .name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--slate-950);
+  margin-bottom: 0.4rem;
+}
+.workspace .team_name .dept {
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  padding: 0.4rem 1.2rem;
+  background: var(--slate-50);
+  border-radius: 5rem;
+}
+.workspace .social-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.workspace .social-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid var(--slate-50);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.workspace .social-icon a:hover {
+  background: var(--slate-50);
+  border: 0.1rem solid transparent;
+}
+.workspace .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.workspace .contact-info a {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--slate-700);
+  transition: all 0.3s ease;
+}
+.workspace .contact-info a:hover {
+  color: var(--primary-600);
+}
+.workspace .contact-info span {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--slate-500);
 }
 
 /*# sourceMappingURL=style.css.map */

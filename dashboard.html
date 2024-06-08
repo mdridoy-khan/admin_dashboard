@@ -541,7 +541,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="widget-body mt-5">
+                                        <div class="widget-body mt-3">
                                             <div class="widget-task">
                                                 <div class="task-name">
                                                     <input type="checkbox" id="task2">
@@ -576,8 +576,56 @@
                                             </div>
                                             <div class="widget-task">
                                                 <div class="task-name">
-                                                    <input type="checkbox" id="task1">
-                                                    <label for="task1">
+                                                    <input type="checkbox" id="task4">
+                                                    <label for="task4">
+                                                        Browser testing
+                                                    </label>
+                                                </div>
+                                                <div class="task-person">
+                                                    <span>
+                                                        <i class="fal fa-tasks"></i>4/4
+                                                    </span>
+                                                    <div class="image active">
+                                                        <img src="assets/img/widget/avatar.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-task">
+                                                <div class="task-name">
+                                                    <input type="checkbox" id="task5">
+                                                    <label for="task5">
+                                                        Browser testing
+                                                    </label>
+                                                </div>
+                                                <div class="task-person">
+                                                    <span>
+                                                        <i class="fal fa-tasks"></i>4/4
+                                                    </span>
+                                                    <div class="image active">
+                                                        <img src="assets/img/widget/avatar.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-task">
+                                                <div class="task-name">
+                                                    <input type="checkbox" id="task6">
+                                                    <label for="task6">
+                                                        Browser testing
+                                                    </label>
+                                                </div>
+                                                <div class="task-person">
+                                                    <span>
+                                                        <i class="fal fa-tasks"></i>4/4
+                                                    </span>
+                                                    <div class="image active">
+                                                        <img src="assets/img/widget/avatar.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-task">
+                                                <div class="task-name">
+                                                    <input type="checkbox" id="task7">
+                                                    <label for="task7">
                                                         Browser testing
                                                     </label>
                                                 </div>
@@ -634,7 +682,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="widget-body mt-5">
+                                        <div class="widget-body mt-3">
                                             <div class="widget-task due-task">
                                                 <div class="task-content">
                                                     <div class="task-name">
@@ -751,8 +799,12 @@
                                 <p class="activity_date mt-5">Feb 04, 2024</p>
                                 <ul class="activity-list">
                                     <li class="activity-item">
-                                        <div class="icon circle">
-                                            
+                                        <div class="icon">
+                                            <span>
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 4C0 1.79086 1.79086 0 4 0V0C6.20914 0 8 1.79086 8 4V4C8 6.20914 6.20914 8 4 8V8C1.79086 8 0 6.20914 0 4V4Z" fill="#A6B1BF"/>
+                                                </svg> 
+                                            </span>
                                         </div>
                                         <div class="desc">
                                             <div class="title">
@@ -773,7 +825,9 @@
                                     </li>
                                     <li class="activity-item">
                                         <div class="icon">
-                                            A
+                                            <span>
+                                                A
+                                            </span>
                                         </div>
                                         <div class="desc">
                                             <div class="title">
@@ -793,11 +847,13 @@
                                         </div>
                                     </li>
                                 </ul>
-                                <p class="activity_date">Feb 04, 2024</p>
+                                <p class="activity_date mt-3">Feb 04, 2024</p>
                                 <ul class="activity-list">
                                     <li class="activity-item">
                                         <div class="icon">
-                                            <i class="fas fa-wreath"></i>
+                                            <span>
+                                                <i class="fas fa-wreath"></i>
+                                            </span>
                                         </div>
                                         <div class="desc">
                                             <div class="title">
@@ -1215,7 +1271,9 @@
                                 </div>
                                 <div class="widget-body mt-5">
                                     <div class="widget-line-chart">
-                                        <canvas id="myChart"></canvas>
+                                        <div>
+                                            <canvas id="myChart"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1234,6 +1292,7 @@
     ================================================== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js" integrity="sha512-ZwR1/gSZM3ai6vCdI+LVF1zSq/5HznD3ZSTk7kajkaj4D292NLuduDCO1c/NT8Id+jE58KYLKT7hXnbtryGmMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/select2.full.min.js"></script>
     <script src="assets/js/script.js"></script>
     
@@ -1247,6 +1306,85 @@
             // Make the .element div fullscreen.
             document.querySelector(".getFullScreen").requestFullscreen();
         });
+
+
+        const data = {
+        labels: generateLabels(),
+        datasets: [
+            {
+            label: 'D0',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.red,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
+            hidden: true
+            },
+            {
+            label: 'D1',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.orange,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.orange),
+            fill: '-1'
+            },
+            {
+            label: 'D2',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.yellow,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.yellow),
+            hidden: true,
+            fill: 1
+            },
+            {
+            label: 'D3',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.green,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.green),
+            fill: '-1'
+            },
+            {
+            label: 'D4',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.blue,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.blue),
+            fill: '-1'
+            },
+            {
+            label: 'D5',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.grey,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.grey),
+            fill: '+2'
+            },
+            {
+            label: 'D6',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.purple,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.purple),
+            fill: false
+            },
+            {
+            label: 'D7',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.red,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
+            fill: 8
+            },
+            {
+            label: 'D8',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.orange,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.orange),
+            fill: 'end',
+            hidden: true
+            },
+            {
+            label: 'D9',
+            data: generateData(),
+            borderColor: Utils.CHART_COLORS.yellow,
+            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.yellow),
+            fill: {above: 'blue', below: 'red', target: {value: 350}}
+            }
+        ]
+        };
     </script>
 </body>
 </html>
