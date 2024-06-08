@@ -1690,6 +1690,9 @@ textarea.form-control:focus {
 .workspace + .workspace {
   margin-top: 3rem;
 }
+.workspace .table-responsive {
+  min-height: 25rem;
+}
 .workspace table {
   width: 100%;
   border-collapse: separate;
@@ -1816,6 +1819,43 @@ textarea.form-control:focus {
   color: #D0D5DD;
   font-size: 1.6rem;
   font-weight: 600;
+}
+.workspace table .dropdown button {
+  background: transparent;
+  border: 0;
+  color: var(--slate-950);
+  outline: none;
+  box-shadow: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.workspace table .dropdown button::after {
+  display: none;
+}
+.workspace table .dropdown .dropdown-menu {
+  min-width: 15rem;
+  max-width: 15rem;
+  background: var(--white-950);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--slate-50);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+.workspace table .dropdown .dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--slate-700);
+  transition: all 0.15s ease;
+  padding: 1rem 1.5rem;
+}
+.workspace table .dropdown .dropdown-menu a:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
 }
 
 .workspace .project_card {
@@ -1955,7 +1995,7 @@ textarea.form-control:focus {
   min-width: 15rem;
   max-width: 15rem;
   background: var(--white-950);
-  box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
   border-radius: 0.6rem;
   border: 0.1rem solid var(--slate-50);
   padding: 0;
