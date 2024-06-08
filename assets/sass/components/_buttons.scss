@@ -15,7 +15,6 @@
         color: var(--white-950);
     }
 }
-
 .btn__secondary {
     border: .1rem solid var(--slate-800);
     color: var(--black-950);
@@ -29,7 +28,9 @@
     background-color: var(--white-950);
     white-space: nowrap;
 }
-
+.btn__primary__lightpill {
+    
+}
 .notification-bell-icon {
     @include dimension(4rem, 4rem);
     @include flex-center;

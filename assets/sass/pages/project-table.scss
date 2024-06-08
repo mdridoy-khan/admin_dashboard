@@ -1,8 +1,11 @@
-.workspace{
-    & + .workspace{
+.workspace {
+    & + .workspace {
         margin-top: 3rem;
     }
-    table{
+    .table-responsive {
+        min-height: 25rem;
+    }
+    table {
         width: 100%;
         border-collapse: separate;
         border-spacing: 0 .8rem;
@@ -25,7 +28,7 @@
                 }
             }
         }
-        .project_name{
+        .project_name {
             display: inline-flex;
             align-items: center;
             gap: 1.6rem;
@@ -45,7 +48,7 @@
                 line-height: 1.6;
             }
         }
-        .task{
+        .task {
             @include flex-center;
             flex-direction: column;
             gap: .2rem;
@@ -68,7 +71,7 @@
                color: var(--slate-700);
             }
         }
-        .dated{
+        .dated {
             span{
                 font-size: 1.2rem;
                 font-weight: 700;
@@ -83,7 +86,7 @@
                 }
             }
         }
-        .members{
+        .members {
             @include flex-center;
             gap: .8rem;
             padding: 1rem 1.5rem;
@@ -123,12 +126,52 @@
                 font-weight: 600;
             }
         }
+        .dropdown {
+            button {
+                background: transparent;
+                border: 0;
+                color: var(--slate-950);
+                outline: none;
+                box-shadow: none;
+                font-size: 1.6rem;
+                font-weight: 600;
+                &::after{
+                    display: none;
+                }
+            }
+            .dropdown-menu {
+                min-width: 15rem;
+                max-width: 15rem;
+                background: var(--white-950);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+                border-radius: .6rem;
+                border: .1rem solid var(--slate-50);
+                padding: 0;
+                border: 0;
+                overflow: hidden;
+                
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    color: var(--slate-700);
+                    transition: all .15s ease;
+                    padding: 1rem 1.5rem;
+                    &:hover {
+                        color: var(--primary-600);
+                        background-color: var(--primary-50);
+                    }
+                }
+            }
+        }
     }
 }
 
 //project table grid style
-.workspace{
-    .project_card{
+.workspace {
+    .project_card {
         background: var(--white-950);
         border-radius:1.6rem;
         box-shadow: 0 .2rem .2rem .1rem var(--slate-50);
@@ -254,7 +297,7 @@
                 min-width: 15rem;
                 max-width: 15rem;
                 background: var(--white-950);
-                box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
                 border-radius: .6rem;
                 border: .1rem solid var(--slate-50);
                 padding: 0;

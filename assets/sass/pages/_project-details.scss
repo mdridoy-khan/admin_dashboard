@@ -1,0 +1,25 @@
+.project_tabfilter {
+    display: flex;
+
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: .8rem;
+        border: 0;
+        a {
+            display: flex;
+            align-items: center;
+            gap: .8rem;
+            padding: .5rem .8rem;
+            background-color: var(--white-950);
+            border-radius: .6rem;
+            color: var(--slate-500);
+            font-weight: 500;
+            transition: all .15s ease;
+            &.active {
+                color: var(--black-950);
+                background-color: var(--slate-50);
+            }
+        }
+    }
+}
