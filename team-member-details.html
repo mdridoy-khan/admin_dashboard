@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en" class="bn">
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Specific Meta
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="keyword" content="Project Management System">
+    <meta name="description" content="Project Management System">
+    <meta name="author" content="IT Transmit Ltd.">
+    <meta name="rights" content="IT Transmit Ltd">
+
+    <!-- Site Title
+    ================================================== -->
+    <title>Projman - Project Management System</title>
+
+    <!-- Site Favicon
+    ================================================== -->
+    <link rel="shortcut icon" href="assets/img/logo-icon-white.svg">
+
+    <!-- Google Fonts
+    ================================================== -->
+    <link rel="stylesheet" href="assets/font/stylesheet.css">
+
+
+    <!-- All CSS Here
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontAwesome5Pro.css">
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Preloader Start
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!--~~./ Preloader End ~~-->
+
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Start Dashboard 
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="db_wrapper">
+
+        <div class="db_header">
+            <!-- Sidebar Logo Block (Left) -->
+            <div class="sidebarBlock">
+                <a href="dashboard.html" class="logo">
+                    <img src="assets/img/logo-icon.svg" alt="">
+                    <span class="name">
+                        John's Workspace
+                    </span>
+                </a>
+                <button type="button" class="sidebarToggler">
+                    <svg  class="expandable" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 17.9996V19.9996H3V17.9996H21ZM17.0503 3.5498L22 8.49955L17.0503 13.4493V3.5498ZM12 10.9996V12.9996H3V10.9996H12ZM12 3.99955V5.99955H3V3.99955H12Z" fill="currentColor"/>
+                    </svg>
+                    <svg class="collapseable" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 17.9996V19.9996H3V17.9996H21ZM6.94975 3.5498V13.4493L2 8.49955L6.94975 3.5498ZM21 10.9996V12.9996H12V10.9996H21ZM21 3.99955V5.99955H12V3.99955H21Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Dashboard Header (Right) -->
+            <div class="headerBlock">
+                
+                <ul class="ms-auto">
+                    <li>
+                        <form action="#" class="searchbox">
+                            <fieldset>
+                                <div class="input-group">
+                                    <span class="input-group-text fal fa-search"></span>
+                                    <input type="text" name="s" class="form-control" placeholder="Search for...">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </li>
+                    <li class="dropdown">
+                        <button type="button" class="notification-bell-icon" data-bs-toggle="dropdown">
+                            <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.0196 2.91016C6.7096 2.91016 4.0196 5.60016 4.0196 8.91016V11.8002C4.0196 12.4102 3.7596 13.3402 3.4496 13.8602L2.2996 15.7702C1.5896 16.9502 2.0796 18.2602 3.3796 18.7002C7.6896 20.1402 12.3396 20.1402 16.6496 18.7002C17.8596 18.3002 18.3896 16.8702 17.7296 15.7702L16.5796 13.8602C16.2796 13.3402 16.0196 12.4102 16.0196 11.8002V8.91016C16.0196 5.61016 13.3196 2.91016 10.0196 2.91016Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                                <path d="M11.8699 3.19994C11.5599 3.10994 11.2399 3.03994 10.9099 2.99994C9.94992 2.87994 9.02992 2.94994 8.16992 3.19994C8.45992 2.45994 9.17992 1.93994 10.0199 1.93994C10.8599 1.93994 11.5799 2.45994 11.8699 3.19994Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.0195 19.0601C13.0195 20.7101 11.6695 22.0601 10.0195 22.0601C9.19953 22.0601 8.43953 21.7201 7.89953 21.1801C7.35953 20.6401 7.01953 19.8801 7.01953 19.0601" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+                            </svg>
+                            <span class="count">9+</span>
+                        </button>
+                        <div class="dropdown-menu">
+                            <div class="dropdown_header">Notifications </div>
+                            <ul class="max-height-scroll">
+                                <li class="notification__single">
+                                    <div class="icon">
+                                        <img src="assets/img/notification-icon1.png" alt="">
+                                    </div>
+                                    <div class="notification__details">
+                                        <p class="subject text-truncate">
+                                            <a href="#" class="stretched-link">
+                                                There is revamp on design system team
+                                            </a>
+                                        </p>
+                                        <p class="text-truncate">
+                                            Full new look design system components
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="notification__single">
+                                    <div class="icon">
+                                        <img src="assets/img/notification-icon2.png" alt="">
+                                    </div>
+                                    <div class="notification__details">
+                                        <p class="subject text-truncate">
+                                            <a href="#" class="stretched-link">
+                                                There is revamp on design system team
+                                            </a>
+                                        </p>
+                                        <p class="text-truncate">
+                                            Full new look design system components
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="notification__single">
+                                    <div class="icon">
+                                        <img src="assets/img/notification-icon3.png" alt="">
+                                    </div>
+                                    <div class="notification__details">
+                                        <p class="subject text-truncate">
+                                            <a href="#" class="stretched-link">
+                                                There is revamp on design system team
+                                            </a>
+                                        </p>
+                                        <p class="text-truncate">
+                                            Full new look design system components
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="user-profile-icon d-block" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                            <img src="assets/img/avatar1.png" alt="Jhone Doe">
+                            <span class="status" style="--clr: #12B76A"></span> <!-- Change the variable color on status condition -->
+                        </a>
+                        <div class="dropdown-menu profile-dropdown">
+                            <div class="profile-nav d-flex m-4">
+                                <div class="avatar">
+                                    <img src="assets/img/avatar1.png" alt="Jhone Doe">
+                                    <span class="status" style="--clr: #12B76A"></span>
+                                </div>
+                                <div class="name">
+                                    <h6>Jhone Doe</h6>
+                                    <p>
+                                        name@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                            <hr>
+                            <ul class="mx-4">
+                                <li>
+                                    <a href="#">
+                                        <span class="icon fal fa-user"></span>
+                                        View Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon fal fa-cog"></span>
+                                        Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon fal fa-users"></span>
+                                        Team
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon fal fa-user-plus"></span>
+                                        Invite Colleagues
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr>
+                            <ul class="mx-4 mb-4">
+                                <li>
+                                    <a href="#">
+                                        <span class="icon fal fa-sign-out"></span>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="db_body">
+            <div class="sidebar">
+                <div class="menu-group">
+                    <div class="title">
+                        Menu
+                    </div>
+
+                    <ul class="menu-list">
+                        <li>
+                            <a href="dashboard.html" class="">
+                                <span class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 10H7C9 10 10 9 10 7V5C10 3 9 2 7 2H5C3 2 2 3 2 5V7C2 9 3 10 5 10Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17 10H19C21 10 22 9 22 7V5C22 3 21 2 19 2H17C15 2 14 3 14 5V7C14 9 15 10 17 10Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17 22H19C21 22 22 21 22 19V17C22 15 21 14 19 14H17C15 14 14 15 14 17V19C14 21 15 22 17 22Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 22H7C9 22 10 21 10 19V17C10 15 9 14 7 14H5C3 14 2 15 2 17V19C2 21 3 22 5 22Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="text">
+                                    Overview
+                                </span>
+                                <!-- <span class="count"></span> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html" class="">
+                                <span class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.6698 14.3L21.2698 19.3C21.1198 20.83 20.9998 22 18.2898 22H5.70977C2.99977 22 2.87977 20.83 2.72977 19.3L2.32977 14.3C2.24977 13.47 2.50977 12.7 2.97977 12.11C2.98977 12.1 2.98977 12.1 2.99977 12.09C3.54977 11.42 4.37977 11 5.30977 11H18.6898C19.6198 11 20.4398 11.42 20.9798 12.07C20.9898 12.08 20.9998 12.09 20.9998 12.1C21.4898 12.69 21.7598 13.46 21.6698 14.3Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+                                        <path d="M3.5 11.4298V6.27979C3.5 2.87979 4.35 2.02979 7.75 2.02979H9.02C10.29 2.02979 10.58 2.40979 11.06 3.04979L12.33 4.74979C12.65 5.16979 12.84 5.42979 13.69 5.42979H16.24C19.64 5.42979 20.49 6.27979 20.49 9.67979V11.4698" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.42969 17H14.5697" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="text">
+                                    Projects
+                                </span>
+                                <span class="count">
+                                    8
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="chats.html" class="">
+                                <span class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.98 10.79V14.79C17.98 15.05 17.97 15.3 17.94 15.54C17.71 18.24 16.12 19.58 13.19 19.58H12.79C12.54 19.58 12.3 19.7 12.15 19.9L10.95 21.5C10.42 22.21 9.56 22.21 9.03 21.5L7.82999 19.9C7.69999 19.73 7.41 19.58 7.19 19.58H6.79001C3.60001 19.58 2 18.79 2 14.79V10.79C2 7.86001 3.35001 6.27001 6.04001 6.04001C6.28001 6.01001 6.53001 6 6.79001 6H13.19C16.38 6 17.98 7.60001 17.98 10.79Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21.98 6.79001V10.79C21.98 13.73 20.63 15.31 17.94 15.54C17.97 15.3 17.98 15.05 17.98 14.79V10.79C17.98 7.60001 16.38 6 13.19 6H6.79004C6.53004 6 6.28004 6.01001 6.04004 6.04001C6.27004 3.35001 7.86004 2 10.79 2H17.19C20.38 2 21.98 3.60001 21.98 6.79001Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M13.4955 13.25H13.5045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9.9955 13.25H10.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.4955 13.25H6.5045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="text">
+                                    Messages
+                                </span>
+                                <!-- <span class="count"></span> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teams.html" class="active">
+                                <span class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.0909 19.4286V17.7143C16.0909 16.805 15.7461 15.9329 15.1323 15.2899C14.5186 14.6469 13.6862 14.2857 12.8182 14.2857H6.27273C5.40475 14.2857 4.57232 14.6469 3.95856 15.2899C3.3448 15.9329 3 16.805 3 17.7143V19.4286M21 19.4286V17.7143C20.9995 16.9546 20.7581 16.2167 20.3138 15.6163C19.8696 15.0159 19.2476 14.5871 18.5455 14.3971M15.2727 4.11143C15.9767 4.30026 16.6007 4.72917 17.0462 5.33055C17.4918 5.93193 17.7337 6.67157 17.7337 7.43286C17.7337 8.19415 17.4918 8.93378 17.0462 9.53516C16.6007 10.1365 15.9767 10.5655 15.2727 10.7543M12.8182 7.42857C12.8182 9.32212 11.3529 10.8571 9.54545 10.8571C7.73798 10.8571 6.27273 9.32212 6.27273 7.42857C6.27273 5.53502 7.73798 4 9.54545 4C11.3529 4 12.8182 5.53502 12.8182 7.42857Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="text">
+                                    Team Members
+                                </span>
+                                <!-- <span class="count"></span> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="calendar.html" class="">
+                                <span class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 2V5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M16 2V5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M3.5 9.08984H20.5" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M15.6947 13.7002H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M15.6947 16.7002H15.7037" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11.9955 13.7002H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M11.9955 16.7002H12.0045" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8.29431 13.7002H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8.29431 16.7002H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="text">
+                                    Calendar
+                                </span>
+                                <!-- <span class="count"></span> -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="menu-group">
+                    <div class="title">
+                        All Spaces
+                        <a href="#" data-bs-toggle="tooltip" title="Create Workspace">
+                            <i class="fal fa-plus"></i>
+                        </a>
+                    </div>
+
+                    <ul class="workspaces-list">
+                        <li class="workspaces-item">
+                            <a href="#workspace-1" class="" data-bs-toggle="collapse" aria-expanded="true">
+                                IT Transmit Ltd.
+                            </a>
+                            <ul class="project-list collapse show" id="workspace-1">
+                                <li>
+                                    <a href="#" class="">
+                                        Nen ERP
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Devboy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Internal Project 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Design System
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Mobile App Design
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="workspaces-item">
+                            <a href="#workspace-2" class="" data-bs-toggle="collapse" aria-expanded="false">
+                                IT Transmit Ltd.
+                            </a>
+                            <ul class="project-list collapse" id="workspace-2">
+                                <li>
+                                    <a href="#" class="">
+                                        Nen ERP
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Devboy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Internal Project 1
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Design System
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="">
+                                        Mobile App Design
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="menu-group">
+                    <div class="title">
+                        Discussion                        
+                    </div>
+
+                    <ul class="menu-list">
+                        <li>
+                            <a href="#" class="">
+                                <span class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 9C17 12.87 13.64 16 9.5 16L8.57001 17.12L8.02 17.78C7.55 18.34 6.65 18.22 6.34 17.55L5 14.6C3.18 13.32 2 11.29 2 9C2 5.13 5.36 2 9.5 2C12.52 2 15.13 3.67001 16.3 6.07001C16.75 6.96001 17 7.95 17 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M22.0003 12.8598C22.0003 15.1498 20.8203 17.1798 19.0003 18.4598L17.6603 21.4098C17.3503 22.0798 16.4503 22.2098 15.9803 21.6398L14.5003 19.8598C12.0803 19.8598 9.92031 18.7898 8.57031 17.1198L9.50031 15.9998C13.6403 15.9998 17.0003 12.8698 17.0003 8.99982C17.0003 7.94982 16.7503 6.95982 16.3003 6.06982C19.5703 6.81982 22.0003 9.5798 22.0003 12.8598Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7 9H12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="text">
+                                    Project Discussion
+                                </span>
+                                <!-- <span class="count">5</span> -->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="">
+                                <span class="icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.3701 8.87988H17.6201" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.37988 8.87988L7.12988 9.62988L9.37988 7.37988" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.3701 15.8799H17.6201" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.37988 15.8799L7.12988 16.6299L9.37988 14.3799" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <span class="text">
+                                    Resources
+                                </span>
+                                <!-- <span class="count">5</span> -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="db_content">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="member-details-card">
+                            <a href="#" class="cover-img">
+                                <img src="assets/img/widget/member-details/cover-img.jpg" alt="">
+                            </a>
+                            <div class="member-info text-center">
+                                <a href="#" class="profile-img">
+                                    <img src="assets/img/widget/member-details/profile-img.png" alt="">
+                                </a>
+                                <div class="content">
+                                    <h4 class="name">
+                                        Nathan Garcia
+                                    </h4>
+                                    <span class="passion">
+                                        UI/UX Designer
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="profile-body">
+                                <p class="about-member text-center">
+                                    I'm a Product Designer based in San Francisco. I specialize in UX/UI design Web development.
+                                </p>
+                                <div class="contact-info">
+                                    <a href="tel:01717362597" class="number">
+                                        01717362597
+                                    </a>
+                                    <a href="mailto:mdridoy9902@gmail.com" class="mail">
+                                      ridoy@gmail.com
+                                    </a>
+                                </div>
+                                <div class="social-icon">
+                                    <a href="#">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.9863 7.19334V9.86001C11.9863 10.0333 11.9797 10.2 11.9597 10.36C11.8063 12.16 10.7463 13.0533 8.79301 13.0533H8.52635C8.35968 13.0533 8.19967 13.1333 8.09967 13.2667L7.29968 14.3333C6.94635 14.8067 6.37301 14.8067 6.01967 14.3333L5.21967 13.2667C5.133 13.1533 4.93968 13.0533 4.79301 13.0533H4.52635C2.39968 13.0533 1.33301 12.5267 1.33301 9.86001V7.19334C1.33301 5.24001 2.23301 4.18001 4.02635 4.02667C4.18635 4.00667 4.35301 4 4.52635 4H8.79301C10.9197 4 11.9863 5.06667 11.9863 7.19334Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M14.653 4.52635V7.19301C14.653 9.15301 13.753 10.2063 11.9597 10.3597C11.9797 10.1997 11.9864 10.033 11.9864 9.85968V7.19301C11.9864 5.06635 10.9197 3.99967 8.79303 3.99967H4.52637C4.35303 3.99967 4.18637 4.00635 4.02637 4.02635C4.1797 2.23301 5.2397 1.33301 7.19303 1.33301H11.4597C13.5864 1.33301 14.653 2.39968 14.653 4.52635Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.99733 8.83333H9.00333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.66334 8.83333H6.66934" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.33033 8.83333H4.33633" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.9863 7.19334V9.86001C11.9863 10.0333 11.9797 10.2 11.9597 10.36C11.8063 12.16 10.7463 13.0533 8.79301 13.0533H8.52635C8.35968 13.0533 8.19967 13.1333 8.09967 13.2667L7.29968 14.3333C6.94635 14.8067 6.37301 14.8067 6.01967 14.3333L5.21967 13.2667C5.133 13.1533 4.93968 13.0533 4.79301 13.0533H4.52635C2.39968 13.0533 1.33301 12.5267 1.33301 9.86001V7.19334C1.33301 5.24001 2.23301 4.18001 4.02635 4.02667C4.18635 4.00667 4.35301 4 4.52635 4H8.79301C10.9197 4 11.9863 5.06667 11.9863 7.19334Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M14.653 4.52635V7.19301C14.653 9.15301 13.753 10.2063 11.9597 10.3597C11.9797 10.1997 11.9864 10.033 11.9864 9.85968V7.19301C11.9864 5.06635 10.9197 3.99967 8.79303 3.99967H4.52637C4.35303 3.99967 4.18637 4.00635 4.02637 4.02635C4.1797 2.23301 5.2397 1.33301 7.19303 1.33301H11.4597C13.5864 1.33301 14.653 2.39968 14.653 4.52635Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.99733 8.83333H9.00333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.66334 8.83333H6.66934" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.33033 8.83333H4.33633" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.9863 7.19334V9.86001C11.9863 10.0333 11.9797 10.2 11.9597 10.36C11.8063 12.16 10.7463 13.0533 8.79301 13.0533H8.52635C8.35968 13.0533 8.19967 13.1333 8.09967 13.2667L7.29968 14.3333C6.94635 14.8067 6.37301 14.8067 6.01967 14.3333L5.21967 13.2667C5.133 13.1533 4.93968 13.0533 4.79301 13.0533H4.52635C2.39968 13.0533 1.33301 12.5267 1.33301 9.86001V7.19334C1.33301 5.24001 2.23301 4.18001 4.02635 4.02667C4.18635 4.00667 4.35301 4 4.52635 4H8.79301C10.9197 4 11.9863 5.06667 11.9863 7.19334Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M14.653 4.52635V7.19301C14.653 9.15301 13.753 10.2063 11.9597 10.3597C11.9797 10.1997 11.9864 10.033 11.9864 9.85968V7.19301C11.9864 5.06635 10.9197 3.99967 8.79303 3.99967H4.52637C4.35303 3.99967 4.18637 4.00635 4.02637 4.02635C4.1797 2.23301 5.2397 1.33301 7.19303 1.33301H11.4597C13.5864 1.33301 14.653 2.39968 14.653 4.52635Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.99733 8.83333H9.00333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.66334 8.83333H6.66934" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.33033 8.83333H4.33633" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="profile-action">
+                                    <a href="#">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M11.9863 7.19334V9.86001C11.9863 10.0333 11.9797 10.2 11.9597 10.36C11.8063 12.16 10.7463 13.0533 8.79301 13.0533H8.52635C8.35968 13.0533 8.19967 13.1333 8.09967 13.2667L7.29968 14.3333C6.94635 14.8067 6.37301 14.8067 6.01967 14.3333L5.21967 13.2667C5.133 13.1533 4.93968 13.0533 4.79301 13.0533H4.52635C2.39968 13.0533 1.33301 12.5267 1.33301 9.86001V7.19334C1.33301 5.24001 2.23301 4.18001 4.02635 4.02667C4.18635 4.00667 4.35301 4 4.52635 4H8.79301C10.9197 4 11.9863 5.06667 11.9863 7.19334Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M14.653 4.52635V7.19301C14.653 9.15301 13.753 10.2063 11.9597 10.3597C11.9797 10.1997 11.9864 10.033 11.9864 9.85968V7.19301C11.9864 5.06635 10.9197 3.99967 8.79303 3.99967H4.52637C4.35303 3.99967 4.18637 4.00635 4.02637 4.02635C4.1797 2.23301 5.2397 1.33301 7.19303 1.33301H11.4597C13.5864 1.33301 14.653 2.39968 14.653 4.52635Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M8.99733 8.83333H9.00333" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M6.66334 8.83333H6.66934" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M4.33033 8.83333H4.33633" stroke="curentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                        Activity
+                                    </a>
+                                    <a href="#">
+                                        Assigned Tasks
+                                    </a>
+                                    <a href="#">
+                                        Uploaded Files
+                                    </a>
+                                </div>
+                                <div class="profile-btn text-center">
+                                    <a href="#">
+                                        Direct Message
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="widget mb-4">
+                            <div class="widget-header">
+                                <h6 class="title">
+                                    Recent activity
+                                </h6>
+                                <a href="#" class="text__primary fw-bold">
+                                    See All Activity
+                                </a>
+                            </div>
+                            <div class="widget-body">
+                                <div class="activity-list">
+                                    <p>
+                                        <i class="fal fa-calendar-alt"></i> April 25, 2024 <b>Meeting with with executive team</b> about <a href="#" class="text__primary fw-bold"> Nen Erp redesign</a>
+                                    </p>
+                                    <p>
+                                        <i class="fal fa-calendar-alt"></i> April 25, 2024 <b>Meeting with with executive team</b> about <a href="#" class="text__primary fw-bold"> Nen Erp redesign</a>
+                                    </p>
+                                    <p>
+                                        <i class="fal fa-calendar-alt"></i> April 25, 2024 <b>Meeting with with executive team</b> about <a href="#" class="text__primary fw-bold"> Nen Erp redesign</a>
+                                    </p>
+                                    <p>
+                                        <i class="fal fa-calendar-alt"></i> April 25, 2024 <b>Meeting with with executive team</b> about <a href="#" class="text__primary fw-bold"> Nen Erp redesign</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget mb-4">
+                            <div class="widget-header">
+                                <h6 class="title">
+                                    Recent tasks
+                                </h6>
+                                <a href="#" class="text__primary fw-bold">
+                                    See All Tasks
+                                </a>
+                            </div>
+                            <div class="widget-body p-0">
+                                <div class="task-list">
+                                    <div class="table-responsive">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="task-name">
+                                                            <input type="checkbox" id="task1">
+                                                            <label for="task1">
+                                                                Making a new trend in poster
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="task-activity">
+                                                            <span class="flag" style="--clr:#FF4133;">
+                                                                <i class="fas fa-flag"></i>
+                                                            </span>
+                                                            <span>
+                                                                <i class="fal fa-tasks"></i>3/5
+                                                            </span>
+                                                            <span>
+                                                                <i class="fal fa-comment-dots"></i>16
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <span>
+                                                                <i class="fal fa-calendar-alt"></i>16 May 2024
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="task-name">
+                                                            <input type="checkbox" id="task2">
+                                                            <label for="task2">
+                                                                Making a new trend in poster
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="task-activity">
+                                                            <span class="flag" style="--clr:#FF4133;">
+                                                                <i class="fas fa-flag"></i>
+                                                            </span>
+                                                            <span>
+                                                                <i class="fal fa-tasks"></i>3/5
+                                                            </span>
+                                                            <span>
+                                                                <i class="fal fa-comment-dots"></i>16
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <span>
+                                                                <i class="fal fa-calendar-alt"></i>16 May 2024
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="task-name">
+                                                            <input type="checkbox" id="task3">
+                                                            <label for="task3">
+                                                                Making a new trend in poster
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="task-activity">
+                                                            <span class="flag" style="--clr:#FF4133;">
+                                                                <i class="fas fa-flag"></i>
+                                                            </span>
+                                                            <span>
+                                                                <i class="fal fa-tasks"></i>3/5
+                                                            </span>
+                                                            <span>
+                                                                <i class="fal fa-comment-dots"></i>16
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="date">
+                                                            <span>
+                                                                <i class="fal fa-calendar-alt"></i>16 May 2024
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget">
+                            <div class="widget-header">
+                                <h6 class="title">
+                                    Uploaded Files
+                                </h6>
+                                <a href="#" class="text__primary fw-bold">
+                                    All Files
+                                </a>
+                            </div>
+                            <div class="widget-body p-0">
+                                <div class="task-list">
+                                    <div class="table-responsive">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="uploaded-file">
+                                                            <span class="file-icon">
+                                                                <img src="assets/img/widget/member-details/file.png" alt="">
+                                                            </span>
+                                                            <span class="file-name">
+                                                                Nen-HR.FIG
+                                                            </span>
+                                                            <span class="file-type">
+                                                                Design File
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="image-group">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
+                                                            <span>
+                                                                5+
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="dropdown">
+                                                        <button type="button" data-bs-toggle="dropdown">
+                                                            <i class="far fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-eye"></i>View
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-edit"></i>Edit 
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-share-alt"></i>Share
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-trash-alt"></i>Delete 
+                                                            </a>
+                                                          </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="uploaded-file">
+                                                            <span class="file-icon">
+                                                                <img src="assets/img/widget/member-details/file.png" alt="">
+                                                            </span>
+                                                            <span class="file-name">
+                                                                Nen-HR.FIG
+                                                            </span>
+                                                            <span class="file-type">
+                                                                Design File
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="image-group">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
+                                                            <span>
+                                                                5+
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="dropdown">
+                                                        <button type="button" data-bs-toggle="dropdown">
+                                                            <i class="far fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-eye"></i>View
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-edit"></i>Edit 
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-share-alt"></i>Share
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-trash-alt"></i>Delete 
+                                                            </a>
+                                                          </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="uploaded-file">
+                                                            <span class="file-icon">
+                                                                <img src="assets/img/widget/member-details/file.png" alt="">
+                                                            </span>
+                                                            <span class="file-name">
+                                                                Nen-HR.FIG
+                                                            </span>
+                                                            <span class="file-type">
+                                                                Design File
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="image-group">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
+                                                            <span>
+                                                                5+
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td class="dropdown">
+                                                        <button type="button" data-bs-toggle="dropdown">
+                                                            <i class="far fa-ellipsis-h"></i>
+                                                        </button>
+                                                        <ul class="dropdown-menu">
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-eye"></i>View
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-edit"></i>Edit 
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-share-alt"></i>Share
+                                                            </a>
+                                                          </li>
+                                                          <li>
+                                                            <a href="#">
+                                                                <i class="fal fa-trash-alt"></i>Delete 
+                                                            </a>
+                                                          </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--~~./ end Dashboard  ~~-->
+    
+
+
+    <!-- All The JS Files
+    ================================================== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/select2.full.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
