@@ -29,9 +29,6 @@
     background-color: var(--white-950);
     white-space: nowrap;
 }
-.btn__primary__lightpill {
-    
-}
 .notification-bell-icon {
     @include dimension(4rem, 4rem);
     @include flex-center;

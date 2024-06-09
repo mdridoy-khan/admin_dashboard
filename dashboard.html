@@ -1308,83 +1308,26 @@
         });
 
 
-        const data = {
-        labels: generateLabels(),
-        datasets: [
-            {
-            label: 'D0',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.red,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
-            hidden: true
+        const ctx = document.getElementById('myChart');
+
+            new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green'],
+                datasets: [{
+                label: '',
+                data: [20, 15, 10, 5],
+                borderWidth: 1
+                }]
             },
-            {
-            label: 'D1',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.orange,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.orange),
-            fill: '-1'
-            },
-            {
-            label: 'D2',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.yellow,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.yellow),
-            hidden: true,
-            fill: 1
-            },
-            {
-            label: 'D3',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.green,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.green),
-            fill: '-1'
-            },
-            {
-            label: 'D4',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.blue,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.blue),
-            fill: '-1'
-            },
-            {
-            label: 'D5',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.grey,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.grey),
-            fill: '+2'
-            },
-            {
-            label: 'D6',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.purple,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.purple),
-            fill: false
-            },
-            {
-            label: 'D7',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.red,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red),
-            fill: 8
-            },
-            {
-            label: 'D8',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.orange,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.orange),
-            fill: 'end',
-            hidden: true
-            },
-            {
-            label: 'D9',
-            data: generateData(),
-            borderColor: Utils.CHART_COLORS.yellow,
-            backgroundColor: Utils.transparentize(Utils.CHART_COLORS.yellow),
-            fill: {above: 'blue', below: 'red', target: {value: 350}}
+            options: {
+                scales: {
+                y: {
+                    beginAtZero: true
+                }
+                }
             }
-        ]
-        };
+        });
     </script>
 </body>
 </html>
