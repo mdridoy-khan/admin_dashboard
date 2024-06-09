@@ -225,6 +225,10 @@
                 @include flex-center;
                 gap: .8rem;
                 padding-bottom: 1.6rem;
+
+                @include lg-down {
+                    display: none;
+                }    
                 .image-group{
                     display:flex;
                     align-items: center;
@@ -565,18 +569,6 @@
                         border-radius: 50%;
                         position: relative;
                         background: var(--white-950);
-                        // &.circle{
-                        //     border: 0;
-                        //     position: relative;
-                        //     &::before{
-                        //         position: absolute;
-                        //         content: '';
-                        //         width: .8rem;
-                        //         height: .8rem;
-                        //         background: var(--slate-50);
-                        //         border-radius: 50%;
-                        //     }   
-                        // }
                         &::after{
                             position: absolute;
                             content: "";

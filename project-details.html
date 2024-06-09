@@ -543,17 +543,220 @@
                             </a>
                         </li>
                     </ul>
-                    <ul class="endblock ms-auto">
+                    <ul class="endblock nav ms-auto">
                         <li>
+                            <form action="#">
+                                <div class="input-group align-items-center">
+                                    <span class="fal fa-search"></span>
+                                    <input type="text" name="s" class="form-control" placeholder="Search for task...">
+                                </div>
+                            </form>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-filter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-cog"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
                 <div class="kanban_canvas" id="kanban_canvas">
                     <div id="kanban_board">
+                        <div class="list-item">
+                            <div class="list-header dropdown">
+                                Issues Cards
 
+                                <button class="" data-bs-toggle="dropdown">
+                                    <i class="far fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a href="#">
+                                            Add Card
+                                        </a>
+                                    </li>
+                                    <li><a href="#">Copy List</a></li>
+                                    <li><a href="#">Move List</a></li>
+                                </ul>
+                            </div>
+                            <div class="list-cards">
+                                <div class="list-card">
+                                    <h6 class="list-card-title">
+                                        Review Created Screen
+                                    </h6>
+                                    <ul class="meta">
+                                        <li>
+                                            <i class="fal fa-tasks"></i>
+                                            <span>0/5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="list-card">
+                                    <h6 class="list-card-title">
+                                        Creating Next.js Version
+                                    </h6>
+                                    <ul class="meta">
+                                        <li>
+                                            <i class="fal fa-tasks"></i>
+                                            <span>0/5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="list-card">
+                                    <h6 class="list-card-title">
+                                        Fixing New Issues
+                                    </h6>
+                                    <ul class="meta">
+                                        <li>
+                                            <i class="fal fa-tasks"></i>
+                                            <span>0/5</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="list-footer">
+                                <form action="#" class="addCardForm" style="display: none;">
+                                    <fieldset>
+                                        <input type="text" name="cardName" class="form-control" placeholder="Enter a title for this card...">
+                                    </fieldset>
+                                    <fieldset class="mt-3 flex align-items-center">
+                                        <button type="submit" class="btn__primary">Add Card</button>
+                                        <button type="reset" class="reset">
+                                            <i class="fal fa-times"></i>
+                                        </button>
+                                    </fieldset>
+                                </form>
+                                <button class="list-add-card-btn">
+                                    <i class="far fa-plus"></i> 
+                                    New Card
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-header dropdown">
+                                In Progress
+
+                                <button class="" data-bs-toggle="dropdown">
+                                    <i class="far fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a href="#">
+                                            Add Card
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Copy List</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Move List</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list-cards">
+                                <div class="list-card">
+                                    <h6 class="list-card-title">
+                                        Making trendy poster description for advertisement
+                                    </h6>
+                                    <ul class="meta">
+                                        <li>
+                                            <i class="fal fa-tasks"></i>
+                                            <span>0/5</span>
+                                        </li>
+                                        <li>
+                                            <i class="fal fa-comment-dots"></i>
+                                            <span>16</span>
+                                        </li>
+                                        <li class="ms-auto">
+                                            <i class="fal fa-calendar-alt"></i>
+                                            <span>16 May 2024</span>
+                                        </li>
+                                    </ul>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="--bg:#FFDD00; width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="list-card">
+                                    <h6 class="list-card-title">
+                                        Collecting data from user testing
+                                    </h6>
+                                    <ul class="meta">
+                                        <li>
+                                            <i class="fal fa-tasks"></i>
+                                            <span>4/5</span>
+                                        </li>
+                                        <li>
+                                            <i class="fal fa-comment-dots"></i>
+                                            <span>16</span>
+                                        </li>
+                                        <li class="ms-auto">
+                                            <i class="fal fa-calendar-alt"></i>
+                                            <span>16 May 2024</span>
+                                        </li>
+                                    </ul>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="--bg:#499C4B; width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="list-card">
+                                    <h6 class="list-card-title">
+                                        Update on a existing React component
+                                    </h6>
+                                    <ul class="meta">
+                                        <li>
+                                            <i class="fal fa-tasks"></i>
+                                            <span>1/5</span>
+                                        </li>
+                                        <li>
+                                            <i class="fal fa-comment-dots"></i>
+                                            <span>16</span>
+                                        </li>
+                                        <li class="ms-auto">
+                                            <i class="fal fa-calendar-alt"></i>
+                                            <span>16 May 2024</span>
+                                        </li>
+                                    </ul>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="--bg:#e72113; width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="list-footer">
+                                <form action="#" class="addCardForm" style="display: none;">
+                                    <fieldset>
+                                        <input type="text" name="cardName" class="form-control" placeholder="Enter a title for this card...">
+                                    </fieldset>
+                                    <fieldset class="mt-3 flex align-items-center">
+                                        <button type="submit" class="btn__primary">Add Card</button>
+                                        <button type="reset" class="reset">
+                                            <i class="fal fa-times"></i>
+                                        </button>
+                                    </fieldset>
+                                </form>
+                                <button class="list-add-card-btn">
+                                    <i class="far fa-plus"></i> 
+                                    New Card
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div class="add-list">
-                        <div class="title editable addListPlaceholder">Add New List</div>
+                        <form action="#" class="addListForm" style="display: none;">
+                            <fieldset>
+                                <input type="text" name="listName" class="form-control" placeholder="Enter List Title...">
+                            </fieldset>
+                            <fieldset class="mt-3 flex align-items-center">
+                                <button type="submit" class="btn__primary">Add List</button>
+                                <button type="reset" class="reset">
+                                    <i class="fal fa-times"></i>
+                                </button>
+                            </fieldset>
+                        </form>
+                        <button class="addListPlaceholder">Add New List</button>
                     </div>
                     
                 </div>
@@ -590,9 +793,5 @@
     <script src="assets/js/Sortable.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/canban.js"></script>
-
-    <script>
-        
-    </script>
 </body>
 </html>
