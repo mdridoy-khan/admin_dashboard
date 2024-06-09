@@ -5,9 +5,10 @@
         gap: 1.6rem;
         padding: 1.6rem 2.4rem;
         .image{
-            img{
-                border-radius: 50%;
-            }
+            width: 4rem;
+            height: auto;
+            overflow: hidden;
+            border-radius: 50%;
         }
         .name{
             font-size: 1.6rem;
@@ -245,6 +246,7 @@
 .member-details-card{
     background: var(--white-950);
     border-radius: 1.2rem;
+    margin-bottom: 2.4rem;
     .cover-img{
         img{
             width: 100%;
@@ -288,7 +290,12 @@
         display: flex;
         align-items: center;
         gap: .6rem;
+        justify-content: center;
         margin-bottom: 2.4rem;
+        flex-direction: column;
+        @include xl-up{
+            flex-direction: row;
+        }
         a{
             padding: .6rem 1.5rem;
             display: block;
@@ -338,12 +345,15 @@
             display: flex;
             align-items: center;
             gap: .8rem;
-            padding: .8rem 1.2rem .8rem 2.4rem;
+            padding: .8rem 1.2rem .8rem 1.2rem;
             border-radius: .8rem;
             transition: all .3s ease;
             font-weight: 600;
             line-height: 1.6;
             color: var(--slate-700);
+            @include xl-up{
+                padding: .8rem 1.2rem .8rem 2.4rem;
+            }
             &:hover{
                 color: var(--primary-600);
                 background: var(--primary-50);
@@ -374,6 +384,16 @@
 .widget{
     background: var(--white-950);
     border-radius: 1.2rem;
+    width: 70rem;
+    @include sm-up{
+        width: 100%;
+    }
+    @include lg-up{
+        width: 60rem;
+    }
+    @include xl-up{
+        width: 100%;
+    }
     .widget-header{
         display: flex;
         align-items: center;
@@ -405,6 +425,7 @@
             gap: .8rem;
             font-size: 1.4rem;
             color: var(--slate-500);
+            flex-wrap: wrap;
             & + p{
                 margin-top: 1.6rem;
             }
