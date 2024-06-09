@@ -225,6 +225,10 @@
                 @include flex-center;
                 gap: .8rem;
                 padding-bottom: 1.6rem;
+
+                @include lg-down {
+                    display: none;
+                }    
                 .image-group{
                     display:flex;
                     align-items: center;

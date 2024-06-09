@@ -1391,6 +1391,11 @@ textarea.form-control:focus {
   gap: 0.8rem;
   padding-bottom: 1.6rem;
 }
+@media screen and (max-width: 991px) {
+  .db_wrapper .db_body .filter_area .members {
+    display: none;
+  }
+}
 .db_wrapper .db_body .filter_area .members .image-group {
   display: flex;
   align-items: center;
@@ -2345,8 +2350,10 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # Project Details (Kanban) Page
 --------------------------------------------------------------*/
-.project_tabfilter {
-  display: flex;
+@media screen and (min-width: 992px) {
+  .project_tabfilter {
+    display: flex;
+  }
 }
 .project_tabfilter .nav {
   display: flex;
@@ -2369,13 +2376,32 @@ textarea.form-control:focus {
   color: var(--black-950);
   background-color: var(--slate-50);
 }
+.project_tabfilter .endblock a {
+  background-color: var(--slate-50);
+  height: 3.2rem;
+  width: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project_tabfilter .endblock input {
+  height: 3.2rem;
+  border: 0;
+  background-color: transparent;
+  max-width: 18rem;
+}
+@media screen and (max-width: 991px) {
+  .project_tabfilter .startblock + .endblock {
+    margin-top: 1rem;
+  }
+}
 
 .kanban_canvas {
   margin: 2rem 0;
   padding: 0 0 1rem;
   display: flex;
   align-items: start;
-  gap: 2rem;
+  gap: 1.5rem;
   overflow-x: scroll;
 }
 .kanban_canvas::-webkit-scrollbar {
@@ -2390,19 +2416,152 @@ textarea.form-control:focus {
 .kanban_canvas #kanban_board {
   display: flex;
   align-items: start;
-  gap: 2rem;
+  gap: 1.5rem;
+  min-height: 50rem;
 }
-.kanban_canvas .list {
+.kanban_canvas .list-item {
   background-color: var(--white-950);
   padding: 1.5rem;
   border: 0.1rem solid var(--slate-50);
   border-radius: 0.8rem;
-  min-width: 28rem;
+  width: 30rem;
 }
-.kanban_canvas .list .title {
+.kanban_canvas .list-item .list-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.kanban_canvas .list-item .list-header button {
+  border: 0;
+  background-color: var(--slate-50);
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.5rem;
+}
+.kanban_canvas .list-item .list-header .dropdown-menu {
+  border: 0;
+  outline: 0;
+  background-color: var(--white-950);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+  min-width: 20rem;
+  border-radius: 0.8rem;
+}
+.kanban_canvas .list-item .list-header .dropdown-menu li a {
+  padding: 0.5rem 1.5rem;
+  display: block;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  transition: all 0.15s ease;
+}
+.kanban_canvas .list-item .list-header .dropdown-menu li a:hover {
+  background-color: var(--slate-50);
+}
+.kanban_canvas .list-item .list-footer {
+  margin-top: 2rem;
+}
+.kanban_canvas .list-item .list-footer .list-add-card-btn {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--primary-600);
+  font-weight: 700;
+}
+.kanban_canvas .list-item .list-footer .list-add-card-btn i {
+  width: 2rem;
+  height: 2rem;
+  border: 0.2rem solid var(--primary-600);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.kanban_canvas .list-item .list-footer .btn__primary {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.4rem;
+}
+.kanban_canvas .list-item .list-footer .reset {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-size: 2rem;
+}
+.kanban_canvas .list-card {
+  border: 0.1rem solid var(--slate-100);
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  transition: all 0.15s ease;
+  background-color: var(--white-950);
+  overflow: hidden;
+}
+.kanban_canvas .list-card + .list-card {
+  margin-top: 0.8rem;
+}
+.kanban_canvas .list-card.ghost {
+  background-color: var(--primary-50);
+}
+.kanban_canvas .list-card .list-card-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.kanban_canvas .list-card .list-card-title button {
+  border: 0;
+  background-color: transparent;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+.kanban_canvas .list-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.8rem;
+}
+.kanban_canvas .list-card .meta li {
+  font-size: 1.2rem;
+  color: var(--slate-500);
+}
+.kanban_canvas .list-card .progress {
+  height: 0.4rem;
+  margin-top: 1.5rem;
+  margin: 1.5rem -1.5rem -1.5rem -1.5rem;
+}
+.kanban_canvas .list-card .progress-bar {
+  background-color: var(--bg);
+}
+.kanban_canvas .list-card:hover {
+  border-color: var(--primary-600);
+}
+.kanban_canvas .list-card:hover .list-card-title button {
+  opacity: 1;
+  visibility: visible;
+}
+.kanban_canvas .addListForm .btn__primary {
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.4rem;
+}
+.kanban_canvas .addListForm .reset {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  font-size: 2rem;
+}
+.kanban_canvas .add-list {
+  min-width: 25rem;
 }
 .kanban_canvas .addListPlaceholder {
   background-color: white;
@@ -2410,7 +2569,6 @@ textarea.form-control:focus {
   border: 0.1rem solid var(--slate-200);
   border-radius: 0.8rem;
   outline: none;
-  min-width: 25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
