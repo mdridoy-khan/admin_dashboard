@@ -2,7 +2,7 @@
     height: 100vh;
     overflow: hidden;   
     .db_body {
-        height: calc(100vh - 7.2rem);
+        height: calc(100vh - 7.2rem);   
         @include lg-down {
             overflow-y: scroll;
         }
