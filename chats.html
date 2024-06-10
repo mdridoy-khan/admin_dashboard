@@ -584,9 +584,6 @@
                                             <h6 class="name">
                                                 Nen HR - UI Kit for Human Resource Management on Nen Erp
                                             </h6>
-                                            <button type="button" class="close-box">
-                                                <i class="fal fa-times"></i>
-                                            </button>
                                         </div>
                                         <p class="content">
                                             A perfect Web UI kit for Human Resource Management Tools. This template is compatible with the current design trends by managing design system.
@@ -1140,8 +1137,8 @@
                 $(actionSelector).toggleClass('appeared');
             });
         };
+        chat_atachment('.attachmentToggler, .closeAttachemnt', '.attachment');  
         if ($(window).width() <= 767) {
-            chat_atachment('.attachmentToggler, .closeAttachemnt', '.attachment');  
             chat_atachment('.chat-wrapper .chat-item, .backtochat', '.chat-wrapper .chat-box, .chat-wrapper .chat_sidebar');  
         }
     </script>
