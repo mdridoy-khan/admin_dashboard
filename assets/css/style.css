@@ -766,7 +766,7 @@ textarea.form-control:focus {
   position: relative;
 }
 .db_wrapper .db_header .headerBlock .user-profile-icon img {
-  border-width: 50%;
+  border-radius: 50%;
   width: 4rem;
   height: 4rem;
 }
@@ -3148,7 +3148,7 @@ textarea.form-control:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2.4rem 1.2rem 1.2rem 2.4rem;
+  margin: 2.4rem 1.5rem 1.2rem 1.5rem;
   padding-bottom: 0.8rem;
   border-bottom: 0.1rem solid var(--slate-50);
   font-size: 1.4rem;
@@ -3161,7 +3161,7 @@ textarea.form-control:focus {
   color: var(--slate-500);
 }
 .chat-wrapper .chat_sidebar .chat-item {
-  padding: 1rem 1.2rem 1rem 2.4rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
   display: flex;
   width: 100%;
   align-items: center;
@@ -3174,13 +3174,16 @@ textarea.form-control:focus {
   cursor: pointer;
 }
 .chat-wrapper .chat_sidebar .chat-item .thumb {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.chat-wrapper .chat_sidebar .chat-item .thumb img {
+  width: 100%;
 }
 .chat-wrapper .chat_sidebar .chat-item .info {
   flex: 1;
