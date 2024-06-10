@@ -304,12 +304,6 @@
                 line-height: 1.6;
                 font-weight: 600;
             }
-            .close-box{
-                background: none;
-                border: 0;
-                font-size: 1.4rem;
-                color: var(--slate-500);
-            }
             .content{
                 font-size: 1.4rem;
                 line-height: 1.6;
@@ -357,6 +351,7 @@
                 font-size: 1.4rem;
                 line-height: 1.6;
                 color: var(--slate-700);
+                text-align: end;
             }
         }
         .new-message-label{
@@ -364,8 +359,14 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            max-width: 40rem;
+            max-width: 25rem;
             margin: 0 auto;
+            @include md-up{
+                max-width: 40rem;
+            }
+            @include xl-up{
+                max-width: 60rem;
+            }
             p{
                 font-size: 1.2rem;
                 line-height: 1.4;
