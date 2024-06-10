@@ -418,7 +418,7 @@
                 </div>
             </div>
 
-            <div class="db_content">
+            <div class="db_content chat">
                 <div class="chat-wrapper">
                     <div class="chat-left-sidebar">
                         <form action="#" class="find-people position-sticky mb-4">
@@ -437,7 +437,7 @@
                         </div>
                         <ul class="chat-list mb-5">
                             <li>
-                                <a href="#" class="active">
+                                <a href="#" class="chat_body_open active">
                                     <img src="assets/img/chart/group/nen.png" alt="">
                                     Nen Erp    
                                 </a>
@@ -776,12 +776,43 @@
                     </div>
                     <div class="chat-box">
                         <div class="chat-header">
-                            <div class="image">
-                                <img src="assets/img/chart/header-logo.png" alt="">
+                            <div class="active-chat-header">
+                                <div class="image">
+                                    <img src="assets/img/chart/header-logo.png" alt="">
+                                </div>
+                                <h5 class="team-name">                        
+                                    Nen Erp
+                                </h5>
                             </div>
-                            <h5 class="team-name">                        
-                                Nen Erp
-                            </h5>
+                            <div class="chat-header-btn">
+                                <div class="dropdown">
+                                    <button type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                        <i class="far fa-ellipsis-h"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" data-popper-placement="bottom-end" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-45px, 61px);">
+                                      <li>
+                                        <a href="#">
+                                            <i class="fal fa-users"></i>Group info
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="#" class="attachmentToggler">
+                                            <i class="far fa-paperclip"></i>Video file and attachment
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                            <i class="fal fa-user-lock"></i>Block 
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="#">
+                                            <i class="fal fa-angle-right"></i>More 
+                                        </a>
+                                      </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="message-body">
                             <div class="incoming-message">
@@ -1025,22 +1056,22 @@
                                     Latest photos
                                 </h6>
                                 <div class="row gx-3">
-                                    <div class="col-md-6">
+                                    <div class="col-6 col-md-6">
                                         <div class="photo mb-3">
                                             <img src="assets/img/chart/attachment-galary/photo1.png" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-6 col-md-6">
                                         <div class="photo mb-3">
                                             <img src="assets/img/chart/attachment-galary/photo2.png" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-6 col-md-6">
                                         <div class="photo mb-3">
                                             <img src="assets/img/chart/attachment-galary/photo3.png" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-6 col-md-6">
                                         <div class="photo mb-3">
                                             <img src="assets/img/chart/attachment-galary/photo4.png" alt="">
                                         </div>
@@ -1357,5 +1388,53 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        //=============  chat attachment sidebar  =============\\
+        function chat_atachment(selector, actionSelector) {
+            var chat_atachment_btn = $(selector);
+            chat_atachment_btn.on("click", function() {
+                $(selector).toggleClass('sidebar_collapsed');
+            });
+            
+            var hamburgerbtn = $(selector);
+            hamburgerbtn.on("click", function() {
+                $(actionSelector).toggleClass('sidebar_collapsed');
+            });
+
+            $(document).on('click', function(e) {
+                var selectorType = $(actionSelector).add(chat_atachment_btn);
+                if (selectorType.is(e.target) !== true && selectorType.has(e.target).length === 0) {
+                    $(actionSelector).removeClass("sidebar_collapsed");
+                    $(selector).removeClass("sidebar_collapsed");
+                }
+            });
+
+        };
+        chat_atachment('.attachmentToggler', '.attachment');  
+
+        //=============  chat body layout  =============\\
+        function chat_body(selector, actionSelector) {
+            var chat_body_layout = $(selector);
+            chat_body_layout.on("click", function() {
+                $(selector).toggleClass('chat_box_collapsed');
+            });
+            
+            var hamburgerbtn = $(selector);
+            hamburgerbtn.on("click", function() {
+                $(actionSelector).toggleClass('chat_box_collapsed');
+            });
+
+            $(document).on('click', function(e) {
+                var selectorType = $(actionSelector).add(chat_body_layout);
+                if (selectorType.is(e.target) !== true && selectorType.has(e.target).length === 0) {
+                    $(actionSelector).removeClass("chat_box_collapsed");
+                    $(selector).removeClass("chat_box_collapsed");
+                }
+            });
+
+        };
+        chat_body('.chat_body_open.active', '.chat-box');  
+    </script>
 </body>
 </html>
