@@ -420,355 +420,93 @@
 
             <div class="db_content chat">
                 <div class="chat-wrapper">
-                    <div class="chat-left-sidebar">
-                        <form action="#" class="find-people position-sticky mb-4">
-                            <input type="text" placeholder="Search for a discussion">
+                    <div class="chat_sidebar">
+                        <form action="#" class="find-contacts position-sticky mb-4">
+                            <input type="text" placeholder="Search for a discussion" class="form-control">
                             <button type="button" class="search-btn">
                                 <i class="fal fa-search"></i>
                             </button>
                         </form>
-                        <div class="create-team">
-                            <span class="name">
-                                Teams
-                            </span>
+                        <div class="chat-list-title">
+                            Teams
                             <button type="button" class="icon">
                                 <i class="far fa-plus-circle"></i>
                             </button>
                         </div>
                         <ul class="chat-list mb-5">
-                            <li>
-                                <a href="#" class="chat_body_open active">
+                            <li class="chat-item">
+                                <div class="thumb">
                                     <img src="assets/img/chart/group/nen.png" alt="">
-                                    Nen Erp    
-                                </a>
+                                </div>
+                                <div class="info">
+                                    <h6 class="name">
+                                        Nen Erp
+                                    </h6>
+                                </div>
                             </li>
-                            <li>
-                                <a href="#">
+                            <li class="chat-item">
+                                <div class="thumb">
                                     <img src="assets/img/chart/group/app.png" alt="">
-                                    Mobile App Design
-                                </a>
+                                </div>
+                                <div class="info">
+                                    <h6 class="name">
+                                        Mobile App Design
+                                    </h6>
+                                </div>
                             </li>
-                            <li>
-                                <a href="#">
+                            <li class="chat-item">
+                                <div class="thumb">
                                     <img src="assets/img/chart/group/design-system.png" alt="">
-                                    Design System  
-                                </a>
+                                </div>
+                                <div class="info">
+                                    <h6 class="name">
+                                        Design System  
+                                    </h6>
+                                </div>
                             </li>
-                            <li>
-                                <a href="#">
+                            <li class="chat-item">
+                                <div class="thumb">
                                     <img src="assets/img/chart/group/devboy.png" alt="">
-                                    Devboy    
-                                </a>
+                                </div>
+                                <div class="info">
+                                    <h6 class="name">
+                                        Devboy    
+                                    </h6>
+                                </div>
                             </li>
-                            <li>
-                                <a href="#">
+                            <li class="chat-item">
+                                <div class="thumb">
                                     <img src="assets/img/chart/group/internal-project.png" alt="">
-                                    Internal Project    
-                                </a>
+                                </div>
+                                <div class="info">
+                                    <h6 class="name">
+                                        Internal Project    
+                                    </h6>
+                                </div>
                             </li>
                         </ul>
-                        <div class="create-team">
-                            <span class="name">
-                                Contacts
-                            </span>
-                            <button type="button" class="icon">
+                        <div class="chat-list-title">
+                            Contact
+                            <button type="button" class="icon" data-bs-toggle="modal" data-bs-target="#create_contact">
                                 <i class="far fa-plus-circle"></i>
                             </button>
                         </div>
-                        <div class="chat-box-list">
+                        <div class="chat-list">
                             <ul>
-                                <li class="profile-info active">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/profile1.png" alt="">
-                                        </a>
+                                <li class="chat-item chat-contacts">
+                                    <div class="thumb">
+                                        <img src="assets/img/chart/profile1.png" alt="">
                                     </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Noell Blue
-                                            </h6>
+                                    <div class="info">
+                                        <h6 class="name">
+                                            Noell Blue
                                             <span class="time">
                                                 10m
                                             </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
+                                        </h6>
+                                        <p class="last_message">
+                                            Whatever you can do Whatever you can do
                                         </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/2.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Jack person
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/3.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Sasha grey
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/4.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                jonas blue
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/5.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Kala
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/6.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Marry chain
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/7.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                John cina
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/8.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Natalia 
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/contact/9.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Robin
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/profile1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Noell Blue
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/profile1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Noell Blue
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/profile1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Noell Blue
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/profile1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Noell Blue
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
-                                    </div>
-                                </li>
-                                <li class="profile-info">
-                                    <div class="image">
-                                        <a href="#">
-                                            <img src="assets/img/chart/profile1.png" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="profile-content">
-                                        <div class="profile-name">
-                                            <h6 class="name">
-                                                Noell Blue
-                                            </h6>
-                                            <span class="time">
-                                                10m
-                                            </span>
-                                        </div>
-                                        <p class="message">
-                                            Whatever you can do
-                                        </p>
-                                        <a href="#" class="stretched-link"></a>
                                     </div>
                                 </li>
                             </ul>
@@ -777,10 +515,15 @@
                     <div class="chat-box">
                         <div class="chat-header">
                             <div class="active-chat-header">
+                                <button type="button" class="backtochat">
+                                    <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18 5.08006C18 4.77812 17.7121 4.5334 17.3571 4.5334L2.19486 4.5334L6.07553 0.933214C6.32659 0.719715 6.32659 0.373628 6.07553 0.160126C5.82448 -0.0533767 5.41745 -0.0533766 5.1664 0.160126L0.188289 4.69352C-0.0627618 4.90702 -0.0627618 5.2531 0.188289 5.4666L5.33115 9.83986C5.5822 10.0534 5.98923 10.0534 6.24028 9.83986C6.49134 9.62637 6.49134 9.28028 6.24028 9.06678L2.19486 5.62672L17.3571 5.62671C17.7121 5.62671 18 5.38199 18 5.08006Z" fill="currentcolor"></path>
+                                    </svg>
+                                </button>
                                 <div class="image">
                                     <img src="assets/img/chart/header-logo.png" alt="">
                                 </div>
-                                <h5 class="team-name">                        
+                                <h5 class="chat-name">
                                     Nen Erp
                                 </h5>
                             </div>
@@ -797,7 +540,7 @@
                                       </li>
                                       <li>
                                         <a href="#" class="attachmentToggler">
-                                            <i class="far fa-paperclip"></i>Video file and attachment
+                                            <i class="far fa-paperclip"></i>Attachments
                                         </a>
                                       </li>
                                       <li>
@@ -1023,30 +766,25 @@
                                 Attachment
                             </h4>
                             <div class="dropdown">
-                                <button type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                                <button type="button" class="closeAttachemnt">
+                                    <i class="far fa-times"></i>
+                                </button>
+                                <button type="button" data-bs-toggle="dropdown">
                                     <i class="far fa-ellipsis-h"></i>
                                 </button>
-                                <ul class="dropdown-menu" data-popper-placement="bottom-end" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(-45px, 61px);">
-                                  <li>
-                                    <a href="#">
-                                        <i class="fal fa-eye"></i>View
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                        <i class="fal fa-edit"></i>Edit 
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                        <i class="fal fa-share-alt"></i>Share
-                                    </a>
-                                  </li>
-                                  <li>
-                                    <a href="#">
-                                        <i class="fal fa-trash-alt"></i>Delete 
-                                    </a>
-                                  </li>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fal fa-eye"></i>
+                                            Option
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fal fa-edit"></i>
+                                            Another Option
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -1394,47 +1132,18 @@
         function chat_atachment(selector, actionSelector) {
             var chat_atachment_btn = $(selector);
             chat_atachment_btn.on("click", function() {
-                $(selector).toggleClass('sidebar_collapsed');
+                $(selector).toggleClass('appeared');
             });
             
             var hamburgerbtn = $(selector);
             hamburgerbtn.on("click", function() {
-                $(actionSelector).toggleClass('sidebar_collapsed');
+                $(actionSelector).toggleClass('appeared');
             });
-
-            $(document).on('click', function(e) {
-                var selectorType = $(actionSelector).add(chat_atachment_btn);
-                if (selectorType.is(e.target) !== true && selectorType.has(e.target).length === 0) {
-                    $(actionSelector).removeClass("sidebar_collapsed");
-                    $(selector).removeClass("sidebar_collapsed");
-                }
-            });
-
         };
-        chat_atachment('.attachmentToggler', '.attachment');  
-
-        //=============  chat body layout  =============\\
-        function chat_body(selector, actionSelector) {
-            var chat_body_layout = $(selector);
-            chat_body_layout.on("click", function() {
-                $(selector).toggleClass('chat_box_collapsed');
-            });
-            
-            var hamburgerbtn = $(selector);
-            hamburgerbtn.on("click", function() {
-                $(actionSelector).toggleClass('chat_box_collapsed');
-            });
-
-            $(document).on('click', function(e) {
-                var selectorType = $(actionSelector).add(chat_body_layout);
-                if (selectorType.is(e.target) !== true && selectorType.has(e.target).length === 0) {
-                    $(actionSelector).removeClass("chat_box_collapsed");
-                    $(selector).removeClass("chat_box_collapsed");
-                }
-            });
-
-        };
-        chat_body('.chat_body_open.active', '.chat-box');  
+        if ($(window).width() <= 767) {
+            chat_atachment('.attachmentToggler, .closeAttachemnt', '.attachment');  
+            chat_atachment('.chat-wrapper .chat-item, .backtochat', '.chat-wrapper .chat-box, .chat-wrapper .chat_sidebar');  
+        }
     </script>
 </body>
 </html>

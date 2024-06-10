@@ -1,13 +1,13 @@
 .db_content{
     &.chat{
         width: 100%;
-        height: calc(100vh - 7.5rem);
+        height: 100%;
     }
 }
 .chat-wrapper{
     border: .1rem solid var(--slate-100);
     width: 100%;
-    height: calc(100vh - 7.5rem);
+    height: 100%;
     border-radius: 1.6rem;
     background: var(--white-950);
     overflow: hidden;
@@ -15,22 +15,26 @@
     @include md-up{
         display: flex;
     }
-    .chat-left-sidebar{
+    .chat_sidebar {
         flex: 0 0 23rem;
         border-right: .1rem solid var(--slate-50);
         overflow-y: scroll;
         position: relative;
-        height: 100vh;
-        @include xl-up{
+        height: 100%;
+        transition: all .2s ease;
+        &.appeared {
+            transform: translateX(-5rem);
+        }
+        @include xl-up {
             flex: 0 0 28rem;
         }
-        @include md-up{
+        @include md-up {
             height: 100%;
         }
-        &::-webkit-scrollbar{
+        &::-webkit-scrollbar {
             width: 0;
         }
-        .find-people{
+        .find-contacts {
             margin-bottom: 2.4rem;
             position: relative;
             z-index: 20;
@@ -58,135 +62,90 @@
                 transform: translateY(-50%);
             }
         }
-        .chat-box-list{
-            .profile-info{
-                display: flex;
-                gap: 1.2rem;
-                padding: 1.2rem 1.2rem 1.2rem 2.4rem;
-                border-bottom: .1rem solid var(--slate-50);
-                position: relative;
-                &:last-child{
-                    border-bottom: 0;
-                }
-                &.active{
-                    background: var(--primary-50);
-                    .message{
-                        color: var(--slate-950);
-                    }
-                }
-            }
-            .profile-content{
-                flex: 1;
-            }
-            .image{
-                width: 3.2rem;
-                height: 3.2rem;
-                border-radius: 5rem;
-                a{
-                    width: 100%;
-                    display: block;
-                    position: relative;
-                    &::before{
-                        position: absolute;
-                        content: '';
-                        width: .8rem;
-                        height: .8rem;
-                        background: #4FB059;
-                        border-radius: 50%;
-                        right: 0;
-                        bottom: 0;
-                        border: .2rem solid var(--white-950);
-                    }
-                }
-                img{
-                    border-radius: 50%;
-                    width: 100%;
-                }
-            }
-            .profile-name{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: .4rem;
-                .name{
-                    font-size: 1.4rem;
-                    color: var(--slate-950);
-                    line-height: 1.6;
-                    font-weight: 500;
-                }
-                .time{
-                    font-size: 1.2rem;
-                    line-height: 1.4;
-                    color: var(--slate-500);
-                }
-            }
-            .message{
-                font-size: 1.4rem;
-                line-height: 1.6;
-                color: var(--slate-700);
-            }
-        }
-        .create-team{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        
+        .chat-list-title {
+            @include flex-between;
             margin: 2.4rem 1.2rem 1.2rem 2.4rem;
             padding-bottom: .8rem;
             border-bottom: .1rem solid var(--slate-50);
-            .name{
-                font-size: 1.4rem;
-                font-weight: 500;
-                line-height: 1.2;
-                color: var(--slate-500);
-            }
-            .icon{
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--slate-500);
+            .icon {
                 background: none;
                 border: 0;
                 color: var(--slate-500);
-                font-weight: 600;
-                font-size: 1.4rem;
             }
         }
-        .chat-list{
-            a{
-                padding: .8rem 1.2rem .8rem 2.4rem;
-                display: flex;
-                width: 100%;
-                align-items: center;
-                gap: .8rem;
+        .chat-item {
+            padding: 1rem 1.2rem 1rem 2.4rem;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            gap: .8rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.6;
+            color: var(--slate-700);
+            transition: all .3s ease;
+            cursor: pointer;
+            .thumb {
+                @include dimension(3.2rem, 3.2rem);
+                border-radius: 50%;
+                overflow: hidden;
+                @include flex-center;
+            }
+            .info {
+                flex: 1;
+            }
+            .name {
                 font-size: 1.4rem;
-                font-weight: 500;
-                line-height: 1.6;
+                font-weight: 600;
                 color: var(--slate-700);
-                transition: all .3s ease;
-                &:hover{
-                    color: var(--primary-600);
-                    background: var(--primary-50);
+                @include flex-between;
+
+                .time {
+                    font-weight: 400;
+                    font-size: 1.2rem;
                 }
-                &.active{
-                    color: var(--primary-600);
-                    background: var(--primary-50);
-                }
+            }
+
+            .last_message {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;  
+                overflow: hidden;
+                color: var(--slate-400);
+            }
+            &:hover{
+                color: var(--primary-600);
+                background: var(--primary-50);
+            }
+            &.active{
+                color: var(--primary-600);
+                background: var(--primary-50);
             }
         }
     }
     .chat-box{
-        flex: 1;
-        border-right: .1rem solid var(--slate-50);
-        position: absolute;
-        right: 100vw;
-        top: 0;
-        bottom: 0;
         background: var(--white-950);
-        z-index: 55;
         transition: all .3s ease;
-        &.chat_box_collapsed{
-            right: 0;
-        }
-        @include md-up{
-            position: relative;
+        @include md-down {
+            position: absolute;
             inset: 0;
+            width: 100%;
+            left: calc(100% + 1rem);
+            z-index: 55;
+
+            &.appeared {
+                left: 0;
+            }
         }
+        @include md-up {
+            flex: 1;  
+            position: relative;          
+        }
+
         .chat-header{
             display: flex;
             align-items: center;
@@ -194,9 +153,19 @@
             padding: 1.6rem 2.4rem;
             border-bottom: .1rem solid var(--slate-50);
             justify-content: space-between;
+            
+            .backtochat {
+                background-color: transparent;
+                border: .1rem solid var(--slate-100);
+                @include dimension(3.2rem, 3.2rem);
+                @include flex-center;
+                border-radius: 50%;
+                @include md-up {
+                    display: none;
+                }
+            }
             .image{
-                width: 3.2rem;
-                height: 3.2rem;
+                @include dimension(3.2rem, 3.2rem);
                 border-radius: 50%;
                 overflow: hidden;
             }
@@ -248,7 +217,7 @@
                 }
             }
         }
-        .team-name{
+        .chat-name{
             font-size: 1.6rem;
             font-weight: 600;
             line-height: 1.6;
@@ -388,7 +357,6 @@
                 font-size: 1.4rem;
                 line-height: 1.6;
                 color: var(--slate-700);
-                text-align: right;
             }
         }
         .new-message-label{
@@ -456,16 +424,17 @@
     .attachment{
         position: absolute;
         top: 0;
-        right: -27rem;
+        width: 100%;
+        right: -31rem;
         background: #fff;
-        z-index: 33;
-        max-width: 26.5rem;
+        z-index: 999;
+        max-width: 30rem;
         border-left: .1rem solid var(--slate-50);
         height: 100%;
         transition: all .3s ease;
-        &.sidebar_collapsed{
+
+        &.appeared{
             right: 0;
-            z-index: 99;
         }
         .attachment-header{
             display: flex;
@@ -493,8 +462,7 @@
                     }
                 }
                 .dropdown-menu {
-                    min-width: 15rem;
-                    max-width: 15rem;
+                    min-width: 20rem;
                     background: var(--white-950);
                     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
                     border-radius: .6rem;
