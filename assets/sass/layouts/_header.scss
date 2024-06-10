@@ -184,7 +184,7 @@
             .user-profile-icon {
                 position: relative;
                 img {
-                    border-width: 50%;
+                    border-radius: 50%;
                     @include dimension(4rem, 4rem);
 
                 }
