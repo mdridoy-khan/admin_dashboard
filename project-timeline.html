@@ -419,11 +419,6 @@
             </div>
 
             <div class="db_content">
-                <div class="db_title mb-3">
-                    <h5>
-                        All Projects
-                    </h5>
-                </div>
                 <div class="filter_area mb-5">
                     <div class="startBlock">
                         <form action="#">
@@ -434,7 +429,7 @@
                                     </label>
                                     <select name="" class="select2">
                                         <option value="">All</option>
-                                        <option value="">IT Transmit</option>
+                                        <option value="" selected>IT Transmit</option>
                                         <option value="">NEN ERP</option>
                                         <option value="">The Times BD</option>
                                     </select>
@@ -443,354 +438,135 @@
                             <div class="input-item overflow-hidden">
                                 <div class="input-group align-items-center">
                                     <label class="px-4">
-                                        Status
+                                        Project Name
                                     </label>
                                     <select name="" class="select2">
                                         <option value="">All</option>
-                                        <option value="">Active</option>
-                                        <option value="">Deactive</option>
-                                        <option value="">In Review</option>
+                                        <option value="" selected>NEN ERP</option>
+                                        <option value="">Devboy</option>
+                                        <option value="">Design System</option>
                                     </select>
                                 </div>
                             </div>
                         </form>
                     </div>        
                     <div class="endBlock">
-                        <ul class="d-flex align-items-center">
-                            <li class="btn-group">
-                                <a href="projects-table.html">
-                                    <i class="fas fa-list-ul"></i>
-                                </a>
-                                <a href="projects.html" class="active">
-                                    <i class="fad fa-th-large"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="add-project.html" class="btn__primary">
-                                    <i class="fal fa-plus"></i> New Project
-                                </a>
-                            </li>
-                        </ul>
+                        <div class="members">
+                            <div class="image-group">
+                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
+                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
+                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
+                                <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
+                                <span>
+                                    5+
+                                </span>
+                            </div>
+                            <button type="button" class="add-member">
+                                <i class="fal fa-plus"></i>
+                            </button>
+                        </div>
                     </div>        
                 </div>
-                <div class="workspace">
-                    <div class="name mb-3">
-                        Space : <b>IT TRANSMIT</b>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-xl-4 col-xxl-3">
-                            <div class="project_card text-center mb-4" style="--progress: #2364E7">
-                                <a href="project-kanban.html" class="project_name">
-                                    <div class="icon">
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.732 18.5984C13.4172 16.0415 16.0454 13.4133 18.6023 12.728L34.5431 8.45607C37.1 7.77085 38.6173 9.28814 37.9321 11.845L33.6601 27.7859C32.9749 30.3428 30.3467 32.971 27.7898 33.6562L11.8489 37.9282C9.29205 38.6134 7.77476 37.0961 8.45998 34.5392L12.732 18.5984Z" fill="#9E77ED"/>
-                                            <path d="M6.34133 12.2078C7.02655 9.6509 9.6548 7.02264 12.2117 6.33742L28.1525 2.06545C30.7094 1.38023 32.2267 2.89752 31.5415 5.45441L27.2695 21.3952C26.5843 23.9521 23.9561 26.5804 21.3992 27.2656L5.45831 31.5376C2.90142 32.2228 1.38413 30.7055 2.06935 28.1486L6.34133 12.2078Z" fill="#6941C6"/>
-                                        </svg>
-                                    </div>
-                                    <h5 class="name">
-                                        Nen Erp
-                                    </h5>
-                                </a>
-                                <div class="dated">
-                                    <span>
-                                        Due Date <b class="text-black">Feb 20, 2024</b>
-                                    </span>
+
+                <div class="project_tabfilter">
+                    <ul class="startblock nav">
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 19.11V4.89C10 3.54 9.47294 3 8.16353 3H4.83647C3.52706 3 3 3.54 3 4.89V19.11C3 20.46 3.52706 21 4.83647 21H8.16353C9.47294 21 10 20.46 10 19.11Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 13.0615V4.93846C21 3.55385 20.4729 3 19.1635 3H15.8365C14.5271 3 14 3.55385 14 4.93846V13.0615C14 14.4462 14.5271 15 15.8365 15H19.1635C20.4729 15 21 14.4462 21 13.0615Z" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Kanban
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.75 5.5H13.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M6.75 12H17.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M10.75 18.5H21.25" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                Timeline
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="4" cy="19" r="1" stroke="currentcolor" stroke-width="2"/>
+                                    <circle cx="4" cy="11.5" r="1" stroke="currentcolor" stroke-width="2"/>
+                                    <circle cx="4" cy="5" r="1" stroke="currentcolor" stroke-width="2"/>
+                                    <path d="M9 5H21" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M9 12H21" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                                    <path d="M9 19H21" stroke="currentcolor" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                                List
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 7C3 4.79086 4.79086 3 7 3H17C19.2091 3 21 4.79086 21 7V17C21 19.2091 19.2091 21 17 21H7C4.79086 21 3 19.2091 3 17V7Z" stroke="currentcolor" stroke-width="2"/>
+                                    <path d="M3 9H21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3 15H21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M9 21V3" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 21V3" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Table
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 4H3" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M19 9H3" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15 14H3" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 19H3" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Gantt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 2V5" stroke="currentcolor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 2V5" stroke="currentcolor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M3.5 9.08984H20.5" stroke="currentcolor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentcolor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.6937 13.7002H15.7027" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M15.6937 16.7002H15.7027" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.9945 13.7002H12.0035" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.9945 16.7002H12.0035" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.29529 13.7002H8.30427" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8.29529 16.7002H8.30427" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Calendar
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="endblock nav ms-auto">
+                        <li>
+                            <form action="#">
+                                <div class="input-group align-items-center">
+                                    <span class="fal fa-search"></span>
+                                    <input type="text" name="s" class="form-control" placeholder="Search for task...">
                                 </div>
-                                <div class="task">
-                                    <div class="count">
-                                        <i class="fal fa-tasks"></i>
-                                        <span>
-                                            15
-                                        </span>
-                                        /15
-                                    </div>
-                                    <p>
-                                        Tasks
-                                    </p>
-                                </div>
-                                <div class="members">
-                                    <div class="image-group">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <span>
-                                            5+
-                                        </span>
-                                    </div>
-                                    <button type="button" class="add-member">
-                                        <i class="fal fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="project_dropdown">
-                                    <div class="dropdown">
-                                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="far fa-ellipsis-h"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                          <li>
-                                            <a href="project-kanban.html" class="item-link">
-                                                <i class="fal fa-eye"></i>
-                                                View
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#" class="item-link">
-                                                <i class="fal fa-edit"></i>
-                                                Edit 
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#" class="item-link">
-                                                <i class="fal fa-share-alt"></i>
-                                                Share
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#" class="item-link">
-                                                <i class="fal fa-trash-alt"></i>
-                                                Delete 
-                                            </a>
-                                          </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-4 col-xxl-3">
-                            <div class="project_card text-center mb-4" style="--progress: #499C4B">
-                                <a href="project-kanban.html" class="project_name">
-                                    <div class="icon">
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.732 18.5984C13.4172 16.0415 16.0454 13.4133 18.6023 12.728L34.5431 8.45607C37.1 7.77085 38.6173 9.28814 37.9321 11.845L33.6601 27.7859C32.9749 30.3428 30.3467 32.971 27.7898 33.6562L11.8489 37.9282C9.29205 38.6134 7.77476 37.0961 8.45998 34.5392L12.732 18.5984Z" fill="#9E77ED"/>
-                                            <path d="M6.34133 12.2078C7.02655 9.6509 9.6548 7.02264 12.2117 6.33742L28.1525 2.06545C30.7094 1.38023 32.2267 2.89752 31.5415 5.45441L27.2695 21.3952C26.5843 23.9521 23.9561 26.5804 21.3992 27.2656L5.45831 31.5376C2.90142 32.2228 1.38413 30.7055 2.06935 28.1486L6.34133 12.2078Z" fill="#6941C6"/>
-                                        </svg>
-                                    </div>
-                                    <h5 class="name">
-                                        Nen Erp
-                                    </h5>
-                                </a>
-                                <div class="dated">
-                                    <span>
-                                        Due Date <b class="text-black">Feb 20, 2024</b>
-                                    </span>
-                                </div>
-                                <div class="task">
-                                    <div class="count">
-                                        <i class="fal fa-tasks"></i>
-                                        <span>
-                                            15
-                                        </span>
-                                        /15
-                                    </div>
-                                    <p>
-                                        Tasks
-                                    </p>
-                                </div>
-                                <div class="members">
-                                    <div class="image-group">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <span>
-                                            5+
-                                        </span>
-                                    </div>
-                                    <button type="button" class="add-member">
-                                        <i class="fal fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="project_dropdown">
-                                    <div class="dropdown">
-                                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="far fa-ellipsis-h"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                          <li>
-                                            <a href="project-kanban.html">
-                                                <i class="fal fa-eye"></i>
-                                                View
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-edit"></i>
-                                                Edit 
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-share-alt"></i>
-                                                Share
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-trash-alt"></i>
-                                                Delete 
-                                            </a>
-                                          </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-4 col-xxl-3">
-                            <div class="project_card text-center mb-4" style="--progress: #499C4B">
-                                <a href="project-kanban.html" class="project_name">
-                                    <div class="icon">
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.732 18.5984C13.4172 16.0415 16.0454 13.4133 18.6023 12.728L34.5431 8.45607C37.1 7.77085 38.6173 9.28814 37.9321 11.845L33.6601 27.7859C32.9749 30.3428 30.3467 32.971 27.7898 33.6562L11.8489 37.9282C9.29205 38.6134 7.77476 37.0961 8.45998 34.5392L12.732 18.5984Z" fill="#9E77ED"/>
-                                            <path d="M6.34133 12.2078C7.02655 9.6509 9.6548 7.02264 12.2117 6.33742L28.1525 2.06545C30.7094 1.38023 32.2267 2.89752 31.5415 5.45441L27.2695 21.3952C26.5843 23.9521 23.9561 26.5804 21.3992 27.2656L5.45831 31.5376C2.90142 32.2228 1.38413 30.7055 2.06935 28.1486L6.34133 12.2078Z" fill="#6941C6"/>
-                                        </svg>
-                                    </div>
-                                    <h5 class="name">
-                                        Nen Erp
-                                    </h5>
-                                </a>
-                                <div class="dated">
-                                    <span>
-                                        Due Date <b class="text-black">Feb 20, 2024</b>
-                                    </span>
-                                </div>
-                                <div class="task">
-                                    <div class="count">
-                                        <i class="fal fa-tasks"></i>
-                                        <span>
-                                            15
-                                        </span>
-                                        /15
-                                    </div>
-                                    <p>
-                                        Tasks
-                                    </p>
-                                </div>
-                                <div class="members">
-                                    <div class="image-group">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <span>
-                                            5+
-                                        </span>
-                                    </div>
-                                    <button type="button" class="add-member">
-                                        <i class="fal fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="project_dropdown">
-                                    <div class="dropdown">
-                                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="far fa-ellipsis-h"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                          <li>
-                                            <a href="project-kanban.html">
-                                                <i class="fal fa-eye"></i>
-                                                View
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-edit"></i>
-                                                Edit 
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-share-alt"></i>
-                                                Share
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-trash-alt"></i>
-                                                Delete 
-                                            </a>
-                                          </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-xl-4 col-xxl-3">
-                            <div class="project_card text-center mb-4" style="--progress: #FFDD00">
-                                <a href="#" class="project_name">
-                                    <div class="icon">
-                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.732 18.5984C13.4172 16.0415 16.0454 13.4133 18.6023 12.728L34.5431 8.45607C37.1 7.77085 38.6173 9.28814 37.9321 11.845L33.6601 27.7859C32.9749 30.3428 30.3467 32.971 27.7898 33.6562L11.8489 37.9282C9.29205 38.6134 7.77476 37.0961 8.45998 34.5392L12.732 18.5984Z" fill="#9E77ED"/>
-                                            <path d="M6.34133 12.2078C7.02655 9.6509 9.6548 7.02264 12.2117 6.33742L28.1525 2.06545C30.7094 1.38023 32.2267 2.89752 31.5415 5.45441L27.2695 21.3952C26.5843 23.9521 23.9561 26.5804 21.3992 27.2656L5.45831 31.5376C2.90142 32.2228 1.38413 30.7055 2.06935 28.1486L6.34133 12.2078Z" fill="#6941C6"/>
-                                        </svg>
-                                    </div>
-                                    <h5 class="name">
-                                        Nen Erp
-                                    </h5>
-                                </a>
-                                <div class="dated">
-                                    <span>
-                                        Due Date <b class="text-black">Feb 20, 2024</b>
-                                    </span>
-                                </div>
-                                <div class="task">
-                                    <div class="count">
-                                        <i class="fal fa-tasks"></i>
-                                        <span>
-                                            15
-                                        </span>
-                                        /15
-                                    </div>
-                                    <p>
-                                        Tasks
-                                    </p>
-                                </div>
-                                <div class="members">
-                                    <div class="image-group">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <img class="avatar rounded-circle" src="assets/img/invite-member/avatar.png" alt="">
-                                        <span>
-                                            5+
-                                        </span>
-                                    </div>
-                                    <button type="button" class="add-member">
-                                        <i class="fal fa-plus"></i>
-                                    </button>
-                                </div>
-                                <div class="project_dropdown">
-                                    <div class="dropdown">
-                                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="far fa-ellipsis-h"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-eye"></i>View
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-edit"></i>Edit 
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-share-alt"></i>Share
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="#">
-                                                <i class="fal fa-trash-alt"></i>Delete 
-                                            </a>
-                                          </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            </form>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-filter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fal fa-cog"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="" id="">
+                    
+                    
                 </div>
             </div>
         </div>
@@ -798,12 +574,13 @@
     <!--~~./ end Dashboard  ~~-->
     
 
-
     <!-- All The JS Files
     ================================================== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
+    <script src="assets/js/Sortable.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/canban.js"></script>
 </body>
 </html>
