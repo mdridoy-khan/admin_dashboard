@@ -1,4 +1,4 @@
-.workspace{
+.member-list-wrapper{
     #memberListTable{
         border: .1rem solid var(--slate-50);
         border-radius: 1.6rem;
@@ -27,6 +27,55 @@
                         border: 0;
                         outline: 0;
                         box-shadow: none;
+                    }
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    &.child{
+                        table{
+                            tr{
+                                td{
+                                    text-align: left;
+                                    border-radius: 0;
+                                    button{
+                                        background: transparent;
+                                        border: 0;
+                                        color: var(--slate-950);
+                                        outline: none;
+                                        box-shadow: none;
+                                        font-size: 1.6rem;
+                                        font-weight: 600;
+                                    }
+                                    .dropdown-menu{
+                                        min-width: 15rem;
+                                        max-width: 15rem;
+                                        background: var(--white-950);
+                                        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+                                        border-radius: 0.6rem;
+                                        border: 0.1rem solid var(--slate-50);
+                                        border: 0;
+                                        overflow: hidden;
+                                        li{
+                                            a{
+                                                padding: .8rem 1rem;
+                                                display: flex;
+                                                align-items: center;
+                                                gap: .5rem;
+                                            }
+                                        }
+                                    }
+                                    &:first-child{
+                                        border-radius: 0;
+                                    }
+                                    &:last-child{
+                                        border-radius: 0;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
