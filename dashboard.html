@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontAwesome5Pro.css">
     <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -171,7 +172,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" data-bs-target="#settings_modal" data-bs-toggle="modal">
                                         <span class="icon fal fa-cog"></span>
                                         Settings
                                     </a>
@@ -1285,6 +1286,184 @@
         </div>
     </div>
     <!--~~./ end Dashboard  ~~-->
+
+    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    settings modal Start
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <div class="settings-modal-wrapper">
+        <div class="modal fade" id="settings_modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+              <div class="modal-content">
+                <div class="settings-sidebar">
+                    <h2 class="title">
+                        Settings
+                    </h2>
+                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#account" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.1596 10.87C12.0596 10.86 11.9396 10.86 11.8296 10.87C9.44957 10.79 7.55957 8.84 7.55957 6.44C7.55957 3.99 9.53957 2 11.9996 2C14.4496 2 16.4396 3.99 16.4396 6.44C16.4296 8.84 14.5396 10.79 12.1596 10.87Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.15973 14.56C4.73973 16.18 4.73973 18.82 7.15973 20.43C9.90973 22.27 14.4197 22.27 17.1697 20.43C19.5897 18.81 19.5897 16.17 17.1697 14.56C14.4297 12.73 9.91973 12.73 7.15973 14.56Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Account
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#general-settings" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12.8794V11.1194C2 10.0794 2.85 9.21945 3.9 9.21945C5.71 9.21945 6.45 7.93945 5.54 6.36945C5.02 5.46945 5.33 4.29945 6.24 3.77945L7.97 2.78945C8.76 2.31945 9.78 2.59945 10.25 3.38945L10.36 3.57945C11.26 5.14945 12.74 5.14945 13.65 3.57945L13.76 3.38945C14.23 2.59945 15.25 2.31945 16.04 2.78945L17.77 3.77945C18.68 4.29945 18.99 5.46945 18.47 6.36945C17.56 7.93945 18.3 9.21945 20.11 9.21945C21.15 9.21945 22.01 10.0694 22.01 11.1194V12.8794C22.01 13.9194 21.16 14.7794 20.11 14.7794C18.3 14.7794 17.56 16.0594 18.47 17.6294C18.99 18.5394 18.68 19.6994 17.77 20.2194L16.04 21.2094C15.25 21.6794 14.23 21.3994 13.76 20.6094L13.65 20.4194C12.75 18.8494 11.27 18.8494 10.36 20.4194L10.25 20.6094C9.78 21.3994 8.76 21.6794 7.97 21.2094L6.24 20.2194C5.33 19.6994 5.02 18.5294 5.54 17.6294C6.45 16.0594 5.71 14.7794 3.9 14.7794C2.85 14.7794 2 13.9194 2 12.8794Z" stroke="currentColor" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            General Settings
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#subscriptions" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 12V17C22 20 20 22 17 22H7C4 22 2 20 2 17V12C2 9.28 3.64 7.38 6.19 7.06C6.45 7.02 6.72 7 7 7H17C17.26 7 17.51 7.00999 17.75 7.04999C20.33 7.34999 22 9.26 22 12Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M17.7514 7.05C17.5114 7.01 17.2614 7.00001 17.0014 7.00001H7.00141C6.72141 7.00001 6.45141 7.02001 6.19141 7.06001C6.33141 6.78001 6.53141 6.52001 6.77141 6.28001L10.0214 3.02C11.3914 1.66 13.6114 1.66 14.9814 3.02L16.7314 4.79002C17.3714 5.42002 17.7114 6.22 17.7514 7.05Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 12.5H19C17.9 12.5 17 13.4 17 14.5C17 15.6 17.9 16.5 19 16.5H22" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Subscriptions
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#productivity" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.87988 18.1501V16.0801" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                                <path d="M12 18.1498V14.0098" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                                <path d="M17.1201 18.1497V11.9297" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                                <path d="M17.1199 5.84961L16.6599 6.38961C14.1099 9.36961 10.6899 11.4796 6.87988 12.4296" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+                                <path d="M14.1904 5.84961H17.1204V8.76961" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                
+                            Productivity
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#reminders" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.75 13.25C20.75 18.08 16.83 22 12 22C7.17 22 3.25 18.08 3.25 13.25C3.25 8.42 7.17 4.5 12 4.5C16.83 4.5 20.75 8.42 20.75 13.25Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 8V13" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 2H15" stroke="currentColor" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                
+                            Reminders
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#notification" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0196 2.91016C8.7096 2.91016 6.0196 5.60016 6.0196 8.91016V11.8002C6.0196 12.4102 5.7596 13.3402 5.4496 13.8602L4.2996 15.7702C3.5896 16.9502 4.0796 18.2602 5.3796 18.7002C9.6896 20.1402 14.3396 20.1402 18.6496 18.7002C19.8596 18.3002 20.3896 16.8702 19.7296 15.7702L18.5796 13.8602C18.2796 13.3402 18.0196 12.4102 18.0196 11.8002V8.91016C18.0196 5.61016 15.3196 2.91016 12.0196 2.91016Z" stroke="currentColor" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round"/>
+                                <path d="M13.8699 3.19945C13.5599 3.10945 13.2399 3.03945 12.9099 2.99945C11.9499 2.87945 11.0299 2.94945 10.1699 3.19945C10.4599 2.45945 11.1799 1.93945 12.0199 1.93945C12.8599 1.93945 13.5799 2.45945 13.8699 3.19945Z" stroke="currentColor" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M15.0195 19.0605C15.0195 20.7105 13.6695 22.0605 12.0195 22.0605C11.1995 22.0605 10.4395 21.7205 9.89953 21.1805C9.35953 20.6405 9.01953 19.8805 9.01953 19.0605" stroke="currentColor" stroke-width="1" stroke-miterlimit="10"/>
+                            </svg>
+                            Notifications
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#integrations" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 9V16" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.25 8.5C7.04493 8.5 8.5 7.04493 8.5 5.25C8.5 3.45507 7.04493 2 5.25 2C3.45507 2 2 3.45507 2 5.25C2 7.04493 3.45507 8.5 5.25 8.5Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5 22C6.65685 22 8 20.6569 8 19C8 17.3431 6.65685 16 5 16C3.34315 16 2 17.3431 2 19C2 20.6569 3.34315 22 5 22Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19 22C20.6569 22 22 20.6569 22 19C22 17.3431 20.6569 16 19 16C17.3431 16 16 17.3431 16 19C16 20.6569 17.3431 22 19 22Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.12988 9C5.57988 10.75 7.17988 12.05 9.06988 12.04L12.4999 12.03C15.1199 12.02 17.3499 13.7 18.1699 16.04" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Integrations
+                        </button>
+                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#backups" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.11028 11.8498C5.29028 12.0498 5.30028 16.1498 8.11028 16.3498H14.7803C15.5903 16.3598 16.3703 16.0498 16.9703 15.5098C18.9503 13.7798 17.8903 10.3098 15.2903 9.97976C14.3603 4.33976 6.2103 6.47976 8.1403 11.8498" stroke="currentColor" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 15C2 18.87 5.13 22 9 22L7.95001 20.25" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M22 9C22 5.13 18.87 2 15 2L16.05 3.75" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Backups
+                        </button>
+                    </div>
+                </div>
+                <div class="settings-body">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="account">
+                            <h2 class="title">
+                                Account
+                            </h2>
+                            <form action="#" class="card-wrapper">
+                                <div class="single-card">
+                                    <div class="logo">
+                                        <div class="image">
+                                            <img src="assets/img/settings-modal/logo.png" alt="">
+                                        </div>
+                                        <h3 class="name">
+                                            John’s Workspace
+                                        </h3>
+                                    </div>
+                                    <div class="change-email-box">
+                                        <span>
+                                            Admin
+                                        </span>
+                                        <select>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="single-card">
+                                    <h5 class="title mt-4">
+                                        Account
+                                    </h5>
+                                    <div class="account-update">
+                                        <div class="account">
+                                            <div class="account-info">
+                                                <div class="account-img">
+                                                    <img src="assets/img/settings-modal/accont-img.png" alt="">
+                                                </div>
+                                                <div class="account-content">
+                                                    <input type="text" value="John Doe" placeholder="" readonly>
+                                                    <input type="email" value="name@gmail.com" placeholder="" readonly>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="update-btn">
+                                                Update
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-card">
+                                    <h5 class="title mt-4">
+                                        Connected Account
+                                    </h5>
+                                    <div class="account-connect">
+                                        <div class="social-btn">
+                                            <a href="#">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M22.5015 12.2326C22.5015 11.3693 22.43 10.7393 22.2753 10.0859H12.2158V13.9826H18.1205C18.0015 14.9509 17.3587 16.4093 15.9301 17.3892L15.91 17.5197L19.0907 19.9344L19.311 19.9559C21.3348 18.1242 22.5015 15.4292 22.5015 12.2326" fill="#4285F4"/>
+                                                    <path d="M12.215 22.4996C15.1078 22.4996 17.5363 21.5662 19.3102 19.9562L15.9292 17.3895C15.0245 18.0078 13.8102 18.4395 12.215 18.4395C9.38167 18.4395 6.97693 16.6079 6.11971 14.0762L5.99406 14.0866L2.68681 16.595L2.64355 16.7128C4.40543 20.1428 8.02448 22.4996 12.215 22.4996Z" fill="#34A853"/>
+                                                    <path d="M6.11997 14.0775C5.89379 13.4241 5.76289 12.7241 5.76289 12.0008C5.76289 11.2774 5.89379 10.5774 6.10807 9.9241L6.10208 9.78496L2.75337 7.23633L2.64381 7.2874C1.91765 8.71075 1.50098 10.3091 1.50098 12.0008C1.50098 13.6924 1.91765 15.2907 2.64381 16.7141L6.11997 14.0775" fill="#FBBC05"/>
+                                                    <path d="M12.215 5.55997C14.2269 5.55997 15.584 6.41163 16.3579 7.12335L19.3817 4.23C17.5246 2.53834 15.1078 1.5 12.215 1.5C8.02451 1.5 4.40544 3.85665 2.64355 7.28662L6.10783 9.92332C6.97696 7.39166 9.38171 5.55997 12.215 5.55997" fill="#EB4335"/>
+                                                </svg>
+                                                Login with Google
+                                            </a>
+                                            <a href="#">
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="12.5" cy="12" r="10.5" fill="url(#paint0_linear_12001_134501)"/>
+                                                    <path d="M16.4103 15.2112L16.8767 12.2476H13.9589V10.3252C13.9589 9.51428 14.3657 8.7233 15.6726 8.7233H17V6.20024C17 6.20024 15.7959 6 14.6452 6C12.2411 6 10.6712 7.4197 10.6712 9.98883V12.2476H8V15.2112H10.6712V22.3759C11.2075 22.458 11.7562 22.5 12.3151 22.5C12.874 22.5 13.4226 22.458 13.9589 22.3759V15.2112H16.4103Z" fill="white"/>
+                                                    <defs>
+                                                    <linearGradient id="paint0_linear_12001_134501" x1="12.5" y1="1.5" x2="12.5" y2="22.4377" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#18ACFE"/>
+                                                    <stop offset="1" stop-color="#0163E0"/>
+                                                    </linearGradient>
+                                                    </defs>
+                                                </svg>
+                                                Login with Facebook
+                                            </a>
+                                        </div>
+                                        <button type="button" class="update-btn">
+                                            Update
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="general-settings">
+                            ...
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!--~~./ settings modal End ~~-->
     
 
 
@@ -1292,25 +1471,18 @@
     ================================================== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js" integrity="sha512-ZwR1/gSZM3ai6vCdI+LVF1zSq/5HznD3ZSTk7kajkaj4D292NLuduDCO1c/NT8Id+jE58KYLKT7hXnbtryGmMg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
     <script src="assets/js/script.js"></script>
     
     <script>
-        document.querySelector(".getFullScreen").addEventListener("click", function (event) {
-            if (document.fullscreenElement) {
-                // If there is a fullscreen element, exit full screen.
-                document.exitFullscreen();
-                return;
-            }
-            // Make the .element div fullscreen.
-            document.querySelector(".getFullScreen").requestFullscreen();
-        });
+       
 
 
         const ctx = document.getElementById('myChart');
 
-            new Chart(ctx, {
+        new Chart(ctx, {
             type: 'line',
             data: {
                 labels: ['Red', 'Blue', 'Yellow', 'Green'],
@@ -1328,6 +1500,9 @@
                 }
             }
         });
+
+        //nice select js
+        $('select').niceSelect();
     </script>
 </body>
 </html>

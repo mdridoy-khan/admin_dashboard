@@ -78,3 +78,20 @@
 .color_active{
     color: #4FB059;
 }
+.update-btn{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--slate-600);
+    padding: .8rem 2.4rem;
+    background: var(--slate-50);
+    border-radius: .8rem;
+    transition: all .3s ease;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    &:hover{
+        background: var(--slate-100);
+        color: var(--slate-700);
+    }
+}
