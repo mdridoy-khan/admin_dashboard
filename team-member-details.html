@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontAwesome5Pro.css">
     <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -418,25 +419,23 @@
                 </div>
             </div>
 
-            <div class="db_content">
-                <div class="row">
-                    <div class="col-md-5 col-xxl-4">
+            <div class="db_content team-single">
+                <div class="row g-5">
+                    <div class="col-md-5 col-xxl-3">
                         <div class="member-details-card">
-                            <a href="#" class="cover-img">
-                                <img src="assets/img/widget/member-details/cover-img.jpg" alt="">
-                            </a>
-                            <div class="member-info text-center">
-                                <a href="#" class="profile-img">
-                                    <img src="assets/img/widget/member-details/profile-img.png" alt="">
-                                </a>
-                                <div class="content">
-                                    <h4 class="name">
-                                        Md Ridoy Islam
-                                    </h4>
-                                    <span class="passion">
-                                        Front-End Developer
-                                    </span>
-                                </div>
+                            <div class="cover"></div>
+                            <div class="basic-info text-center">
+                                <img 
+                                    src="assets/img/widget/member-details/profile-img.png" 
+                                    class="profile-img" 
+                                    alt="Nathan Garcia"
+                                >
+                                <h4 class="name">
+                                    Nathan Garcia
+                                </h4>
+                                <p class="designation">
+                                    Front-End Developer
+                                </p>
                             </div>
                             <div class="profile-body">
                                 <p class="about-member text-center">
@@ -445,17 +444,9 @@
                                 <div class="contact-info text-center">
                                     <a href="tel:01717362597" class="number">
                                         01717362597
-                                        <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.1673 8.59967V11.3997C11.1673 13.733 10.234 14.6663 7.90065 14.6663H5.10065C2.76732 14.6663 1.83398 13.733 1.83398 11.3997V8.59967C1.83398 6.26634 2.76732 5.33301 5.10065 5.33301H7.90065C10.234 5.33301 11.1673 6.26634 11.1673 8.59967Z" stroke="#363E4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M15.1673 4.59967V7.39967C15.1673 9.73301 14.234 10.6663 11.9007 10.6663H11.1673V8.59967C11.1673 6.26634 10.234 5.33301 7.90065 5.33301H5.83398V4.59967C5.83398 2.26634 6.76732 1.33301 9.10065 1.33301H11.9007C14.234 1.33301 15.1673 2.26634 15.1673 4.59967Z" stroke="#363E4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>  
                                     </a>
                                     <a href="mailto:mdridoy9902@gmail.com" class="mail">
-                                      ridoy@gmail.com
-                                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11.1673 8.59967V11.3997C11.1673 13.733 10.234 14.6663 7.90065 14.6663H5.10065C2.76732 14.6663 1.83398 13.733 1.83398 11.3997V8.59967C1.83398 6.26634 2.76732 5.33301 5.10065 5.33301H7.90065C10.234 5.33301 11.1673 6.26634 11.1673 8.59967Z" stroke="#363E4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M15.1673 4.59967V7.39967C15.1673 9.73301 14.234 10.6663 11.9007 10.6663H11.1673V8.59967C11.1673 6.26634 10.234 5.33301 7.90065 5.33301H5.83398V4.59967C5.83398 2.26634 6.76732 1.33301 9.10065 1.33301H11.9007C14.234 1.33301 15.1673 2.26634 15.1673 4.59967Z" stroke="#363E4A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>  
+                                        ridoy@gmail.com
                                     </a>
                                 </div>
                                 <div class="social-icon">
@@ -525,7 +516,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-7 col-xxl-8">
+                    <div class="col-md-7 col-xxl-9">
                         <div class="widget mb-4">
                             <div class="widget-header">
                                 <h6 class="title">
@@ -563,102 +554,107 @@
                             </div>
                             <div class="widget-body p-0">
                                 <div class="task-list">
-                                    <div class="table-responsive">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="task-name">
-                                                            <input type="checkbox" id="task1">
-                                                            <label for="task1">
-                                                                Making a new trend in poster
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="task-activity">
-                                                            <span class="flag" style="--clr:#FF4133;">
-                                                                <i class="fas fa-flag"></i>
-                                                            </span>
-                                                            <span>
-                                                                <i class="fal fa-tasks"></i>3/5
-                                                            </span>
-                                                            <span>
-                                                                <i class="fal fa-comment-dots"></i>16
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="date">
-                                                            <span>
-                                                                <i class="fal fa-calendar-alt"></i>16 May 2024
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="task-name">
-                                                            <input type="checkbox" id="task2">
-                                                            <label for="task2">
-                                                                Making a new trend in poster
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="task-activity">
-                                                            <span class="flag" style="--clr:#FF4133;">
-                                                                <i class="fas fa-flag"></i>
-                                                            </span>
-                                                            <span>
-                                                                <i class="fal fa-tasks"></i>3/5
-                                                            </span>
-                                                            <span>
-                                                                <i class="fal fa-comment-dots"></i>16
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="date">
-                                                            <span>
-                                                                <i class="fal fa-calendar-alt"></i>16 May 2024
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="task-name">
-                                                            <input type="checkbox" id="task3">
-                                                            <label for="task3">
-                                                                Making a new trend in poster
-                                                            </label>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="task-activity">
-                                                            <span class="flag" style="--clr:#FF4133;">
-                                                                <i class="fas fa-flag"></i>
-                                                            </span>
-                                                            <span>
-                                                                <i class="fal fa-tasks"></i>3/5
-                                                            </span>
-                                                            <span>
-                                                                <i class="fal fa-comment-dots"></i>16
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="date">
-                                                            <span>
-                                                                <i class="fal fa-calendar-alt"></i>16 May 2024
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                    <table class="table dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="task-name">
+                                                        <input type="checkbox" id="task1">
+                                                        <label for="task1">
+                                                            Making a new trend in poster
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="task-activity">
+                                                        <span>
+                                                            <i class="fal fa-tasks"></i>
+                                                            3/5
+                                                        </span>
+                                                        <span>
+                                                            <i class="fal fa-comment-dots"></i>
+                                                            16
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="date">
+                                                        <span>
+                                                            <i class="fal fa-calendar-alt"></i>
+                                                            16 May 2024
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="task-name">
+                                                        <input type="checkbox" id="task2">
+                                                        <label for="task2">
+                                                            Making a new trend in poster
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="task-activity">
+                                                        <span>
+                                                            <i class="fal fa-tasks"></i>
+                                                            3/5
+                                                        </span>
+                                                        <span>
+                                                            <i class="fal fa-comment-dots"></i>
+                                                            16
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="date">
+                                                        <span>
+                                                            <i class="fal fa-calendar-alt"></i>
+                                                            16 May 2024
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="task-name">
+                                                        <input type="checkbox" id="task3">
+                                                        <label for="task3">
+                                                            Making a new trend in poster
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="task-activity">
+                                                        <span>
+                                                            <i class="fal fa-tasks"></i>
+                                                            3/5
+                                                        </span>
+                                                        <span>
+                                                            <i class="fal fa-comment-dots"></i>
+                                                            16
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="date">
+                                                        <span>
+                                                            <i class="fal fa-calendar-alt"></i>
+                                                            16 May 2024
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -673,168 +669,201 @@
                             </div>
                             <div class="widget-body p-0">
                                 <div class="task-list">
-                                    <div class="table-responsive">
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <div class="uploaded-file">
-                                                            <span class="file-icon">
-                                                                <img src="assets/img/widget/member-details/file.png" alt="">
-                                                            </span>
-                                                            <span class="file-name">
-                                                                Nen-HR.FIG
-                                                            </span>
-                                                            <span class="file-type">
-                                                                Design File
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="image-group">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
-                                                            <span>
-                                                                5+
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="dropdown">
+                                    <table class="table dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="uploaded-file">
+                                                        <span class="file-icon">
+                                                            <img src="assets/img/widget/member-details/file.png" alt="">
+                                                        </span>
+                                                        <span class="file-name">
+                                                            Nen-HR.FIG
+                                                        </span>
+                                                        <span class="file-type">
+                                                            Design File
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="image-group">
+                                                        <img 
+                                                            class="avatar rounded-circle" 
+                                                            src="assets/img/widget/member-details/avatar.png" 
+                                                            alt=""
+                                                        >
+                                                        <img 
+                                                            class="avatar rounded-circle" 
+                                                            src="assets/img/widget/member-details/avatar.png" 
+                                                            alt=""
+                                                        >
+                                                        <img 
+                                                            class="avatar rounded-circle" 
+                                                            src="assets/img/widget/member-details/avatar.png" 
+                                                            alt=""
+                                                        >                                                          
+                                                        <span>5+</span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
                                                         <button type="button" data-bs-toggle="dropdown">
                                                             <i class="far fa-ellipsis-h"></i>
                                                         </button>
-                                                        <ul class="dropdown-menu">
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-eye"></i>View
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-edit"></i>Edit 
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-share-alt"></i>Share
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-trash-alt"></i>Delete 
-                                                            </a>
-                                                          </li>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-eye"></i>
+                                                                    View
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-edit"></i>
+                                                                    Edit 
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-share-alt"></i>
+                                                                    Share
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-trash-alt"></i>
+                                                                    Delete 
+                                                                </a>
+                                                            </li>
                                                         </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="uploaded-file">
-                                                            <span class="file-icon">
-                                                                <img src="assets/img/widget/member-details/file.png" alt="">
-                                                            </span>
-                                                            <span class="file-name">
-                                                                Nen-HR.FIG
-                                                            </span>
-                                                            <span class="file-type">
-                                                                Design File
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="image-group">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
-                                                            <span>
-                                                                5+
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="dropdown">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="uploaded-file">
+                                                        <span class="file-icon">
+                                                            <img src="assets/img/widget/member-details/file.png" alt="">
+                                                        </span>
+                                                        <span class="file-name">
+                                                            Nen-HR.FIG
+                                                        </span>
+                                                        <span class="file-type">
+                                                            Design File
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="image-group">
+                                                        <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                        <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                        <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
+                                                        <span>
+                                                            5+
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
                                                         <button type="button" data-bs-toggle="dropdown">
                                                             <i class="far fa-ellipsis-h"></i>
                                                         </button>
-                                                        <ul class="dropdown-menu">
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-eye"></i>View
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-edit"></i>Edit 
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-share-alt"></i>Share
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-trash-alt"></i>Delete 
-                                                            </a>
-                                                          </li>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-eye"></i>
+                                                                    View
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-edit"></i>
+                                                                    Edit 
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-share-alt"></i>
+                                                                    Share
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-trash-alt"></i>
+                                                                    Delete 
+                                                                </a>
+                                                            </li>
                                                         </ul>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <div class="uploaded-file">
-                                                            <span class="file-icon">
-                                                                <img src="assets/img/widget/member-details/file.png" alt="">
-                                                            </span>
-                                                            <span class="file-name">
-                                                                Nen-HR.FIG
-                                                            </span>
-                                                            <span class="file-type">
-                                                                Design File
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td>
-                                                        <div class="image-group">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
-                                                            <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
-                                                            <span>
-                                                                5+
-                                                            </span>
-                                                        </div>
-                                                    </td>
-                                                    <td class="dropdown">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="uploaded-file">
+                                                        <span class="file-icon">
+                                                            <img src="assets/img/widget/member-details/file.png" alt="">
+                                                        </span>
+                                                        <span class="file-name">
+                                                            Nen-HR.FIG
+                                                        </span>
+                                                        <span class="file-type">
+                                                            Design File
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="image-group">
+                                                        <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                        <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">
+                                                        <img class="avatar rounded-circle" src="assets/img/widget/member-details/avatar.png" alt="">                                                          
+                                                        <span>
+                                                            5+
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="dropdown">
                                                         <button type="button" data-bs-toggle="dropdown">
                                                             <i class="far fa-ellipsis-h"></i>
                                                         </button>
-                                                        <ul class="dropdown-menu">
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-eye"></i>View
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-edit"></i>Edit 
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-share-alt"></i>Share
-                                                            </a>
-                                                          </li>
-                                                          <li>
-                                                            <a href="#">
-                                                                <i class="fal fa-trash-alt"></i>Delete 
-                                                            </a>
-                                                          </li>
+                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-eye"></i>
+                                                                    View
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-edit"></i>
+                                                                    Edit 
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-share-alt"></i>
+                                                                    Share
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">
+                                                                    <i class="fal fa-trash-alt"></i>
+                                                                    Delete 
+                                                                </a>
+                                                            </li>
                                                         </ul>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -852,6 +881,18 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
     <script src="assets/js/script.js"></script>
+
+    <script>
+        $('.dataTable').dataTable( {
+            responsive: true,
+            paging: false,
+            ordering: false,
+            info: false,
+            searching: false,
+            autoWidth: false,
+        });
+    </script>
 </body>
 </html>
