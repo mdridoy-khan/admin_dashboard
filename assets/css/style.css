@@ -3688,4 +3688,64 @@ textarea.form-control:focus {
   border-top: 0.1rem solid var(--slate-50);
 }
 
+/*--------------------------------------------------------------
+# team member list filter Page
+--------------------------------------------------------------*/
+.workspace #memberListTable {
+  border: 0.1rem solid var(--slate-50);
+  border-radius: 1.6rem;
+}
+.workspace #memberListTable thead tr {
+  border-style: none;
+  border: 0;
+}
+.workspace #memberListTable thead tr th {
+  padding: 1.6rem 2.4rem;
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  font-weight: 500;
+  cursor: default;
+  background: var(--slate-50);
+}
+.workspace #memberListTable thead tr th:first-child {
+  border-radius: 1.6rem 0 0 0;
+}
+.workspace #memberListTable thead tr th:last-child {
+  border-radius: 0 1.6rem 0 0;
+  text-align: right;
+}
+.workspace #memberListTable thead tr th .dt-column-order {
+  display: none;
+}
+.workspace #memberListTable thead tr th:hover {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+.workspace #memberListTable tr td {
+  border-radius: 0;
+  padding: 1.6rem 2rem;
+}
+.workspace #memberListTable tr td:last-child {
+  text-align: end;
+}
+.workspace #memberListTable tr:last-child td:first-child {
+  border-radius: 0 0 0 1.6rem;
+}
+.workspace #memberListTable tr:last-child td:last-child {
+  border-radius: 0 0 1.6rem 0;
+  text-align: right;
+}
+.workspace #memberListTable .social-icon {
+  justify-content: start;
+}
+.workspace #memberListTable .team_name {
+  padding: 0;
+}
+.workspace table.table > :not(caption) > * > * {
+  background-color: var(--white-950);
+  border-bottom: 0;
+  box-shadow: none;
+}
+
 /*# sourceMappingURL=style.css.map */
