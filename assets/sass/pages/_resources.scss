@@ -1,12 +1,12 @@
 .db_wrapper .db_body .resources-content{
     height: 100%;
 }
-.resource-blank-content{
+.resource-blank-content {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100%;
+    min-height: calc(100% - 15rem);
     .content{
         margin-top: 2.4rem;
         .title{
