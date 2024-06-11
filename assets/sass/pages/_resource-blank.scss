@@ -1,0 +1,26 @@
+.db_wrapper .db_body .resources-content{
+    height: 100%;
+}
+.resource-blank-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    .content{
+        margin-top: 2.4rem;
+        .title{
+            font-size: 2.4rem;
+            line-height: 1.6;
+            font-weight: 600;
+            color: var(--slate-950);
+        }
+        p{
+            font-size: 1.4rem;
+            color: var(--slate-500);
+            line-height: 1.6;
+        }
+    }
+}
+
+
