@@ -1361,6 +1361,33 @@ textarea.form-control:focus {
   border: 0;
   border-radius: 0;
 }
+.db_wrapper .db_body .filter_area .startBlock .btn-group button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--slate-300);
+  line-height: 1.6;
+  background: none;
+  padding: 0.8rem 2.4rem;
+  border: 0.1rem solid var(--slate-300);
+  transition: all 0.3s ease;
+}
+@media screen and (min-width: 480px) {
+  .db_wrapper .db_body .filter_area .startBlock .btn-group button {
+    font-size: 1.6rem;
+  }
+}
+.db_wrapper .db_body .filter_area .startBlock .btn-group button.active {
+  color: var(--slate-950);
+}
+.db_wrapper .db_body .filter_area .startBlock .btn-group button:hover {
+  color: var(--slate-950);
+}
+.db_wrapper .db_body .filter_area .startBlock .btn-group button:first-child {
+  border-radius: 0.8rem 0 0 0.8rem;
+}
+.db_wrapper .db_body .filter_area .startBlock .btn-group button:last-child {
+  border-radius: 0 0.8rem 0.8rem 0;
+}
 @media screen and (max-width: 767px) {
   .db_wrapper .db_body .filter_area .endBlock {
     margin-top: 1rem;
@@ -3686,6 +3713,95 @@ textarea.form-control:focus {
   font-weight: 600;
   padding: 1.4rem 3rem;
   border-top: 0.1rem solid var(--slate-50);
+}
+
+/*--------------------------------------------------------------
+# team member list filter Page
+--------------------------------------------------------------*/
+.workspace #memberListTable {
+  border: 0.1rem solid var(--slate-50);
+  border-radius: 1.6rem;
+}
+.workspace #memberListTable thead tr {
+  border-style: none;
+  border: 0;
+}
+.workspace #memberListTable thead tr th {
+  padding: 1.6rem 2.4rem;
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  font-weight: 500;
+  cursor: default;
+  background: var(--slate-50);
+}
+.workspace #memberListTable thead tr th:first-child {
+  border-radius: 1.6rem 0 0 0;
+}
+.workspace #memberListTable thead tr th:last-child {
+  border-radius: 0 1.6rem 0 0;
+  text-align: right;
+}
+.workspace #memberListTable thead tr th .dt-column-order {
+  display: none;
+}
+.workspace #memberListTable thead tr th:hover {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+.workspace #memberListTable tr td {
+  border-radius: 0;
+  padding: 1.6rem 2rem;
+}
+.workspace #memberListTable tr td:last-child {
+  text-align: end;
+}
+.workspace #memberListTable tr:last-child td:first-child {
+  border-radius: 0 0 0 1.6rem;
+}
+.workspace #memberListTable tr:last-child td:last-child {
+  border-radius: 0 0 1.6rem 0;
+  text-align: right;
+}
+.workspace #memberListTable .social-icon {
+  justify-content: start;
+}
+.workspace #memberListTable .team_name {
+  padding: 0;
+}
+.workspace table.table > :not(caption) > * > * {
+  background-color: var(--white-950);
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+/*--------------------------------------------------------------
+# resource blank Page
+--------------------------------------------------------------*/
+.db_wrapper .db_body .resources-content {
+  height: 100%;
+}
+
+.resource-blank-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.resource-blank-content .content {
+  margin-top: 2.4rem;
+}
+.resource-blank-content .content .title {
+  font-size: 2.4rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--slate-950);
+}
+.resource-blank-content .content p {
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=style.css.map */
