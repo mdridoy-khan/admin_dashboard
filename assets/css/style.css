@@ -1370,6 +1370,8 @@ textarea.form-control:focus {
   padding: 0.8rem 2.4rem;
   border: 0.1rem solid var(--slate-300);
   transition: all 0.3s ease;
+  outline: 0;
+  box-shadow: none;
 }
 @media screen and (min-width: 480px) {
   .db_wrapper .db_body .filter_area .startBlock .btn-group button {
@@ -3718,15 +3720,15 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # team member list filter Page
 --------------------------------------------------------------*/
-.workspace #memberListTable {
+.member-list-wrapper #memberListTable {
   border: 0.1rem solid var(--slate-50);
   border-radius: 1.6rem;
 }
-.workspace #memberListTable thead tr {
+.member-list-wrapper #memberListTable thead tr {
   border-style: none;
   border: 0;
 }
-.workspace #memberListTable thead tr th {
+.member-list-wrapper #memberListTable thead tr th {
   padding: 1.6rem 2.4rem;
   font-size: 1.4rem;
   color: var(--slate-500);
@@ -3734,42 +3736,77 @@ textarea.form-control:focus {
   cursor: default;
   background: var(--slate-50);
 }
-.workspace #memberListTable thead tr th:first-child {
+.member-list-wrapper #memberListTable thead tr th:first-child {
   border-radius: 1.6rem 0 0 0;
 }
-.workspace #memberListTable thead tr th:last-child {
+.member-list-wrapper #memberListTable thead tr th:last-child {
   border-radius: 0 1.6rem 0 0;
   text-align: right;
 }
-.workspace #memberListTable thead tr th .dt-column-order {
+.member-list-wrapper #memberListTable thead tr th .dt-column-order {
   display: none;
 }
-.workspace #memberListTable thead tr th:hover {
+.member-list-wrapper #memberListTable thead tr th:hover {
   border: 0;
   outline: 0;
   box-shadow: none;
 }
-.workspace #memberListTable tr td {
+.member-list-wrapper #memberListTable tbody tr td.child table tr td {
+  text-align: left;
+  border-radius: 0;
+}
+.member-list-wrapper #memberListTable tbody tr td.child table tr td button {
+  background: transparent;
+  border: 0;
+  color: var(--slate-950);
+  outline: none;
+  box-shadow: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.member-list-wrapper #memberListTable tbody tr td.child table tr td .dropdown-menu {
+  min-width: 15rem;
+  max-width: 15rem;
+  background: var(--white-950);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--slate-50);
+  border: 0;
+  overflow: hidden;
+}
+.member-list-wrapper #memberListTable tbody tr td.child table tr td .dropdown-menu li a {
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.member-list-wrapper #memberListTable tbody tr td.child table tr td:first-child {
+  border-radius: 0;
+}
+.member-list-wrapper #memberListTable tbody tr td.child table tr td:last-child {
+  border-radius: 0;
+}
+.member-list-wrapper #memberListTable tr td {
   border-radius: 0;
   padding: 1.6rem 2rem;
 }
-.workspace #memberListTable tr td:last-child {
+.member-list-wrapper #memberListTable tr td:last-child {
   text-align: end;
 }
-.workspace #memberListTable tr:last-child td:first-child {
+.member-list-wrapper #memberListTable tr:last-child td:first-child {
   border-radius: 0 0 0 1.6rem;
 }
-.workspace #memberListTable tr:last-child td:last-child {
+.member-list-wrapper #memberListTable tr:last-child td:last-child {
   border-radius: 0 0 1.6rem 0;
   text-align: right;
 }
-.workspace #memberListTable .social-icon {
+.member-list-wrapper #memberListTable .social-icon {
   justify-content: start;
 }
-.workspace #memberListTable .team_name {
+.member-list-wrapper #memberListTable .team_name {
   padding: 0;
 }
-.workspace table.table > :not(caption) > * > * {
+.member-list-wrapper table.table > :not(caption) > * > * {
   background-color: var(--white-950);
   border-bottom: 0;
   box-shadow: none;
