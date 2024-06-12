@@ -39,6 +39,36 @@
     mobile_menu('.sidebarToggler', '.sidebar');  
 
 
+    // Upload Create Team Thumbnail Image
+    function upload_thumbnail(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('#teamThumb').attr('src', e.target.result);
+            };
+            reader.readAsDataURL(input.files[0]);
+            $('.thumbnails_upload-wrapper').addClass('image_uploaded');
+        }
+    }
+    $('.remove_image').on('click', function() {
+        $(this).parents('.thumbnails_upload-wrapper').find('input').val('');
+        $(this).parent().find('img').attr('src', 'assets/img/placeholder-image.png');
+        $(this).parents('.thumbnails_upload-wrapper').removeClass('image_uploaded');
+    });
+    $(document).on('change','#upload_teamThumbnail' , function(){ 
+        upload_thumbnail(this); 
+    });
+
+    // Toggle Auto suggestion teammate collapse function
+    $(document).ready(function() {
+        $('#addTeamMate').on('input', function() {
+            if ($(this).val().trim() !== '') {
+                $('.suggested_team').collapse('show');
+            } else {
+                $('.suggested_team').collapse('hide');
+            }
+        });
+    });
 
     ///============= Select2 =============\\\
     $('.select2').select2();
