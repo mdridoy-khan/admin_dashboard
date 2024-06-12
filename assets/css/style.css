@@ -4127,4 +4127,281 @@ textarea.form-control:focus {
   line-height: 1.6;
 }
 
+/*--------------------------------------------------------------
+# resource list Page
+--------------------------------------------------------------*/
+.resources-member-list-wrapper #memberListTable {
+  border-radius: 1.6rem;
+}
+.resources-member-list-wrapper #memberListTable thead tr {
+  border-style: none;
+  border: 0;
+}
+.resources-member-list-wrapper #memberListTable thead tr th {
+  padding: 1.6rem 2.4rem;
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  font-weight: 500;
+  cursor: default;
+  background: var(--slate-50);
+}
+.resources-member-list-wrapper #memberListTable thead tr th:first-child {
+  border-radius: 1.6rem 0 0 0;
+}
+.resources-member-list-wrapper #memberListTable thead tr th:last-child {
+  border-radius: 0 1.6rem 0 0;
+  text-align: right;
+}
+.resources-member-list-wrapper #memberListTable thead tr th .dt-column-order {
+  display: none;
+}
+.resources-member-list-wrapper #memberListTable thead tr th:hover {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+.resources-member-list-wrapper #memberListTable tr td {
+  border-radius: 0;
+  padding: 1.6rem 2rem;
+}
+.resources-member-list-wrapper #memberListTable tr td:last-child {
+  text-align: end;
+}
+.resources-member-list-wrapper #memberListTable tr td .content .name {
+  margin: 0;
+}
+.resources-member-list-wrapper #memberListTable tr td .file-type span {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--slate-700);
+  padding: 0.4rem 0.8rem;
+  background: var(--slate-50);
+  border-radius: 5rem;
+}
+.resources-member-list-wrapper #memberListTable tr td .file-author span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--slate-700);
+  background: var(--slate-50);
+  line-height: 1.8;
+  padding: 0.2rem 0.8rem 0.2rem 0;
+  border-radius: 5rem;
+}
+.resources-member-list-wrapper #memberListTable tr td .file-author span img {
+  border-radius: 50%;
+}
+.resources-member-list-wrapper #memberListTable tr td .time {
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  line-height: 1.6;
+}
+.resources-member-list-wrapper #memberListTable tr td .share-members {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 1.6rem;
+  justify-content: end;
+}
+@media screen and (min-width: 768px) {
+  .resources-member-list-wrapper #memberListTable tr td .share-members {
+    justify-content: start;
+  }
+}
+.resources-member-list-wrapper #memberListTable tr td .share-members .image-group {
+  display: flex;
+  align-items: center;
+}
+.resources-member-list-wrapper #memberListTable tr td .share-members .image-group img {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: -0.5rem;
+  box-shadow: 0 0 0 0.3rem #fff;
+}
+.resources-member-list-wrapper #memberListTable tr td .share-members .image-group span {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: var(--primary-50);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--slate-500);
+  box-shadow: 0 0 0 0.3rem #fff;
+}
+.resources-member-list-wrapper #memberListTable tr td.child table tr td button {
+  background: none;
+  border: 0;
+  font-size: 1.6rem;
+}
+.resources-member-list-wrapper #memberListTable tr td.child table tr td .dropdown-menu {
+  border-radius: 0.8rem;
+}
+.resources-member-list-wrapper #memberListTable tr td.child table tr td .dropdown-menu li a {
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.resources-member-list-wrapper #memberListTable tr td.child table tr td:first-child {
+  text-align: left;
+  border-radius: 0;
+}
+.resources-member-list-wrapper #memberListTable tr td.child table tr td:last-child {
+  border-radius: 0;
+  text-align: right;
+}
+.resources-member-list-wrapper #memberListTable tr:last-child td {
+  border-bottom: 0.1rem solid var(--slate-50);
+}
+.resources-member-list-wrapper #memberListTable tr:last-child td:first-child {
+  border-radius: 0 0 0 1.6rem;
+}
+.resources-member-list-wrapper #memberListTable tr:last-child td:last-child {
+  border-radius: 0 0 1.6rem 0;
+  text-align: right;
+}
+.resources-member-list-wrapper #memberListTable .social-icon {
+  justify-content: start;
+}
+.resources-member-list-wrapper #memberListTable .team_name {
+  padding: 0;
+}
+.resources-member-list-wrapper table {
+  border-spacing: 0;
+}
+.resources-member-list-wrapper table.table > :not(caption) > * > * {
+  background-color: var(--white-950);
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.resource-member-grid-wrapper .file_card {
+  background: var(--white-950);
+  border-radius: 1.6rem;
+  box-shadow: 0 0.2rem 0.2rem 0.1rem var(--slate-50);
+  border: 0.1rem solid var(--slate-50);
+  padding: 2.4rem;
+  position: relative;
+  transition: all 0.3s ease;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+}
+.resource-member-grid-wrapper .file_card .file_name {
+  display: inline-block;
+  margin-bottom: 1.6rem;
+}
+.resource-member-grid-wrapper .file_card .file_name .icon {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.resource-member-grid-wrapper .file_card .file_name .name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--slate-950);
+  line-height: 1.6;
+  margin-top: 1.6rem;
+}
+.resource-member-grid-wrapper .file_card .file-type {
+  margin-bottom: 6.5rem;
+}
+.resource-member-grid-wrapper .file_card .file-type span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.4rem 1.2rem;
+  display: flex;
+  border-radius: 5rem;
+  color: var(--slate-500);
+  background: var(--slate-50);
+  display: inline-block;
+}
+.resource-member-grid-wrapper .file_card .file-type span b {
+  margin-left: 0.8rem;
+}
+.resource-member-grid-wrapper .file_card .members {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding-bottom: 1.6rem;
+}
+.resource-member-grid-wrapper .file_card .members .image-group {
+  display: flex;
+  align-items: center;
+}
+.resource-member-grid-wrapper .file_card .members .image-group img {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin-right: -1rem;
+  box-shadow: 0 0 0 0.3rem #fff;
+}
+.resource-member-grid-wrapper .file_card .members .image-group span {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: var(--primary-50);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--slate-500);
+  box-shadow: 0 0 0 0.3rem #fff;
+}
+.resource-member-grid-wrapper .file_card .file_dropdown {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+}
+.resource-member-grid-wrapper .file_card .file_dropdown button {
+  background: transparent;
+  border: 0;
+  color: var(--slate-950);
+  outline: none;
+  box-shadow: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.resource-member-grid-wrapper .file_card .file_dropdown button::after {
+  display: none;
+}
+.resource-member-grid-wrapper .file_card .file_dropdown .dropdown-menu {
+  min-width: 15rem;
+  max-width: 15rem;
+  background: var(--white-950);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  border-radius: 0.6rem;
+  border: 0.1rem solid var(--slate-50);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+.resource-member-grid-wrapper .file_card .file_dropdown .dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--slate-700);
+  transition: all 0.15s ease;
+  padding: 1rem 1.5rem;
+}
+.resource-member-grid-wrapper .file_card .file_dropdown .dropdown-menu a:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
+}
+.resource-member-grid-wrapper .file_card:hover {
+  transform: translateY(-0.5rem);
+}
+
 /*# sourceMappingURL=style.css.map */
