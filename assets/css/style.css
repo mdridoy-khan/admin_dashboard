@@ -471,7 +471,7 @@ textarea.form-control:focus {
 }
 
 .update-btn {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   font-weight: 600;
   color: var(--slate-600);
@@ -482,10 +482,49 @@ textarea.form-control:focus {
   border: 0;
   outline: 0;
   box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 .update-btn:hover {
   background: var(--slate-100);
   color: var(--slate-700);
+}
+
+.toggle-switch {
+  display: inline-flex;
+}
+.toggle-switch input[type=checkbox] {
+  display: none;
+}
+.toggle-switch label {
+  display: inline-block;
+  width: 4.8rem;
+  height: 2.6rem;
+  border-radius: 2rem;
+  border: 0.1rem solid var(--primary-600);
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+.toggle-switch label::after {
+  content: "";
+  top: 50%;
+  left: 0.2rem;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 2rem;
+  background: var(--primary-400);
+  transition: 0.3s;
+}
+.toggle-switch input:checked ~ label {
+  border-color: var(--primary-600);
+}
+.toggle-switch input:checked ~ label::after {
+  left: 2.5rem;
+  background-color: var(--primary-600);
 }
 
 .glightbox-clean .gslide-title {
@@ -618,23 +657,25 @@ textarea.form-control:focus {
 .modal.createTeamModal .suggested_team .suggested_item button:hover {
   background-color: var(--slate-100);
 }
-
-.settings-modal-wrapper .modal-content {
-  flex-direction: row;
-  border-radius: 1.2rem;
+.modal.settingsModal .modal-content {
+  min-height: 80vh;
 }
-.settings-modal-wrapper .settings-sidebar {
+.modal.settingsModal .modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.modal.settingsModal .settings-sidebar {
   flex: 0 0 24rem;
-  padding: 1.6rem 1.2rem;
 }
-.settings-modal-wrapper .settings-sidebar .title {
+.modal.settingsModal .settings-sidebar .title {
   font-size: 2rem;
   line-height: 1.6;
   color: var(--slate-950);
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
-.settings-modal-wrapper .settings-sidebar .nav-link {
+.modal.settingsModal .settings-sidebar .nav-link {
   font-size: 1.4rem;
   color: var(--slate-700);
   font-weight: 400;
@@ -646,113 +687,62 @@ textarea.form-control:focus {
   padding: 0.8rem;
   border-radius: 0.8rem;
 }
-.settings-modal-wrapper .settings-sidebar .nav-link + .nav-link {
+.modal.settingsModal .settings-sidebar .nav-link + .nav-link {
   margin-top: 0.8rem;
 }
-.settings-modal-wrapper .settings-sidebar .nav-link.active {
+.modal.settingsModal .settings-sidebar .nav-link.active {
   background: var(--primary-50);
   color: var(--primary-500);
 }
-.settings-modal-wrapper .settings-body {
+.modal.settingsModal .tab-content {
   flex: 1;
-  background: var(--slate-25);
-  padding: 1.2rem 4rem 4rem 4.8rem;
 }
-.settings-modal-wrapper .settings-body .tab-content .title {
-  font-size: 2.4rem;
-  font-weight: 700;
+.modal.settingsModal fieldset + fieldset {
+  margin-top: 2rem;
+}
+.modal.settingsModal .tab-content-title {
+  font-size: 2rem;
+  font-weight: 600;
   line-height: 1.6;
   color: var(--slate-950);
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
-.settings-modal-wrapper .settings-body .tab-content .logo {
+.modal.settingsModal .account__tab .logo {
   display: flex;
   align-items: center;
   gap: 1.6rem;
-  margin-bottom: 1.6rem;
 }
-.settings-modal-wrapper .settings-body .tab-content .logo .name {
+.modal.settingsModal .account__tab .logo .image {
+  width: 5rem;
+}
+.modal.settingsModal .account__tab .logo .name {
   font-size: 2rem;
   line-height: 1.4;
   color: var(--slate-700);
 }
-.settings-modal-wrapper .settings-body .change-email-box span {
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: var(--slate-600);
-  margin-bottom: 0.4rem;
-}
-.settings-modal-wrapper .settings-body .change-email-box .nice-select {
-  max-width: 38rem;
-  width: 100%;
+.modal.settingsModal .account__tab .update_acinfo {
   display: flex;
   align-items: center;
-  float: none;
+  gap: 1rem;
 }
-.settings-modal-wrapper .settings-body .single-card {
-  padding-bottom: 2.4rem;
-  border-bottom: 0.1rem solid var(--slate-100);
+.modal.settingsModal .account__tab .update_acinfo .avatar-img img {
+  width: 5rem;
+  height: 5rem;
+  overflow: hidden;
+  border-radius: 50%;
 }
-.settings-modal-wrapper .settings-body .single-card .title {
-  font-size: 1.6rem;
-  line-height: 1.6;
-  font-weight: 500;
-  color: var(--slate-950);
-  margin-bottom: 2.4rem;
-}
-.settings-modal-wrapper .settings-body .single-card .account {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-}
-.settings-modal-wrapper .settings-body .single-card .account .account-info {
-  display: flex;
-  align-items: center;
-  gap: 1.6rem;
-}
-.settings-modal-wrapper .settings-body .single-card .account .account-content {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-}
-.settings-modal-wrapper .settings-body .single-card .account .account-content input[type=text] {
-  font-size: 2rem;
-  color: var(--slate-700);
-  line-height: 1.6;
+.modal.settingsModal .account__tab .update_acinfo .form-control {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 1.87rem;
   font-weight: 600;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background: none;
-  box-shadow: none;
-  outline: 0;
+  line-height: 1;
 }
-.settings-modal-wrapper .settings-body .single-card .account .account-content input[type=email] {
-  font-size: 1.6rem;
-  color: var(--slate-700);
-  line-height: 1.6;
-  font-weight: 400;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  background: none;
-  box-shadow: none;
-  outline: 0;
+.modal.settingsModal .account__tab .connected_account li + li {
+  margin-top: 1rem;
 }
-.settings-modal-wrapper .settings-body .single-card .account-connect {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-}
-.settings-modal-wrapper .settings-body .single-card .account-connect .social-btn {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.6rem;
-  max-width: 40rem;
-}
-.settings-modal-wrapper .settings-body .single-card .account-connect .social-btn a {
+.modal.settingsModal .account__tab .connected_account a {
   padding: 0.8rem 10rem;
   background: var(--slate-50);
   font-size: 1.6rem;
@@ -767,12 +757,123 @@ textarea.form-control:focus {
   border-radius: 0.8rem;
   transition: all 0.3s ease;
 }
-.settings-modal-wrapper .settings-body .single-card .account-connect .social-btn a:hover {
+.modal.settingsModal .account__tab .connected_account a:hover {
   color: var(--slate-700);
   background: var(--slate-100);
 }
-.settings-modal-wrapper .settings-body .single-card:last-child {
+.modal.settingsModal .offDays {
+  gap: 2rem;
+}
+.modal.settingsModal .notification-table {
+  width: 100%;
+}
+.modal.settingsModal .notification-table thead tr th {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--slate-950);
+  border-bottom: 0.1rem solid var(--slate-100);
+  padding: 0.8rem 0;
+}
+.modal.settingsModal .notification-table tbody tr td {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--slate-950);
+  border-bottom: 0.1rem solid var(--slate-100);
+  padding: 1.8rem 0;
+}
+.modal.settingsModal .notification-table tbody tr td form input[type=checkbox] {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.8rem;
+}
+.modal.settingsModal .notification-table tbody tr:last-child td {
   border-bottom: 0;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--slate-950);
+  height: 100%;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget label {
+  background-color: var(--white-950);
+  border-radius: 10px;
+  border: 0.1rem solid var(--slate-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.8rem;
+  color: var(--slate-950);
+  font-weight: 600;
+  position: relative;
+  padding: 2rem;
+  transition: all 0.15s ease;
+  z-index: 10;
+  padding: 6.5rem 2.4rem;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget label::before {
+  display: none;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget label span {
+  font-size: 1.4rem;
+  display: block;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: var(--ff-primary);
+  margin-top: 0.8rem;
+  color: #4B5768;
+  z-index: 2;
+  transition: all 0.15s ease;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget input {
+  display: none;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget input:checked + label {
+  background-color: var(--primary-50);
+  border-color: var(--primary-600);
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget input:checked + label::before {
+  content: "\f058";
+  font-weight: 600;
+  color: var(--primary-600);
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch + label span {
+  width: 3rem;
+  height: 1.7rem;
+  background: var(--gray-100);
+  border-radius: 5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1.6rem;
+  transition: all 0.15s ease;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch + label span::before {
+  content: "";
+  position: absolute;
+  background: var(--white-950);
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  top: 0.2rem;
+  right: 1.5rem;
+  z-index: 11;
+  transition: all 0.3s ease;
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch:checked + label span {
+  background: var(--primary-600);
+}
+.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch:checked + label span::before {
+  right: 0.2rem;
 }
 
 .tooltip {
