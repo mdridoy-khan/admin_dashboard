@@ -162,6 +162,257 @@
             &:last-child{
                 border-bottom: 0;
             }
+            //general-settings
+            fieldset{
+                display: flex;
+                flex-direction: column;
+                & + fieldset{
+                    margin-top: 1.6rem;
+                }
+                label{
+                    font-size: 1.4rem;
+                    line-height: 1.6;
+                    color: var(--slate-600);
+                    margin-bottom: .4rem;
+                }
+                .nice-select{
+                    max-width: 38rem;
+                    width: 100%;
+                    .current{
+                        font-size: 1.4rem;
+                        line-height: 1.6;
+                        color: var(--slate-300);
+                    }
+                }
+                &.general-settings-btn{
+                    display: flex;
+                    align-items: end;
+                    justify-content: start;
+                    margin-top: 2.4rem;
+                    @include sm-up{
+                        justify-content: end;
+                    }
+                }
+            }
+            //subscription settings
+            .content{
+                display: flex;
+                align-items: end;
+                justify-content: space-between;
+                .card-title{
+                    font-size: 2rem;
+                    line-height: 1.6;
+                    font-weight: 600;
+                    color: var(--slate-700);
+                    margin-bottom: .8rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                    line-height: 1.6;
+                    color: var(--slate-700);
+                    b{
+                        color: var(--slate-700);
+                    }
+                    span{
+                        color: var(--slate-800);
+                        font-weight: 600;
+                        margin-left: 1rem;
+                    }
+                    & + p{
+                        margin-top: .8rem;
+                    }
+                }
+                .remove-btn{
+                    border: .1rem solid var(--slate-950);
+                    background: none;
+                    border-radius: .8rem;
+                    padding: .8rem 2.4rem;
+                    font-size: 1.6rem;
+                    line-height: 1.6;
+                    font-weight: 600;
+                    display: inline-block;
+                    margin-top: 1.6rem;
+                    transition: all .3s ease;
+                    &:hover{
+                        color: var(--slate-950);
+                        background: var(--slate-100);
+                    }
+                }
+            }
+            //productivity settings
+            fieldset{
+                .input-label{
+                    margin-top: 1.6rem;
+                }
+                input{
+                    max-width: 38rem;
+                    width: 100%;
+                    background: var(--white-950);
+                    padding: 1rem 1.5rem;
+                    border-radius: .8rem;
+                    border: .1rem solid var(--slate-100);
+                }
+                .off-day-check{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 2.4rem;
+                    fieldset{
+                        display: flex;
+                        align-items: center;
+                        flex-direction: row;
+                        gap: .8rem;
+                        label{
+                            user-select: none;
+                            color: var(--slate-950);
+                            font-size: 1.4rem;
+                            line-height: 1.6;
+                            font-weight: 600;
+                        }
+                        & + fieldset{
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        //notification settings
+        .tab-pane{
+            .notification-table{
+                width: 100%;
+                thead{
+                    tr{
+                        th{
+                            font-size: 1.4rem;
+                            line-height: 1.6;
+                            font-weight: 600;
+                            color: var(--slate-950);
+                            border-bottom: .1rem solid var(--slate-100);
+                            padding: .8rem 0;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            font-size: 1.4rem;
+                            line-height: 1.6;
+                            font-weight: 600;
+                            color: var(--slate-950);
+                            border-bottom: .1rem solid var(--slate-100);
+                            padding: 1.8rem 0;
+                            form{
+                                input[type="checkbox"]{
+                                    width: 1.6rem;
+                                    height: 1.6rem;
+                                    border-radius: .8rem;
+                                }
+                            }
+                        }
+                        &:last-child{
+                            td{
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //Integrations settings
+        .tab-content{
+            .checkable-widget {
+                width: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: var(--slate-950);
+                height: 100%;
+                label {
+                    background-color: var(--white-950);
+                    border-radius: 10px;
+                    border: .1rem solid var(--slate-100);
+                    @include flex-center;
+                    @include dimension(100%, 100%);
+                    cursor: pointer;
+                    user-select: none;
+                    font-size: 1.8rem;
+                    color: var(--slate-950);
+                    font-weight: 600;
+                    position: relative;
+                    padding: 2rem;
+                    transition: all .15s ease;
+                    z-index: 10;
+                    padding: 6.5rem 2.4rem;
+                    &::before{
+                        display: none;
+                    }
+                    span{
+                        font-size: 1.4rem;
+                        display: block;
+                        line-height: 1.6;
+                        font-weight: 400;
+                        font-family: var(--ff-primary);
+                        margin-top: .8rem;
+                        color: #4B5768;
+                        z-index: 2;
+                        transition: all .15s ease;
+                    }
+                }
+                
+                input {
+                    display: none;
+                    &:checked{
+                        & + label{
+                            background-color: var(--primary-50);
+                            border-color: var(--primary-600);
+                            &::before{
+                                content: '\f058';
+                                font-weight: 600;
+                                color: var(--primary-600);
+                            }
+                        }
+                    }
+                }
+                .toggle-switch{
+                    & + label span{
+                        width: 3rem;
+                        height: 1.7rem;
+                        background: var(--gray-100);
+                        border-radius: 5rem;
+                        position: absolute;
+                        top: 1rem;
+                        right: 1.6rem;
+                        transition: all .15s ease;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            background: var(--white-950);
+                            width: 1.3rem;
+                            height: 1.3rem;
+                            border-radius: 50%;
+                            top: .2rem;
+                            right: 1.5rem;
+                            z-index: 11;
+                            transition: all .3s ease;
+                        }
+                    }
+                    &:checked{
+                        & + label{
+                            span{
+                                background: var(--primary-600);
+                                &::before{
+                                    right: .2rem;
+                                }
+                            }
+            
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -90,6 +90,9 @@
     border: 0;
     outline: 0;
     box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
     &:hover{
         background: var(--slate-100);
         color: var(--slate-700);
