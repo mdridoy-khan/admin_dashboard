@@ -791,7 +791,7 @@ textarea.form-control:focus {
 .modal.settingsModal .notification-table tbody tr:last-child td {
   border-bottom: 0;
 }
-.modal.settingsModal .settings-body .tab-content .checkable-widget {
+.modal.settingsModal .checkable-widget {
   width: 100%;
   position: relative;
   display: flex;
@@ -801,7 +801,7 @@ textarea.form-control:focus {
   color: var(--slate-950);
   height: 100%;
 }
-.modal.settingsModal .settings-body .tab-content .checkable-widget label {
+.modal.settingsModal .checkable-widget label {
   background-color: var(--white-950);
   border-radius: 10px;
   border: 0.1rem solid var(--slate-100);
@@ -821,59 +821,17 @@ textarea.form-control:focus {
   z-index: 10;
   padding: 6.5rem 2.4rem;
 }
-.modal.settingsModal .settings-body .tab-content .checkable-widget label::before {
+.modal.settingsModal .checkable-widget input {
   display: none;
 }
-.modal.settingsModal .settings-body .tab-content .checkable-widget label span {
-  font-size: 1.4rem;
-  display: block;
-  line-height: 1.6;
-  font-weight: 400;
-  font-family: var(--ff-primary);
-  margin-top: 0.8rem;
-  color: #4B5768;
-  z-index: 2;
-  transition: all 0.15s ease;
-}
-.modal.settingsModal .settings-body .tab-content .checkable-widget input {
-  display: none;
-}
-.modal.settingsModal .settings-body .tab-content .checkable-widget input:checked + label {
+.modal.settingsModal .checkable-widget input:checked + label {
   background-color: var(--primary-50);
   border-color: var(--primary-600);
 }
-.modal.settingsModal .settings-body .tab-content .checkable-widget input:checked + label::before {
+.modal.settingsModal .checkable-widget input:checked + label::before {
   content: "\f058";
   font-weight: 600;
   color: var(--primary-600);
-}
-.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch + label span {
-  width: 3rem;
-  height: 1.7rem;
-  background: var(--gray-100);
-  border-radius: 5rem;
-  position: absolute;
-  top: 1rem;
-  right: 1.6rem;
-  transition: all 0.15s ease;
-}
-.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch + label span::before {
-  content: "";
-  position: absolute;
-  background: var(--white-950);
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
-  top: 0.2rem;
-  right: 1.5rem;
-  z-index: 11;
-  transition: all 0.3s ease;
-}
-.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch:checked + label span {
-  background: var(--primary-600);
-}
-.modal.settingsModal .settings-body .tab-content .checkable-widget .toggle-switch:checked + label span::before {
-  right: 0.2rem;
 }
 
 .tooltip {
@@ -4181,7 +4139,7 @@ textarea.form-control:focus {
   border-radius: 5rem;
 }
 .resources-member-list-wrapper #memberListTable tr td .file-author span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 1.4rem;

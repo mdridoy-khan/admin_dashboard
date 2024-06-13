@@ -304,102 +304,43 @@
                 }
             }
         }
-        .settings-body {
-        
-            //notification settings
-            .tab-pane{
+        .checkable-widget {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--slate-950);
+            height: 100%;
+            label {
+                background-color: var(--white-950);
+                border-radius: 10px;
+                border: .1rem solid var(--slate-100);
+                @include flex-center;
+                @include dimension(100%, 100%);
+                cursor: pointer;
+                user-select: none;
+                font-size: 1.8rem;
+                color: var(--slate-950);
+                font-weight: 600;
+                position: relative;
+                padding: 2rem;
+                transition: all .15s ease;
+                z-index: 10;
+                padding: 6.5rem 2.4rem;
             }
-        
-            //Integrations settings
-            .tab-content{
-                .checkable-widget {
-                    width: 100%;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    color: var(--slate-950);
-                    height: 100%;
-                    label {
-                        background-color: var(--white-950);
-                        border-radius: 10px;
-                        border: .1rem solid var(--slate-100);
-                        @include flex-center;
-                        @include dimension(100%, 100%);
-                        cursor: pointer;
-                        user-select: none;
-                        font-size: 1.8rem;
-                        color: var(--slate-950);
-                        font-weight: 600;
-                        position: relative;
-                        padding: 2rem;
-                        transition: all .15s ease;
-                        z-index: 10;
-                        padding: 6.5rem 2.4rem;
+            
+            input {
+                display: none;
+                &:checked{
+                    & + label{
+                        background-color: var(--primary-50);
+                        border-color: var(--primary-600);
                         &::before{
-                            display: none;
-                        }
-                        span{
-                            font-size: 1.4rem;
-                            display: block;
-                            line-height: 1.6;
-                            font-weight: 400;
-                            font-family: var(--ff-primary);
-                            margin-top: .8rem;
-                            color: #4B5768;
-                            z-index: 2;
-                            transition: all .15s ease;
-                        }
-                    }
-                    
-                    input {
-                        display: none;
-                        &:checked{
-                            & + label{
-                                background-color: var(--primary-50);
-                                border-color: var(--primary-600);
-                                &::before{
-                                    content: '\f058';
-                                    font-weight: 600;
-                                    color: var(--primary-600);
-                                }
-                            }
-                        }
-                    }
-                    .toggle-switch{
-                        & + label span{
-                            width: 3rem;
-                            height: 1.7rem;
-                            background: var(--gray-100);
-                            border-radius: 5rem;
-                            position: absolute;
-                            top: 1rem;
-                            right: 1.6rem;
-                            transition: all .15s ease;
-                            &::before{
-                                content: "";
-                                position: absolute;
-                                background: var(--white-950);
-                                width: 1.3rem;
-                                height: 1.3rem;
-                                border-radius: 50%;
-                                top: .2rem;
-                                right: 1.5rem;
-                                z-index: 11;
-                                transition: all .3s ease;
-                            }
-                        }
-                        &:checked{
-                            & + label{
-                                span{
-                                    background: var(--primary-600);
-                                    &::before{
-                                        right: .2rem;
-                                    }
-                                }
-                
-                            }
+                            content: '\f058';
+                            font-weight: 600;
+                            color: var(--primary-600);
                         }
                     }
                 }
