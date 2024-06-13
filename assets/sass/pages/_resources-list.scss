@@ -34,6 +34,7 @@
             td{
                 border-radius: 0;
                 padding: 1.6rem 2rem;
+                vertical-align: middle;
                 &:last-child{
                     text-align: end;
                 }
@@ -78,7 +79,6 @@
                     display: flex;
                     align-items: center;
                     gap: .8rem;
-                    padding-bottom: 1.6rem;
                     justify-content: end;
                     @include md-up{
                         justify-content: start;

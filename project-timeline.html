@@ -566,7 +566,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="" id="">
+                <div class="" id="project_timeline_calendar">
                     
                     
                 </div>
@@ -685,7 +685,18 @@
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
     <script src="assets/js/Sortable.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.14/index.global.min.js'></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/canban.js"></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('project_timeline_calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth'
+            });
+            calendar.render();
+        });
+  
+    </script>
 </body>
 </html>
