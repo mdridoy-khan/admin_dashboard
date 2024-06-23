@@ -350,6 +350,39 @@ textarea.form-control:focus {
   border-radius: 0;
 }
 
+.input-checkbox {
+  display: flex;
+  align-items: center;
+}
+.input-checkbox .checkbox_label {
+  position: relative;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--primary-600);
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+.input-checkbox .checkbox_label::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  width: 1.3rem;
+  height: 0.7rem;
+  border-left: 0.2rem solid #fff;
+  border-bottom: 0.2rem solid #fff;
+  border-radius: 0.2rem;
+  transform: rotate(-45deg);
+  transition: all 0.15s ease;
+  opacity: 0;
+}
+.input-checkbox input {
+  display: none;
+}
+.input-checkbox input:checked ~ .checkbox_label::before {
+  opacity: 1;
+}
+
 ::-webkit-input-placeholder {
   color: var(--slate-600);
 }
@@ -442,7 +475,7 @@ textarea.form-control:focus {
 
 .btn__primary__lightpill {
   font-size: 1.4rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: var(--primary-600);
@@ -456,6 +489,78 @@ textarea.form-control:focus {
 .btn__primary__lightpill:hover {
   color: var(--primary-600);
   background: var(--primary-100);
+}
+
+.btn__danger__lightpill {
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--error-600);
+  font-weight: 600;
+  gap: 0.4rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--error-100);
+  border-radius: 5rem;
+  transition: all 0.3s ease;
+}
+.btn__danger__lightpill:hover {
+  color: var(--error-600);
+  background: var(--error-200);
+}
+
+.btn__green__lightpill {
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--success-600);
+  font-weight: 600;
+  gap: 0.4rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--success-100);
+  border-radius: 5rem;
+  transition: all 0.3s ease;
+}
+.btn__green__lightpill:hover {
+  color: var(--success-600);
+  background: var(--success-200);
+}
+
+.btn__secondary__lightpill {
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate-600);
+  font-weight: 600;
+  gap: 0.4rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--slate-100);
+  border-radius: 5rem;
+  transition: all 0.3s ease;
+}
+.btn__secondary__lightpill:hover {
+  color: var(--slate-600);
+  background: var(--slate-200);
+}
+
+.btn__warning__lightpill {
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--warning-600);
+  font-weight: 600;
+  gap: 0.4rem;
+  padding: 0.6rem 1.5rem;
+  background: var(--warning-100);
+  border-radius: 5rem;
+  transition: all 0.3s ease;
+}
+.btn__warning__lightpill:hover {
+  color: var(--warning-600);
+  background: var(--warning-200);
 }
 
 .text__primary {
@@ -1782,7 +1887,6 @@ textarea.form-control:focus {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  padding-bottom: 1.6rem;
 }
 @media screen and (max-width: 991px) {
   .db_wrapper .db_body .filter_area .members {
@@ -1831,6 +1935,11 @@ textarea.form-control:focus {
   padding: 1.6rem;
   border-radius: 0.8rem;
   min-height: 100%;
+  max-height: 40rem;
+  overflow-y: scroll;
+}
+.db_wrapper .db_body .home-widgets .widget::-webkit-scrollbar {
+  width: 0;
 }
 .db_wrapper .db_body .home-widgets .widget-title {
   font-weight: 600;
@@ -1919,14 +2028,10 @@ textarea.form-control:focus {
   justify-content: space-between;
   padding: 1.6rem 0 1.6rem 0;
 }
-.db_wrapper .db_body .home-widgets .widget .widget-task.due-task {
-  display: block;
-  padding: 0;
-}
-.db_wrapper .db_body .home-widgets .widget .widget-task.due-task .progress {
+.db_wrapper .db_body .home-widgets .widget .widget-task .progress {
   height: 0.4rem;
 }
-.db_wrapper .db_body .home-widgets .widget .widget-task.due-task .progress-bar {
+.db_wrapper .db_body .home-widgets .widget .widget-task .progress-bar {
   background-color: var(--clr);
 }
 .db_wrapper .db_body .home-widgets .widget .widget-task .task-name {
@@ -2038,7 +2143,7 @@ textarea.form-control:focus {
   background-color: var(--clr);
   position: relative;
   width: 0.8rem;
-  height: 17rem;
+  height: 23rem;
   border-radius: 5rem;
   overflow: hidden;
 }
@@ -3078,6 +3183,9 @@ textarea.form-control:focus {
 .team-single .widget .task-list tr:last-child {
   border-bottom: 0;
 }
+.team-single .widget .task-list tr:last-child td {
+  border-bottom: 0;
+}
 .team-single .widget .task-list .task-name {
   display: flex;
   align-items: center;
@@ -3218,6 +3326,9 @@ textarea.form-control:focus {
 /*--------------------------------------------------------------
 # Project Details (Kanban) Page
 --------------------------------------------------------------*/
+.project_tabfilter {
+  margin-bottom: 2rem;
+}
 @media screen and (min-width: 992px) {
   .project_tabfilter {
     display: flex;
@@ -3257,6 +3368,10 @@ textarea.form-control:focus {
   border: 0;
   background-color: transparent;
   max-width: 18rem;
+}
+.project_tabfilter .endblock .btn__primary {
+  padding: 0.8rem 1.5rem;
+  font-weight: 500;
 }
 @media screen and (max-width: 991px) {
   .project_tabfilter .startblock + .endblock {
@@ -3437,6 +3552,66 @@ textarea.form-control:focus {
   border: 0.1rem solid var(--slate-200);
   border-radius: 0.8rem;
   outline: none;
+}
+
+.projectTaskList .widget .widget-title {
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.projectTaskList .widget + .widget {
+  margin-top: 2rem;
+}
+.projectTaskList .task-list {
+  border: 0.1rem solid var(--slate-50);
+  border-radius: 2rem;
+  background-color: var(--white-950);
+  overflow: hidden;
+}
+.projectTaskList .task-list form .form-control {
+  border: 0;
+  padding: 1.8rem 2.5rem;
+}
+.projectTaskList .task-list .label {
+  user-select: none;
+  cursor: pointer;
+}
+.projectTaskList .task-list .task_item {
+  border-top: 0.1rem solid var(--slate-50);
+  padding: 1.8rem 2.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.projectTaskList .task-list ul li .meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+}
+.projectTaskList .task-list ul li .meta li {
+  font-size: 1.4rem;
+  color: var(--slate-500);
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.projectTaskTable .image-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.projectTaskTable .dataTable thead th {
+  background-color: var(--gray-50);
+  border-bottom: 0;
+}
+.projectTaskTable .dataTable tbody tr td {
+  white-space: nowrap;
+}
+.projectTaskTable .dataTable tbody tr:last-child > * {
+  border-bottom: transparent !important;
 }
 
 /*--------------------------------------------------------------

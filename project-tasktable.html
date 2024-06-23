@@ -33,6 +33,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontAwesome5Pro.css">
     <link rel="stylesheet" href="assets/css/select2.min.css">
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -302,7 +304,7 @@
 
                 <div class="menu-group">
                     <div class="title">
-                        All Teams
+                        All Team Members
                         <span data-bs-toggle="tooltip" title="Create Team">
                             <a href="#createTeamModal" data-bs-toggle="modal">
                                 <i class="fal fa-plus"></i>
@@ -566,9 +568,292 @@
                         </li>
                     </ul>
                 </div>
-                <div class="" id="">
-                    
-                    
+                <div class="projectTaskTable" id="">
+                    <table class="table dataTable align-middle table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">
+                                    Task ID
+                                </th>
+                                <th>
+                                    Task Name
+                                </th>
+                                <th>
+                                    Assigned to
+                                </th>
+                                <th class="text-center">
+                                    Status
+                                </th>
+                                <th class="text-center">
+                                    Due Date
+                                </th>
+                                <th class="text-center">
+                                    Priority
+                                </th>
+                                <th>
+                                    Comments
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Browser testing
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__primary__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        Done
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__danger__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        High
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Prepare HTML & CSS
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__green__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        In Review
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__danger__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        High
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Prepare HTML & CSS
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__green__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        In Review
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__secondary__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        Low
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Prepare HTML & CSS
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__green__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        In Review
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__warning__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        Low
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Browser testing
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__primary__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        Done
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__danger__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        High
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Prepare HTML & CSS
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__green__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        In Review
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__danger__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        High
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Prepare HTML & CSS
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__green__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        In Review
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__secondary__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        Low
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    #001230
+                                </td>
+                                <td>
+                                    Prepare HTML & CSS
+                                </td>
+                                <td>
+                                    <div class="image-group">
+                                        <img class="avatar rounded-circle" width="24" src="assets/img/resource-blank/share.png" alt="">
+                                        Roberto Martinez
+                                    </div>
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__green__lightpill border-0">
+                                        <i class="fal fa-check"></i>
+                                        In Review
+                                    </button>
+                                </td>
+                                <td>
+                                    Jan 6, 2022
+                                </td>
+                                <td class="text-center">
+                                    <button type="button" class="btn__warning__lightpill border-0">
+                                        <i class="fas fa-flag"></i>
+                                        Low
+                                    </button>
+                                </td>
+                                <td>
+                                    16 Comments on task...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                    
                 </div>
             </div>
         </div>
@@ -684,8 +969,17 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/select2.full.min.js"></script>
-    <script src="assets/js/Sortable.min.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <script src="assets/js/canban.js"></script>
 </body>
+
+<script>
+    let table = new DataTable('.dataTable', {
+        responsive: true,
+        searching: false,
+        paging: false,
+        info: false,
+        ordering: false
+    });
+    </script>
 </html>

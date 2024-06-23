@@ -1,4 +1,5 @@
 .project_tabfilter {
+    margin-bottom: 2rem;
     @include lg-up {
         display: flex;
     }
@@ -26,7 +27,6 @@
     }
     
     .endblock {
-
         a {
             background-color: var(--slate-50);
             height: 3.2rem;
@@ -38,6 +38,10 @@
             border: 0;
             background-color: transparent;
             max-width: 18rem;
+        }
+        .btn__primary {
+            padding: 0.8rem 1.5rem;
+            font-weight: 500;
         }
     }
     .startblock + .endblock {
@@ -231,4 +235,94 @@
         outline: none;
         
     }
+}
+.projectTaskList {
+    .widget {
+        .widget-title {
+            padding: 1rem 0;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        & + .widget {
+            margin-top: 2rem;
+        }
+    }
+    .task-list {
+        border: .1rem solid var(--slate-50);
+        border-radius: 2rem;
+        background-color: var(--white-950);
+        overflow: hidden;
+
+        form {
+            .form-control {
+                border: 0;
+                padding: 1.8rem 2.5rem;
+            }
+        }
+        .label {
+            user-select: none;
+            cursor: pointer;
+        }
+        .task_item {
+            border-top: .1rem solid var(--slate-50);
+            padding: 1.8rem 2.4rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        ul {
+            
+            li {
+                .meta {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: 1.5rem;
+                    margin-left: auto;
+        
+                    li {
+                        font-size: 1.4rem;
+                        color: var(--slate-500);
+                        gap: .5rem;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.projectTaskTable {
+    .image-group {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .dataTable {
+        thead {
+            th {
+                background-color: var(--gray-50);
+                border-bottom: 0;
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    white-space: nowrap;
+                }
+                &:last-child {
+                    > * {
+                        border-bottom: transparent !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.projectTaskGantt {
+    
 }

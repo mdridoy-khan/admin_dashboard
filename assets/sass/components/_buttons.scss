@@ -52,7 +52,7 @@
 
 .btn__primary__lightpill{
     font-size: 1.4rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     color: var(--primary-600);
@@ -65,6 +65,74 @@
     &:hover{
         color: var(--primary-600);
         background: var(--primary-100);
+    }
+}
+.btn__danger__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--error-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--error-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--error-600);
+        background: var(--error-200);
+    }
+}
+.btn__green__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--success-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--success-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--success-600);
+        background: var(--success-200);
+    }
+}
+.btn__secondary__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--slate-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--slate-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--slate-600);
+        background: var(--slate-200);
+    }
+}
+.btn__warning__lightpill{
+    font-size: 1.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--warning-600);
+    font-weight: 600;
+    gap: .4rem;
+    padding: .6rem 1.5rem;
+    background: var(--warning-100);
+    border-radius: 5rem;
+    transition: all .3s ease;
+    &:hover{
+        color: var(--warning-600);
+        background: var(--warning-200);
     }
 }
 

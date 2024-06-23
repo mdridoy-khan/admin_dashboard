@@ -438,6 +438,9 @@
                 border-bottom: .1rem solid var(--slate-50);
                 &:last-child{
                     border-bottom: 0;
+                    td {
+                        border-bottom: 0;
+                    }
                 }
             }
             .task-name{

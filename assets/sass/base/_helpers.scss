@@ -88,6 +88,45 @@ textarea.form-control {
     border-radius: 0;
 }
 
+
+.input-checkbox {
+    display: flex;
+    align-items: center;
+    .checkbox_label {
+        position: relative;
+        width: 1.8rem;
+        height: 1.8rem;
+        background-color: var(--primary-600);
+        border-radius: .4rem;
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 2px;
+            width: 1.3rem;
+            height: 0.7rem;
+            border-left: .2rem solid #fff;
+            border-bottom: .2rem solid #fff;
+            border-radius: .2rem;
+            transform: rotate(-45deg);
+            transition: all .15s ease;
+            opacity: 0;
+        }
+
+    }
+    input {
+        display: none;
+
+        &:checked {
+            & ~ .checkbox_label {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
 // Placeholder Color
 ::-webkit-input-placeholder {
     color: var(--slate-600);

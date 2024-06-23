@@ -114,7 +114,7 @@
             $(items).appendTo(appendto);
         });
         $(document).on('click', '.remove-field', function(e) {
-            $(this).parent().parent().remove();
+            $(this).parent().parent('.social_link_item').remove();
             e.preventDefault();
             var newcount = itemcount--;
         });
