@@ -178,7 +178,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="team-members.html">
                                         <span class="icon fal fa-users"></span>
                                         Team
                                     </a>
@@ -303,7 +303,7 @@
 
                 <div class="menu-group">
                     <div class="title">
-                        All Team Members
+                        All Teams
                         <span data-bs-toggle="tooltip" title="Create Team">
                             <a href="#createTeamModal" data-bs-toggle="modal">
                                 <i class="fal fa-plus"></i>
@@ -421,7 +421,7 @@
                 </div>
             </div>
 
-            <div class="db_content resources-content">
+            <div class="db_content resources">
                 <div class="db_title">
                     <h5>
                         Resources
@@ -429,11 +429,11 @@
                 </div>
                 <div class="filter_area mb-5">
                     <div class="startBlock">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-secondary active">All</button>
-                            <button type="button" class="btn btn-secondary">Documents</button>
-                            <button type="button" class="btn btn-secondary">Image</button>
-                            <button type="button" class="btn btn-secondary">Archived</button>
+                        <div class="btn-group nav" role="tablist">
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#all_Resource" class="btn btn-secondary active">All</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#docs_Resource" class="btn btn-secondary">Documents</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#imgs_Resource" class="btn btn-secondary">Image</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#arch_Resource" class="btn btn-secondary">Archived</button>
                         </div>
                     </div>        
                     <div class="endBlock">
@@ -449,17 +449,31 @@
                         </ul>
                     </div>        
                 </div>
-                <div class="resource-blank-content text-center">
-                    <img src="assets/img/resources/404.svg" alt="">
-                    <div class="content">
-                        <h3 class="title">
-                            No files found?
-                        </h3>
-                        <p>
-                            Try to add more files from your personal storage
-                        </p>
-                    </div>                 
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="all_Resource" role="tabpanel">
+                        <div class="resource-404 text-center">
+                            <img src="assets/img/resources/404.svg" alt="">
+                            <div class="content">
+                                <h3 class="title">
+                                    No files found?
+                                </h3>
+                                <p>
+                                    Try to add more files from your personal storage
+                                </p>
+                            </div>                 
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="docs_Resource" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane fade" id="imgs_Resource" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane fade" id="arch_Resource" role="tabpanel">
+
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>

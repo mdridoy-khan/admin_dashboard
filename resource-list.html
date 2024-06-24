@@ -178,7 +178,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="team-members.html">
                                         <span class="icon fal fa-users"></span>
                                         Team
                                     </a>
@@ -303,7 +303,7 @@
 
                 <div class="menu-group">
                     <div class="title">
-                        All Team Members
+                        All Teams
                         <span data-bs-toggle="tooltip" title="Create Team">
                             <a href="#createTeamModal" data-bs-toggle="modal">
                                 <i class="fal fa-plus"></i>
@@ -421,7 +421,7 @@
                 </div>
             </div>
 
-            <div class="db_content resources-content">
+            <div class="db_content resources">
                 <div class="db_title">
                     <h5>
                         Resources
@@ -429,13 +429,13 @@
                 </div>
                 <div class="filter_area mb-5">
                     <div class="startBlock">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-secondary active">All</button>
-                            <button type="button" class="btn btn-secondary">Documents</button>
-                            <button type="button" class="btn btn-secondary">Image</button>
-                            <button type="button" class="btn btn-secondary">Archived</button>
+                        <div class="btn-group nav" role="tablist">
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#all_Resource_list" class="btn btn-secondary active">All</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#docs_Resource_list" class="btn btn-secondary">Documents</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#imgs_Resource_list" class="btn btn-secondary">Image</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#arch_Resource_list" class="btn btn-secondary">Archived</button>
                         </div>
-                    </div>        
+                    </div>
                     <div class="endBlock">
                         <ul class="d-flex align-items-center">
                             <li class="btn-group">
@@ -449,256 +449,270 @@
                         </ul>
                     </div>        
                 </div>
-                <div class="workspace resources-member-list-wrapper">
-                    <table class="table w-100" id="memberListTable">
-                        <thead>
-                            <tr>
-                                <th class="table-header-name">
-                                    Name & Designation
-                                </th>
-                                <th class="table-header-name">
-                                    File Type
-                                </th>
-                                <th class="table-header-name">
-                                    Created by
-                                </th>
-                                <th class="table-header-name">
-                                    Created Date
-                                </th>
-                                <th class="table-header-name">
-                                    Share with
-                                </th>
-                                <th class="table-header-name">
-                                    Action
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="#" class="team_name">
-                                        <div class="image">
-                                            <img src="assets/img/widget/teams/avatar1.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="name">
-                                                Nen Erp
-                                            </h6>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <div class="file-type">
-                                        <span>
-                                            File
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="file-author">
-                                        <span>
-                                            <img src="assets/img/resource-blank/avatar.png" alt="">
-                                            Ivan Magalhaes
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="time">
-                                        April 27, 2024
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="share-members">
-                                        <div class="image-group">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <span>
-                                                5+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="all_Resource_list" role="tabpanel">
+                        <div class="workspace resources-member-list-wrapper">
+                            <table class="table w-100" id="memberListTable">
+                                <thead>
+                                    <tr>
+                                        <th class="table-header-name">
+                                            Name & Designation
+                                        </th>
+                                        <th class="table-header-name">
+                                            File Type
+                                        </th>
+                                        <th class="table-header-name">
+                                            Created by
+                                        </th>
+                                        <th class="table-header-name">
+                                            Created Date
+                                        </th>
+                                        <th class="table-header-name">
+                                            Share with
+                                        </th>
+                                        <th class="table-header-name">
+                                            Action
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="team_name">
+                                                <div class="image">
+                                                    <img src="assets/img/widget/teams/avatar1.png" alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h6 class="name">
+                                                        Nen Erp
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="file-type">
+                                                <span>
+                                                    File
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="file-author">
+                                                <span>
+                                                    <img src="assets/img/resource-blank/avatar.png" alt="">
+                                                    Ivan Magalhaes
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="time">
+                                                April 27, 2024
                                             </span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="dropdown">
-                                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="far fa-ellipsis-v"></i>
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-eye"></i>View
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-edit"></i>Edit 
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-share-alt"></i>Share
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-trash-alt"></i>Delete 
-                                        </a>
-                                      </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#" class="team_name">
-                                        <div class="image">
-                                            <img src="assets/img/widget/teams/avatar1.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="name">
-                                                Nen Erp
-                                            </h6>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <div class="file-type">
-                                        <span>
-                                            File
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="file-author">
-                                        <span>
-                                            <img src="assets/img/resource-blank/avatar.png" alt="">
-                                            Ivan Magalhaes
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="time">
-                                        April 27, 2024
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="share-members">
-                                        <div class="image-group">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <span>
-                                                5+
+                                        </td>
+                                        <td>
+                                            <div class="share-members">
+                                                <div class="image-group">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <span>
+                                                        5+
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="dropdown">
+                                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="far fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-eye"></i>View
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-edit"></i>Edit 
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-share-alt"></i>Share
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-trash-alt"></i>Delete 
+                                                </a>
+                                              </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="team_name">
+                                                <div class="image">
+                                                    <img src="assets/img/widget/teams/avatar1.png" alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h6 class="name">
+                                                        Nen Erp
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="file-type">
+                                                <span>
+                                                    File
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="file-author">
+                                                <span>
+                                                    <img src="assets/img/resource-blank/avatar.png" alt="">
+                                                    Ivan Magalhaes
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="time">
+                                                April 27, 2024
                                             </span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="dropdown">
-                                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="far fa-ellipsis-v"></i>
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-eye"></i>View
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-edit"></i>Edit 
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-share-alt"></i>Share
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-trash-alt"></i>Delete 
-                                        </a>
-                                      </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="#" class="team_name">
-                                        <div class="image">
-                                            <img src="assets/img/widget/teams/avatar1.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h6 class="name">
-                                                Nen Erp
-                                            </h6>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td>
-                                    <div class="file-type">
-                                        <span>
-                                            File
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="file-author">
-                                        <span>
-                                            <img src="assets/img/resource-blank/avatar.png" alt="">
-                                            Ivan Magalhaes
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <span class="time">
-                                        April 27, 2024
-                                    </span>
-                                </td>
-                                <td>
-                                    <div class="share-members">
-                                        <div class="image-group">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
-                                            <span>
-                                                5+
+                                        </td>
+                                        <td>
+                                            <div class="share-members">
+                                                <div class="image-group">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <span>
+                                                        5+
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="dropdown">
+                                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="far fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-eye"></i>View
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-edit"></i>Edit 
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-share-alt"></i>Share
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-trash-alt"></i>Delete 
+                                                </a>
+                                              </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="#" class="team_name">
+                                                <div class="image">
+                                                    <img src="assets/img/widget/teams/avatar1.png" alt="">
+                                                </div>
+                                                <div class="content">
+                                                    <h6 class="name">
+                                                        Nen Erp
+                                                    </h6>
+                                                </div>
+                                            </a>
+                                        </td>
+                                        <td>
+                                            <div class="file-type">
+                                                <span>
+                                                    File
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="file-author">
+                                                <span>
+                                                    <img src="assets/img/resource-blank/avatar.png" alt="">
+                                                    Ivan Magalhaes
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="time">
+                                                April 27, 2024
                                             </span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td class="dropdown">
-                                    <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="far fa-ellipsis-v"></i>
-                                    </button>
-                                    <ul class="dropdown-menu dropdown-menu-end">
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-eye"></i>View
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-edit"></i>Edit 
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-share-alt"></i>Share
-                                        </a>
-                                      </li>
-                                      <li>
-                                        <a href="#">
-                                            <i class="fal fa-trash-alt"></i>Delete 
-                                        </a>
-                                      </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                        </tbody>       
-                    </table>
+                                        </td>
+                                        <td>
+                                            <div class="share-members">
+                                                <div class="image-group">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <img class="avatar rounded-circle" src="assets/img/resource-blank/share.png" alt="">
+                                                    <span>
+                                                        5+
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="dropdown">
+                                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="far fa-ellipsis-v"></i>
+                                            </button>
+                                            <ul class="dropdown-menu dropdown-menu-end">
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-eye"></i>View
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-edit"></i>Edit 
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-share-alt"></i>Share
+                                                </a>
+                                              </li>
+                                              <li>
+                                                <a href="#">
+                                                    <i class="fal fa-trash-alt"></i>Delete 
+                                                </a>
+                                              </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>       
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="docs_Resource_list" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane fade" id="imgs_Resource_list" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane fade" id="arch_Resource_list" role="tabpanel">
+
+                    </div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -721,19 +735,15 @@
                     renderer: function (api, rowIdx, columns) {
                         var data = $.map(columns, function (col, i) {
                             return col.hidden
-                                ? '<tr data-dt-row="' +
-                                        col.rowIndex +
-                                        '" data-dt-column="' +
-                                        col.columnIndex +
-                                        '">' +
-                                        '<td>' +
+                                ? '<tr data-dt-row="' + '" data-dt-column="' + '">' +
+                                    '<td>' +
                                         col.title +
-                                        ':' +
-                                        '</td> ' +
-                                        '<td>' +
-                                        col.data +
-                                        '</td>' +
-                                        '</tr>'
+                                    ':' +
+                                    '</td> ' +
+                                    '<td>' +
+                                    col.data +
+                                    '</td>' +
+                                    '</tr>'
                                 : '';
                         }).join('');
         

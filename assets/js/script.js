@@ -61,7 +61,7 @@
 
     // Toggle Auto suggestion teammate collapse function
     $(document).ready(function() {
-        $('#addTeamMate').on('input', function() {
+        $('.addTeamMate').on('input', function() {
             if ($(this).val().trim() !== '') {
                 $('.suggested_team').collapse('show');
             } else {

@@ -178,7 +178,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="team-members.html">
                                         <span class="icon fal fa-users"></span>
                                         Team
                                     </a>
@@ -303,7 +303,7 @@
 
                 <div class="menu-group">
                     <div class="title">
-                        All Team Members
+                        All Teams
                         <span data-bs-toggle="tooltip" title="Create Team">
                             <a href="#createTeamModal" data-bs-toggle="modal">
                                 <i class="fal fa-plus"></i>
@@ -547,8 +547,11 @@
                                         <div class="widget-body mt-3">
                                             <div class="widget-task">
                                                 <div class="task-name">
-                                                    <input type="checkbox" id="task2">
-                                                    <label for="task2">
+                                                    <div class="input-checkbox">
+                                                        <input class="form-check-input" id="task1" type="checkbox" checked>
+                                                        <label class="checkbox_label" for="task1"></label>
+                                                    </div>
+                                                    <label for="task1">
                                                         Browser testing
                                                     </label>
                                                 </div>
@@ -563,8 +566,11 @@
                                             </div>
                                             <div class="widget-task">
                                                 <div class="task-name">
-                                                    <input type="checkbox" id="task3">
-                                                    <label for="task3">
+                                                    <div class="input-checkbox">
+                                                        <input class="form-check-input" id="task2" type="checkbox" checked>
+                                                        <label class="checkbox_label" for="task2"></label>
+                                                    </div>
+                                                    <label for="task2">
                                                         Browser testing
                                                     </label>
                                                 </div>
@@ -579,7 +585,29 @@
                                             </div>
                                             <div class="widget-task">
                                                 <div class="task-name">
-                                                    <input type="checkbox" id="task4">
+                                                    <div class="input-checkbox">
+                                                        <input class="form-check-input" id="task3" type="checkbox" checked>
+                                                        <label class="checkbox_label" for="task3"></label>
+                                                    </div>
+                                                    <label for="task3">
+                                                        Browser testing
+                                                    </label>
+                                                </div>
+                                                <div class="task-person">
+                                                    <span>
+                                                        <i class="fal fa-tasks"></i>4/4
+                                                    </span>
+                                                    <div class="image active">
+                                                        <img src="assets/img/widget/avatar.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="widget-task">
+                                                <div class="task-name">
+                                                    <div class="input-checkbox">
+                                                        <input class="form-check-input" id="task4" type="checkbox" checked>
+                                                        <label class="checkbox_label" for="task4"></label>
+                                                    </div>
                                                     <label for="task4">
                                                         Browser testing
                                                     </label>
@@ -595,7 +623,10 @@
                                             </div>
                                             <div class="widget-task">
                                                 <div class="task-name">
-                                                    <input type="checkbox" id="task5">
+                                                    <div class="input-checkbox">
+                                                        <input class="form-check-input" id="task5" type="checkbox" checked>
+                                                        <label class="checkbox_label" for="task5"></label>
+                                                    </div>
                                                     <label for="task5">
                                                         Browser testing
                                                     </label>
@@ -611,24 +642,11 @@
                                             </div>
                                             <div class="widget-task">
                                                 <div class="task-name">
-                                                    <input type="checkbox" id="task6">
-                                                    <label for="task6">
-                                                        Browser testing
-                                                    </label>
-                                                </div>
-                                                <div class="task-person">
-                                                    <span>
-                                                        <i class="fal fa-tasks"></i>4/4
-                                                    </span>
-                                                    <div class="image active">
-                                                        <img src="assets/img/widget/avatar.png" alt="">
+                                                    <div class="input-checkbox">
+                                                        <input class="form-check-input" id="task6" type="checkbox" checked>
+                                                        <label class="checkbox_label" for="task6"></label>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="widget-task">
-                                                <div class="task-name">
-                                                    <input type="checkbox" id="task7">
-                                                    <label for="task7">
+                                                    <label for="task6">
                                                         Browser testing
                                                     </label>
                                                 </div>
@@ -2366,7 +2384,7 @@
                             <div class="thumbnails_upload-wrapper">
                                 <div class="input">
                                     <input type="file" id="upload_teamThumbnail" name="" class="d-none" >
-                                   <label for="upload_teamThumbnail" class="upload_icon">
+                                    <label for="upload_teamThumbnail" class="upload_icon">
                                         <i class="fal fa-plus fa-2x"> </i>
                                     </label>
                                 </div>
@@ -2391,7 +2409,7 @@
                                 <span class="input-group-text bg-transparent px-4">
                                     <i class="fal fa-search fa-2x"></i>
                                 </span>
-                                <input type="text" placeholder="Add Members to the Team" id="addTeamMate" class="form-control">
+                                <input type="text" placeholder="Add Members to the Team" class="addTeamMate form-control">
                             </div>
                         </fieldset>
 

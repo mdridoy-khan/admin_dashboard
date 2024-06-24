@@ -135,7 +135,26 @@
                     h6 {
                         font-size: 1.6rem;
                         font-weight: 600;
+                    }
 
+                    .avatar {
+                        position: relative;
+
+                        img {
+                            border-radius: 50%;
+                            @include dimension(4rem, 4rem);
+                        }
+
+                        .status {
+                            display: inline-block;
+                            @include dimension(.9rem, .9rem);
+                            background-color: var(--clr);
+                            border-radius: 50%;
+                            box-shadow: 0 0 0 .2rem var(--white-950);
+                            position: absolute;
+                            bottom: 5px;
+                            right: 0;
+                        }
                     }
                 }
                 hr {
